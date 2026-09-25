@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Defenders Varsity Volleyball</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div>
+        <p class="eyebrow">2026 season</p>
+        <h1>Defenders Varsity Volleyball</h1>
+      </div>
+      <p class="range" id="range"></p>
+    </header>
+
+    <div class="tabs" id="tabs" role="tablist">
+      <button type="button" role="tab" data-view="players" aria-selected="true">Players</button>
+      <button type="button" role="tab" data-view="compare">Compare</button>
+      <button type="button" role="tab" data-view="bygame">By game</button>
+      <button type="button" role="tab" data-view="matches">Matches</button>
+      <button type="button" role="tab" data-view="rotations">Rotations</button>
+      <button type="button" role="tab" data-view="serving">Serving</button>
+      <button type="button" role="tab" data-view="saved">Saved</button>
+    </div>
+
+    <section class="filters" aria-label="Matches">
+      <div class="filter-label">Matches</div>
+      <div class="chips" id="match-chips"></div>
+    </section>
+
+    <main id="view"></main>
+
+    <footer class="foot">
+      <p>Numbers come from the varsity stat sheets. An empty cell was left blank on the sheet, so it is not a zero. Season hitting is (kills − errors) ÷ attack attempts across every selected line, not an average of each match’s percentage.</p>
+    </footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
