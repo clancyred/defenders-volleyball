@@ -1480,7 +1480,7 @@ function loadGraphs() {
 function renderSaved() {
   const selected = savedGraphs.filter(function (graph) { return graph.include; }).length;
   let html = '<div class="saved-bar"><div><h2>Saved graphs</h2>';
-  html += '<p class="sub">Set up a chart on any other tab and click Save graph. Check the ones to include, then download a PDF. Each page names the stat, who is on it, and which matches.</p></div>';
+  html += '<p class="sub">Set up a chart on any other tab and click Save graph. Check the ones to include, then download a PDF. Each graph names the stat, who is on it, and which matches. Graphs share a page when they fit.</p></div>';
   html += '<div class="card-actions">';
   html += '<button type="button" class="text-btn" data-graphs="all">All</button>';
   html += '<button type="button" class="text-btn" data-graphs="none">None</button>';
@@ -1567,55 +1567,117 @@ function chartPng(spec) {
   return { url: url, width: width, height: height };
 }
 
-function paintPdfPage(doc, spec, page, pages) {
+function pdfBlock(doc, spec, width) {
+  const shot = chartPng(spec);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(13);
+  const titleLines = doc.splitTextToSize(pdfText(spec.title || defaultTitle(spec)), width);
+  const titleH = titleLines.length * doc.getLineHeight();
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  const detailLines = doc.splitTextToSize(pdfText(describeSpec(spec)), width);
+  const detailH = detailLines.length * doc.getLineHeight();
+  const note = spec.note && spec.note.trim() ? pdfText(spec.note.trim()) : "";
+  const noteLines = note ? doc.splitTextToSize(note, width) : [];
+  const noteH = noteLines.length ? noteLines.length * doc.getLineHeight() + 2 : 0;
+  const textH = titleH + detailH + noteH + 8;
+  const aspect = shot ? shot.width / shot.height : 1;
+  const chartH = shot ? width / aspect : 14;
+  return {
+    shot: shot,
+    titleLines: titleLines,
+    detailLines: detailLines,
+    noteLines: noteLines,
+    textH: textH,
+    chartH: chartH,
+    aspect: aspect,
+  };
+}
+
+function packPdf(doc, blocks) {
   const margin = 40;
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
   const width = pageW - margin * 2;
-  doc.setFillColor(244, 240, 232);
-  doc.rect(0, 0, pageW, pageH, "F");
-  doc.setTextColor(184, 67, 31);
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(10);
-  doc.text("DEFENDERS VARSITY VOLLEYBALL", margin, 36);
-  doc.setTextColor(28, 25, 21);
-  doc.setFontSize(18);
-  const titleLines = doc.splitTextToSize(pdfText(spec.title || defaultTitle(spec)), width);
-  doc.text(titleLines, margin, 62);
-  let y = 62 + titleLines.length * 22;
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(11);
-  doc.setTextColor(80, 74, 66);
-  const detailLines = doc.splitTextToSize(pdfText(describeSpec(spec)), width);
-  doc.text(detailLines, margin, y);
-  y += detailLines.length * 14 + 4;
-  if (spec.note && spec.note.trim()) {
-    doc.setTextColor(28, 25, 21);
-    const noteLines = doc.splitTextToSize(pdfText(spec.note.trim()), width);
-    doc.text(noteLines, margin, y);
-    y += noteLines.length * 14 + 8;
-  } else {
-    y += 8;
-  }
-  const shot = chartPng(spec);
-  const bottom = pageH - 36;
-  if (shot) {
-    const aspect = shot.width / shot.height;
-    let drawW = width;
-    let drawH = drawW / aspect;
-    if (y + drawH > bottom) {
-      drawH = Math.max(120, bottom - y);
-      drawW = drawH * aspect;
+  const top = 54;
+  const bottom = pageH - 34;
+  const gap = 16;
+  const room = bottom - top;
+  const pages = [];
+  let page = [];
+  let y = top;
+  blocks.forEach(function (block) {
+    let chartH = block.chartH;
+    let height = block.textH + chartH;
+    if (height > room) {
+      chartH = Math.max(72, room - block.textH);
+      height = block.textH + chartH;
     }
-    const x = margin + (width - drawW) / 2;
-    doc.addImage(shot.url, "PNG", x, y, drawW, drawH);
-  } else {
-    doc.setTextColor(80, 74, 66);
-    doc.text("This graph has no rows for the matches it was saved with.", margin, y + 16);
+    if (page.length && y + height > bottom) {
+      pages.push(page);
+      page = [];
+      y = top;
+    }
+    page.push({ block: block, chartH: chartH, y: y, height: height });
+    y += height + gap;
+  });
+  if (page.length) pages.push(page);
+  return { pages: pages, margin: margin, width: width, pageW: pageW, pageH: pageH };
+}
+
+function drawPdfBlock(doc, item, margin, width) {
+  const block = item.block;
+  let y = item.y;
+  doc.setTextColor(28, 25, 21);
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(13);
+  doc.text(block.titleLines, margin, y);
+  y += block.titleLines.length * doc.getLineHeight();
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(10);
+  doc.setTextColor(80, 74, 66);
+  doc.text(block.detailLines, margin, y);
+  y += block.detailLines.length * doc.getLineHeight() + 2;
+  if (block.noteLines.length) {
+    doc.setTextColor(28, 25, 21);
+    doc.text(block.noteLines, margin, y);
+    y += block.noteLines.length * doc.getLineHeight() + 2;
   }
-  doc.setFontSize(9);
-  doc.setTextColor(120, 112, 102);
-  doc.text(page + " of " + pages, pageW - margin, pageH - 20, { align: "right" });
+  y += 6;
+  if (!block.shot) {
+    doc.setTextColor(80, 74, 66);
+    doc.text("This graph has no rows for the matches it was saved with.", margin, y);
+    return;
+  }
+  const drawW = Math.min(width, item.chartH * block.aspect);
+  const drawH = drawW / block.aspect;
+  const x = margin + (width - drawW) / 2;
+  doc.addImage(block.shot.url, "PNG", x, y, drawW, drawH);
+}
+
+function paintPdf(doc, layout) {
+  const total = layout.pages.length;
+  layout.pages.forEach(function (items, index) {
+    if (index) doc.addPage("letter", "portrait");
+    doc.setFillColor(244, 240, 232);
+    doc.rect(0, 0, layout.pageW, layout.pageH, "F");
+    doc.setTextColor(184, 67, 31);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.text("DEFENDERS VARSITY VOLLEYBALL", layout.margin, 32);
+    items.forEach(function (item, itemIndex) {
+      if (itemIndex) {
+        doc.setDrawColor(227, 219, 207);
+        doc.setLineWidth(0.6);
+        doc.line(layout.margin, item.y - 8, layout.margin + layout.width, item.y - 8);
+      }
+      drawPdfBlock(doc, item, layout.margin, layout.width);
+    });
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(120, 112, 102);
+    doc.text((index + 1) + " of " + total, layout.pageW - layout.margin, layout.pageH - 18, { align: "right" });
+  });
 }
 
 function downloadPdf() {
@@ -1634,10 +1696,9 @@ function downloadPdf() {
   setTimeout(function () {
     try {
       const doc = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter" });
-      chosen.forEach(function (spec, index) {
-        if (index) doc.addPage("letter", "portrait");
-        paintPdfPage(doc, spec, index + 1, chosen.length);
-      });
+      const width = doc.internal.pageSize.getWidth() - 80;
+      const blocks = chosen.map(function (spec) { return pdfBlock(doc, spec, width); });
+      paintPdf(doc, packPdf(doc, blocks));
       doc.save("defenders-volleyball-graphs.pdf");
       pdfMessage = "";
     } catch (err) {
