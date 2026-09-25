@@ -384,6 +384,57 @@ function baseScales(stat, horizontal) {
   return horizontal ? { x: valueScale, y: category } : { x: category, y: valueScale };
 }
 
+function chartLayoutPadding() {
+  return { top: 4, right: 8, bottom: 4, left: 4 };
+}
+
+function shortenOpponent(name, max) {
+  const limit = max || 16;
+  if (name.length <= limit) return name;
+  return name.slice(0, limit - 1) + "\u2026";
+}
+
+function gameChartLabels(keys, compact) {
+  const tight = compact || keys.length > 7;
+  return keys.map(function (key) {
+    const parts = key.split("|");
+    if (tight) return shortDate(parts[0]);
+    return [shortDate(parts[0]), shortenOpponent(parts[1])];
+  });
+}
+
+function gameAxisTicks(keys, compact) {
+  const many = compact || keys.length > 7;
+  return {
+    maxRotation: many ? 45 : 0,
+    minRotation: many ? 45 : 0,
+    autoSkip: keys.length > 14,
+    maxTicksLimit: keys.length > 14 ? Math.ceil(keys.length / 2) : undefined,
+    font: { size: many ? 10 : 11 },
+  };
+}
+
+function gradeAxisLabels(field, bins) {
+  if (field === "receiveGrades") {
+    const map = { 0: "Ace", 1: "Out of system", 2: "Average", 3: "Perfect" };
+    return bins.map(function (bin) { return map[bin] || String(bin); });
+  }
+  if (field === "serveScores") {
+    const map = { 0: "Error", 1: "Perfect pass", 2: "In system", 3: "Out of system", 5: "Ace" };
+    return bins.map(function (bin) { return map[bin] || String(bin); });
+  }
+  return bins.map(String);
+}
+
+function minChartHeight(spec) {
+  if (spec.kind === "trend") return 240;
+  if (spec.kind === "grades") return 220;
+  if (spec.kind === "players") return Math.max(200, previewHeight(spec));
+  if (spec.kind === "matches" || spec.kind === "aces" || spec.kind === "acePct") return 220;
+  if (spec.kind === "rotations") return 240;
+  return 180;
+}
+
 function withAlpha(hex, alpha) {
   const n = String(hex).replace("#", "");
   if (n.length !== 6) return hex;
@@ -697,6 +748,7 @@ function playerChartConfig(records, stat, valueLabel) {
       indexAxis: "y",
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: chartLayoutPadding() },
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -840,11 +892,9 @@ function gradeCard(title, sub, players, field, bins, canvasId) {
   return '<section class="card"><div class="card-head"><div><h2>' + esc(title) + '</h2><p class="sub">' + esc(sub + " " + nameList(players) + ". " + matchSpan(selectedMatchKeys()) + ".") + '</p></div>' + saveButton("grades", field) + '</div><div class="chart-box" style="height:' + chartHeight(players.length) + 'px"><canvas id="' + canvasId + '"></canvas></div></section>';
 }
 
-function trendConfig(players, stat, keys, rows) {
-  const labels = keys.map(function (key) {
-    const parts = key.split("|");
-    return [shortDate(parts[0]), parts[1]];
-  });
+function trendConfig(players, stat, keys, rows, opts) {
+  const compact = opts && opts.compact;
+  const labels = gameChartLabels(keys, compact);
   const datasets = players.map(function (player, index) {
     return {
       label: player,
@@ -859,16 +909,17 @@ function trendConfig(players, stat, keys, rows) {
   });
   const scales = baseScales(stat, false);
   scales.y.title = { display: true, text: stat.label };
-  scales.x.title = { display: true, text: "Game" };
-  scales.x.ticks = { maxRotation: 0, autoSkip: false };
+  scales.x.title = { display: !compact, text: "Game" };
+  scales.x.ticks = gameAxisTicks(keys, compact);
   return {
     type: "line",
     data: { labels: labels, datasets: datasets },
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: chartLayoutPadding() },
       plugins: {
-        legend: { position: "bottom" },
+        legend: { position: "bottom", labels: { padding: 12, boxWidth: 12, font: { size: 11 } } },
         tooltip: {
           callbacks: {
             title: function (items) {
@@ -892,7 +943,8 @@ function drawTrend(players, stat) {
   makeChart(canvas, trendConfig(players, stat, selectedMatchKeys(), selectedPlayerRows()));
 }
 
-function gradeConfig(players, field, bins, rows) {
+function gradeConfig(players, field, bins, rows, opts) {
+  const compact = opts && opts.compact;
   const datasets = players.map(function (player, index) {
     const counts = bins.map(function () { return 0; });
     rows.forEach(function (row) {
@@ -912,15 +964,21 @@ function gradeConfig(players, field, bins, rows) {
   return {
     type: "bar",
     data: {
-      labels: bins.map(String),
+      labels: gradeAxisLabels(field, bins),
       datasets: datasets,
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { position: "bottom" } },
+      layout: { padding: chartLayoutPadding() },
+      plugins: { legend: { position: "bottom", labels: { padding: 12, boxWidth: 12, font: { size: 11 } } } },
+      datasets: { bar: { categoryPercentage: 0.72, barPercentage: 0.9 } },
       scales: {
-        x: { title: { display: true, text: "Score" }, grid: { display: false } },
+        x: {
+          title: { display: !compact, text: "Score" },
+          grid: { display: false },
+          ticks: { maxRotation: compact ? 45 : 0, minRotation: compact ? 45 : 0, font: { size: compact ? 10 : 11 } },
+        },
         y: { beginAtZero: true, ticks: { precision: 0 }, grid: { color: "#efe8dc" }, title: { display: true, text: "How many" } },
       },
     },
@@ -1015,6 +1073,7 @@ function matchChartConfig(rows) {
   const scales = baseScales(statById("hitting"), false);
   scales.y.title = { display: true, text: "Hitting %" };
   scales.x.title = { display: true, text: "Match" };
+  scales.x.ticks = gameAxisTicks(rows.map(function (row) { return row.date + "|" + row.opponent; }), rows.length > 6);
   return {
     type: "bar",
     data: {
@@ -1027,6 +1086,8 @@ function matchChartConfig(rows) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: chartLayoutPadding() },
+      plugins: { legend: { position: "bottom", labels: { padding: 12, boxWidth: 12 } } },
       scales: scales,
     },
   };
@@ -1167,7 +1228,8 @@ function renderServing() {
 }
 
 function aceChartConfig(rows) {
-  const labels = rows.map(function (row) { return shortDate(row.date) + " " + row.opponent; });
+  const tickKeys = rows.map(function (row) { return row.date + "|" + row.opponent; });
+  const labels = gameChartLabels(tickKeys, rows.length > 6);
   return {
     type: "bar",
     data: {
@@ -1181,7 +1243,7 @@ function aceChartConfig(rows) {
       responsive: true,
       maintainAspectRatio: false,
       scales: {
-        x: { title: { display: true, text: "Match" }, grid: { display: false } },
+        x: { title: { display: true, text: "Match" }, grid: { display: false }, ticks: gameAxisTicks(tickKeys, rows.length > 6) },
         y: { beginAtZero: true, ticks: { precision: 0 }, title: { display: true, text: "Aces" }, grid: { color: "#efe8dc" } },
       },
     },
@@ -1193,10 +1255,12 @@ function acePctChartConfig(rows) {
   const scales = baseScales(pctStat, false);
   scales.y.title = { display: true, text: "Ace %" };
   scales.x.title = { display: true, text: "Match" };
+  const tickKeys = rows.map(function (row) { return row.date + "|" + row.opponent; });
+  scales.x.ticks = gameAxisTicks(tickKeys, rows.length > 6);
   return {
     type: "bar",
     data: {
-      labels: rows.map(function (row) { return shortDate(row.date) + " " + row.opponent; }),
+      labels: gameChartLabels(tickKeys, rows.length > 6),
       datasets: [
         { label: "Us", data: rows.map(function (row) { return row.acePctUs; }), backgroundColor: "#1f4e79", borderRadius: 4 },
         { label: "Them", data: rows.map(function (row) { return row.acePctThem; }), backgroundColor: "#b8431f", borderRadius: 4 },
@@ -1322,10 +1386,18 @@ function playerChartRecords(spec) {
     if (query) {
       records = records.filter(function (row) { return row.player.toLowerCase().indexOf(query) !== -1; });
     }
+    const picked = spec.players || [];
+    if (picked.length) {
+      const order = new Map(picked.map(function (name, index) { return [name, index]; }));
+      records = records.filter(function (row) { return order.has(row.player); });
+      records.sort(function (a, b) { return order.get(a.player) - order.get(b.player); });
+    }
     const qualified = records.filter(function (row) {
       return passesSample(row, stat) && valueOf(row, stat) != null;
     });
-    return sortRecords(qualified.map(displayRecord));
+    const displayed = qualified.map(displayRecord);
+    if (picked.length) return displayed;
+    return sortRecords(displayed);
   });
 }
 
@@ -1408,7 +1480,7 @@ function buildSpec(kind, extra) {
   return spec;
 }
 
-function graphConfig(spec) {
+function graphConfig(spec, opts) {
   const stat = statById(spec.statId);
   const keys = (spec.matchKeys || []).slice().sort();
   if (spec.kind === "players") {
@@ -1418,11 +1490,11 @@ function graphConfig(spec) {
   }
   if (spec.kind === "trend") {
     if (!(spec.players || []).length || !keys.length) return null;
-    return trendConfig(spec.players, stat, keys, playerRowsFor(keys));
+    return trendConfig(spec.players, stat, keys, playerRowsFor(keys), opts);
   }
   if (spec.kind === "grades") {
     if (!(spec.players || []).length) return null;
-    return gradeConfig(spec.players, spec.field, gradeBins(spec.field), playerRowsFor(keys));
+    return gradeConfig(spec.players, spec.field, gradeBins(spec.field), playerRowsFor(keys), opts);
   }
   if (spec.kind === "matches") {
     const rows = matchRows(keys);
@@ -1532,7 +1604,7 @@ function pdfText(value) {
 }
 
 function chartPng(spec) {
-  const config = graphConfig(spec);
+  const config = graphConfig(spec, { compact: true });
   if (!config || !window.Chart) return null;
   const height = previewHeight(spec);
   const width = 1000;
@@ -1806,9 +1878,11 @@ function packReportSpecs(specs, contentWidth, contentHeight) {
     probe.remove();
     const ready = !!graphConfig(spec);
     let chartH = ready ? contentWidth * previewHeight(spec) / 1000 : 0;
+    if (ready) chartH = Math.max(chartH, minChartHeight(spec));
     let total = textH + chartH + (ready ? 8 : 0);
+    const floor = ready ? minChartHeight(spec) : 0;
     if (total > contentHeight) {
-      chartH = Math.max(ready ? 120 : 0, contentHeight - textH - 8);
+      chartH = Math.max(floor, contentHeight - textH - 8);
       total = textH + chartH + 8;
     }
     return { spec: spec, chartH: chartH, total: total };
@@ -1867,11 +1941,12 @@ function renderSharedReport(specs) {
   pages.forEach(function (page) {
     page.forEach(function (block) {
       const canvas = document.getElementById("report-" + block.spec.id);
-      const config = canvas && graphConfig(block.spec);
+      const config = canvas && graphConfig(block.spec, { compact: true });
       if (!config) return;
       config.options = config.options || {};
       config.options.animation = false;
-      makeChart(canvas, config);
+      const chart = makeChart(canvas, config);
+      if (chart) chart.resize();
     });
   });
 }

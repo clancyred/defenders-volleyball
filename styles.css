@@ -279,6 +279,12 @@ h1 {
 
 .chart-box { position: relative; }
 
+.chart-box canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .table-wrap { overflow-x: auto; }
 
 table {
@@ -404,6 +410,10 @@ body.report-mode .foot { display: none; }
   color: var(--muted);
   font-size: 12px;
   line-height: 1.35;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .sheet-note {
