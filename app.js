@@ -1633,9 +1633,9 @@ function downloadPdf() {
   }
   setTimeout(function () {
     try {
-      const doc = new window.jspdf.jsPDF({ orientation: "landscape", unit: "pt", format: "letter" });
+      const doc = new window.jspdf.jsPDF({ orientation: "portrait", unit: "pt", format: "letter" });
       chosen.forEach(function (spec, index) {
-        if (index) doc.addPage();
+        if (index) doc.addPage("letter", "portrait");
         paintPdfPage(doc, spec, index + 1, chosen.length);
       });
       doc.save("defenders-volleyball-graphs.pdf");
