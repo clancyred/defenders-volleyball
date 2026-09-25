@@ -343,6 +343,83 @@ tr:hover td { background: #faf6f0; }
 
 .foot p { margin: 0; max-width: 78ch; }
 
+body.report-mode { background: #e6dfd4; }
+body.report-mode .page { max-width: none; padding: 20px 16px 48px; }
+body.report-mode .top,
+body.report-mode .tabs,
+body.report-mode .filters,
+body.report-mode .foot { display: none; }
+
+.report-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  max-width: 8.5in;
+  margin: 0 auto 14px;
+}
+
+.report-bar a { color: var(--muted); font-size: 14px; }
+
+.sheets { display: flex; flex-direction: column; gap: 28px; }
+
+.sheet {
+  width: min(100%, 8.5in);
+  height: 11in;
+  margin: 0 auto;
+  background: #f4f0e8;
+  box-shadow: var(--shadow);
+  padding: 0.38in 0.5in 0.32in;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sheet-brand {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sheet-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sheet-graph h2 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.sheet-detail {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.sheet-note {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+
+.sheet-graph .chart-box { margin-top: 6px; }
+
+.sheet-page {
+  margin: 8px 0 0;
+  text-align: right;
+  color: var(--muted);
+  font-size: 11px;
+}
+
 @media (max-width: 800px) {
   h1 { font-size: 28px; }
   .top { flex-direction: column; align-items: flex-start; }

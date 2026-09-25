@@ -1223,6 +1223,7 @@ function drawServing(rows) {
 const GRAPH_KEY = "vball-graphs";
 let savedGraphs = [];
 let pdfMessage = "";
+let sharedReport = null;
 
 function playerRowsFor(keys) {
   const set = new Set(keys || []);
@@ -1480,10 +1481,11 @@ function loadGraphs() {
 function renderSaved() {
   const selected = savedGraphs.filter(function (graph) { return graph.include; }).length;
   let html = '<div class="saved-bar"><div><h2>Saved graphs</h2>';
-  html += '<p class="sub">Set up a chart on any other tab and click Save graph. Check the ones to include, then download a PDF. Each graph names the stat, who is on it, and which matches. Graphs share a page when they fit.</p></div>';
+  html += '<p class="sub">Set up a chart on any other tab and click Save graph. Check the ones to include, then download a PDF or copy a link to a page that shows those same graphs.</p></div>';
   html += '<div class="card-actions">';
   html += '<button type="button" class="text-btn" data-graphs="all">All</button>';
   html += '<button type="button" class="text-btn" data-graphs="none">None</button>';
+  html += '<button type="button" class="text-btn" id="share-report"' + (selected ? "" : " disabled") + ">Copy share link</button>";
   html += '<button type="button" class="text-btn primary" id="download-pdf"' + (selected ? "" : " disabled") + ">Download PDF" + (selected ? " (" + selected + ")" : "") + "</button>";
   html += "</div></div>";
   html += '<p class="hint" id="pdf-status"></p>';
@@ -1494,7 +1496,7 @@ function renderSaved() {
   savedGraphs.forEach(function (spec) {
     const ready = !!graphConfig(spec);
     html += '<section class="card graph-card">';
-    html += '<div class="graph-top"><label class="check"><input type="checkbox" data-graph-check="' + esc(spec.id) + '"' + (spec.include ? " checked" : "") + "> Include in PDF</label>";
+    html += '<div class="graph-top"><label class="check"><input type="checkbox" data-graph-check="' + esc(spec.id) + '"' + (spec.include ? " checked" : "") + "> Include</label>";
     html += '<button type="button" class="text-btn" data-graph-delete="' + esc(spec.id) + '">Remove</button></div>';
     html += '<label class="control"><span class="control-label">Title</span>';
     html += '<input class="search graph-title" data-graph-title="' + esc(spec.id) + '" value="' + esc(spec.title || "") + '"></label>';
@@ -1680,9 +1682,202 @@ function paintPdf(doc, layout) {
   });
 }
 
+function base64url(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  bytes.forEach(function (b) { binary += String.fromCharCode(b); });
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+}
+
+function fromBase64url(text) {
+  const pad = text.length % 4 === 0 ? "" : "====".slice(text.length % 4);
+  const binary = atob(text.replace(/-/g, "+").replace(/_/g, "/") + pad);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+
+function encodeReport(graphs) {
+  const payload = graphs.map(function (spec) {
+    const item = {
+      k: spec.kind,
+      s: spec.statId,
+      t: spec.title || "",
+      m: spec.matchKeys || [],
+    };
+    if (spec.note) item.n = spec.note;
+    if (spec.players && spec.players.length) item.p = spec.players;
+    if (spec.perMatch) item.pm = 1;
+    if (typeof spec.minSample === "number") item.min = spec.minSample;
+    if (spec.nameQuery) item.q = spec.nameQuery;
+    if (spec.sortKey) item.sk = spec.sortKey;
+    if (spec.sortDir) item.sd = spec.sortDir;
+    if (spec.field) item.f = spec.field;
+    return item;
+  });
+  return base64url(JSON.stringify(payload));
+}
+
+function decodeReport(text) {
+  const data = JSON.parse(fromBase64url(text));
+  if (!Array.isArray(data)) return [];
+  return data.map(function (item, index) {
+    const spec = {
+      id: "r" + index,
+      kind: item.k,
+      statId: item.s,
+      title: item.t || "",
+      note: item.n || "",
+      players: item.p || [],
+      matchKeys: item.m || [],
+      perMatch: !!item.pm,
+      minSample: typeof item.min === "number" ? item.min : 0,
+      nameQuery: item.q || "",
+      sortKey: item.sk || item.s,
+      sortDir: item.sd || "desc",
+      field: item.f || "",
+      include: true,
+    };
+    if (!spec.title) spec.title = defaultTitle(spec);
+    return spec;
+  }).filter(function (spec) {
+    return spec.kind && spec.statId && Array.isArray(spec.matchKeys);
+  });
+}
+
+function reportSpecsFromLocation() {
+  const hash = location.hash || "";
+  if (hash.indexOf("#r=") !== 0) return null;
+  try {
+    return decodeReport(hash.slice(3));
+  } catch (err) {
+    return [];
+  }
+}
+
+function shareUrl(graphs) {
+  return location.href.split("#")[0] + "#r=" + encodeReport(graphs);
+}
+
+function copyShareLink() {
+  const chosen = savedGraphs.filter(function (graph) { return graph.include; });
+  const status = document.getElementById("pdf-status");
+  if (!chosen.length) return;
+  const url = shareUrl(chosen);
+  const done = function (copied) {
+    if (!status) return;
+    status.textContent = copied ? "Link copied. Anyone with it sees these graphs." : url;
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+  } else {
+    done(false);
+  }
+}
+
+function sheetGraphHtml(spec, chartH) {
+  let html = '<section class="sheet-graph">';
+  html += "<h2>" + esc(spec.title || defaultTitle(spec)) + "</h2>";
+  html += '<p class="sheet-detail">' + esc(describeSpec(spec)) + "</p>";
+  if (spec.note && spec.note.trim()) html += '<p class="sheet-note">' + esc(spec.note.trim()) + "</p>";
+  if (graphConfig(spec)) {
+    html += '<div class="chart-box" style="height:' + Math.round(chartH) + 'px"><canvas id="report-' + esc(spec.id) + '"></canvas></div>';
+  } else {
+    html += '<p class="sheet-detail">This graph has no rows for the matches it was saved with.</p>';
+  }
+  html += "</section>";
+  return html;
+}
+
+function packReportSpecs(specs, contentWidth, contentHeight) {
+  const gap = 16;
+  const blocks = specs.map(function (spec) {
+    const probe = document.createElement("div");
+    probe.className = "sheet-graph";
+    probe.style.position = "absolute";
+    probe.style.left = "-10000px";
+    probe.style.top = "0";
+    probe.style.width = contentWidth + "px";
+    probe.innerHTML = "<h2>" + esc(spec.title || defaultTitle(spec)) + "</h2>" +
+      '<p class="sheet-detail">' + esc(describeSpec(spec)) + "</p>" +
+      (spec.note && spec.note.trim() ? '<p class="sheet-note">' + esc(spec.note.trim()) + "</p>" : "");
+    document.body.appendChild(probe);
+    const textH = probe.offsetHeight;
+    probe.remove();
+    const ready = !!graphConfig(spec);
+    let chartH = ready ? contentWidth * previewHeight(spec) / 1000 : 0;
+    let total = textH + chartH + (ready ? 8 : 0);
+    if (total > contentHeight) {
+      chartH = Math.max(ready ? 120 : 0, contentHeight - textH - 8);
+      total = textH + chartH + 8;
+    }
+    return { spec: spec, chartH: chartH, total: total };
+  });
+  const pages = [];
+  let page = [];
+  let used = 0;
+  blocks.forEach(function (block) {
+    const extra = page.length ? gap : 0;
+    if (page.length && used + extra + block.total > contentHeight) {
+      pages.push(page);
+      page = [];
+      used = 0;
+    }
+    page.push(block);
+    used += (page.length > 1 ? gap : 0) + block.total;
+  });
+  if (page.length) pages.push(page);
+  return pages;
+}
+
+function renderSharedReport(specs) {
+  sharedReport = specs;
+  document.body.classList.add("report-mode");
+  document.title = "Defenders Varsity Volleyball";
+  const view = document.getElementById("view");
+  if (!specs.length) {
+    view.innerHTML = '<p class="empty">This link does not contain any graphs.</p>';
+    return;
+  }
+  const gauge = document.createElement("article");
+  gauge.className = "sheet";
+  gauge.innerHTML = '<p class="sheet-brand">Defenders Varsity Volleyball</p><div class="sheet-body"></div><p class="sheet-page">1</p>';
+  view.appendChild(gauge);
+  const body = gauge.querySelector(".sheet-body");
+  const contentWidth = body.clientWidth || 720;
+  const contentHeight = body.clientHeight || 860;
+  gauge.remove();
+  const pages = packReportSpecs(specs, contentWidth, contentHeight);
+  let html = '<div class="report-bar"><a href="./">Stats</a>';
+  html += '<button type="button" class="text-btn" id="download-pdf">Download PDF</button></div>';
+  html += '<div class="sheets">';
+  pages.forEach(function (page, pageIndex) {
+    html += '<article class="sheet">';
+    html += '<p class="sheet-brand">Defenders Varsity Volleyball</p>';
+    html += '<div class="sheet-body">';
+    page.forEach(function (block) {
+      html += sheetGraphHtml(block.spec, block.chartH);
+    });
+    html += "</div>";
+    html += '<p class="sheet-page">' + (pageIndex + 1) + " of " + pages.length + "</p>";
+    html += "</article>";
+  });
+  html += "</div>";
+  view.innerHTML = html;
+  pages.forEach(function (page) {
+    page.forEach(function (block) {
+      const canvas = document.getElementById("report-" + block.spec.id);
+      const config = canvas && graphConfig(block.spec);
+      if (!config) return;
+      config.options = config.options || {};
+      config.options.animation = false;
+      makeChart(canvas, config);
+    });
+  });
+}
 function downloadPdf() {
   const button = document.getElementById("download-pdf");
-  const chosen = savedGraphs.filter(function (graph) { return graph.include; });
+  const chosen = sharedReport || savedGraphs.filter(function (graph) { return graph.include; });
   const status = document.getElementById("pdf-status");
   if (!chosen.length) return;
   if (!window.jspdf || !window.jspdf.jsPDF) {
@@ -1703,6 +1898,13 @@ function downloadPdf() {
       pdfMessage = "";
     } catch (err) {
       pdfMessage = "Could not build the PDF.";
+    }
+    if (sharedReport) {
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Download PDF";
+      }
+      return;
     }
     render();
     const status = document.getElementById("pdf-status");
@@ -1869,6 +2071,10 @@ function onClick(event) {
     downloadPdf();
     return;
   }
+  if (event.target.id === "share-report") {
+    copyShareLink();
+    return;
+  }
   if (event.target.id && event.target.id.indexOf("download-") === 0 && csvAction) csvAction();
 }
 
@@ -1881,10 +2087,12 @@ function onChange(event) {
     }
     const button = document.getElementById("download-pdf");
     const count = savedGraphs.filter(function (item) { return item.include; }).length;
+    const share = document.getElementById("share-report");
     if (button) {
       button.disabled = !count;
       button.textContent = count ? "Download PDF (" + count + ")" : "Download PDF";
     }
+    if (share) share.disabled = !count;
     return;
   }
   if (event.target.id === "stat-select") {
@@ -1934,6 +2142,12 @@ function init() {
     return;
   }
   chartDefaults();
+  const shared = reportSpecsFromLocation();
+  if (shared) {
+    renderSharedReport(shared);
+    document.body.addEventListener("click", onClick);
+    return;
+  }
   loadState();
   loadGraphs();
   document.body.addEventListener("click", onClick);
