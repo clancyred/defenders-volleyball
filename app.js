@@ -7,6 +7,9 @@ const SERIES = [
   "#be185d", "#047857", "#b45309", "#334155", "#0369a1", "#4d7c0f",
 ];
 
+/** Bump when you deploy user-visible site changes (shown in the page footer). */
+const SITE_VERSION = "2026.09.26.1";
+
 const STATS = [
   {
     id: "hitting",
@@ -2008,6 +2011,7 @@ function renderSharedReport(specs) {
     html += "</article>";
   });
   html += "</div>";
+  html += '<p class="site-version report-version">Site version ' + esc(SITE_VERSION) + "</p>";
   view.innerHTML = html;
   pages.forEach(function (page) {
     page.forEach(function (block) {
@@ -2285,12 +2289,27 @@ function onInput(event) {
   }
 }
 
+function renderSiteVersion() {
+  const foot = document.querySelector(".foot");
+  if (!foot) return;
+  let el = document.getElementById("site-version");
+  if (!el) {
+    el = document.createElement("p");
+    el.id = "site-version";
+    el.className = "site-version";
+    foot.appendChild(el);
+  }
+  el.textContent = "Site version " + SITE_VERSION + " · Ctrl+F5 if this looks old after an update";
+}
+
 function init() {
   if (!DATA) {
     document.getElementById("view").innerHTML = '<p class="empty">Stats data did not load.</p>';
+    renderSiteVersion();
     return;
   }
   chartDefaults();
+  renderSiteVersion();
   const shared = reportSpecsFromLocation();
   if (shared) {
     renderSharedReport(shared);
