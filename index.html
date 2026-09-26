@@ -44,5 +44,31 @@
   </div>
   <script src="data.js"></script>
   <script src="app.js"></script>
+  <script>
+    window.SITE_ANALYTICS = { goatCounter: "" };
+    (function () {
+      var endpoint = String((window.SITE_ANALYTICS && window.SITE_ANALYTICS.goatCounter) || "").trim();
+      if (!endpoint) return;
+      function trackPath() {
+        if (!window.goatcounter || !window.goatcounter.count) return;
+        var path = location.pathname || "/";
+        if (location.hash) {
+          var hash = location.hash;
+          if (hash.indexOf("#r=") === 0 && hash.length > 96) hash = "#r=shared-report";
+          path += hash;
+        }
+        window.goatcounter.count({ path: path, title: document.title, event: true });
+      }
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://gc.zgo.at/count.js";
+      s.setAttribute("data-goatcounter", endpoint);
+      s.onload = function () {
+        trackPath();
+        window.addEventListener("hashchange", trackPath);
+      };
+      document.head.appendChild(s);
+    })();
+  </script>
 </body>
 </html>
