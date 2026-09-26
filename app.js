@@ -470,6 +470,12 @@ function applyLegendFocus(chart, index) {
   chart.update("none");
 }
 
+function setChartFocus(chart, index) {
+  if (chart.$focus === index) return;
+  chart.$focus = index;
+  applyLegendFocus(chart, index);
+}
+
 function makeChart(canvas, config, track) {
   if (!window.Chart || !canvas) return;
   const datasets = (config.data && config.data.datasets) || [];
@@ -501,7 +507,23 @@ function makeChart(canvas, config, track) {
       return items;
     };
     legend.labels = labels;
+    const prevLegendHover = legend.onHover;
+    legend.onHover = function (event, legendItem, legend) {
+      if (prevLegendHover) prevLegendHover.call(this, event, legendItem, legend);
+      setChartFocus(legend.chart, legendItem.datasetIndex);
+      if (event.native && event.native.target) event.native.target.style.cursor = "pointer";
+    };
+    const prevLegendLeave = legend.onLeave;
+    legend.onLeave = function (event, legendItem, legend) {
+      if (prevLegendLeave) prevLegendLeave.call(this, event, legendItem, legend);
+      if (event.native && event.native.target) event.native.target.style.cursor = "default";
+    };
     config.options.plugins.legend = legend;
+    const prevOnHover = config.options.onHover;
+    config.options.onHover = function (event, elements, chart) {
+      if (prevOnHover) prevOnHover.call(this, event, elements, chart);
+      if (elements.length) setChartFocus(chart, elements[0].datasetIndex);
+    };
     config.plugins = config.plugins || [];
     config.plugins.push({
       id: "legendFocus",
@@ -523,21 +545,6 @@ function makeChart(canvas, config, track) {
   const chart = new Chart(canvas, config);
   if (track !== false) charts.push(chart);
   if (!canFocus) return chart;
-  canvas.addEventListener("mousemove", function (event) {
-    const pos = Chart.helpers.getRelativePosition(event, chart);
-    const items = (chart.legend && chart.legend.legendItems) || [];
-    const boxes = (chart.legend && chart.legend.legendHitBoxes) || [];
-    let datasetIndex = null;
-    boxes.forEach(function (box, i) {
-      if (pos.x >= box.left && pos.x <= box.left + box.width && pos.y >= box.top && pos.y <= box.top + box.height) {
-        datasetIndex = items[i] ? items[i].datasetIndex : null;
-      }
-    });
-    canvas.style.cursor = datasetIndex == null ? "default" : "pointer";
-    if (chart.$focus === datasetIndex) return;
-    chart.$focus = datasetIndex;
-    applyLegendFocus(chart, datasetIndex);
-  });
   canvas.addEventListener("mouseleave", function () {
     canvas.style.cursor = "default";
     if (chart.$focus == null) return;
