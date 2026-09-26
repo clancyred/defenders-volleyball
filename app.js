@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.26.1";
+const SITE_VERSION = "2026.09.26.2";
 
 const STATS = [
   {
@@ -360,7 +360,15 @@ function sortRecords(records) {
 }
 
 function destroyCharts() {
-  charts.forEach(function (chart) { chart.destroy(); });
+  charts.forEach(function (chart) {
+    const canvas = chart.canvas;
+    if (canvas && canvas._vballFocusLeave) {
+      canvas.removeEventListener("mouseleave", canvas._vballFocusLeave);
+      delete canvas._vballFocusLeave;
+    }
+    chart.$focus = null;
+    chart.destroy();
+  });
   charts = [];
 }
 
@@ -453,13 +461,42 @@ function seriesColor(dataset) {
   return null;
 }
 
+function normalizeFocusIndex(index, chart) {
+  if (typeof index !== "number" || !Number.isFinite(index)) return null;
+  if (index < 0 || index >= chart.data.datasets.length) return null;
+  return index;
+}
+
+function resetDatasetColors(chart) {
+  const isLine = chart.config.type === "line";
+  chart.data.datasets.forEach(function (dataset) {
+    const color = dataset._baseColor;
+    if (!color) return;
+    if (isLine) {
+      dataset.borderWidth = 2.5;
+      dataset.pointRadius = dataset._basePointRadius == null ? 3 : dataset._basePointRadius;
+      dataset.borderColor = color;
+      dataset.pointBackgroundColor = color;
+      dataset.pointBorderColor = color;
+    } else {
+      dataset.backgroundColor = color;
+    }
+  });
+}
+
 function applyLegendFocus(chart, index) {
+  const focus = normalizeFocusIndex(index, chart);
+  resetDatasetColors(chart);
+  if (focus == null) {
+    chart.update("none");
+    return;
+  }
   const isLine = chart.config.type === "line";
   chart.data.datasets.forEach(function (dataset, i) {
     const color = dataset._baseColor;
     if (!color) return;
-    const faded = index != null && i !== index;
-    const hovered = index != null && i === index;
+    const faded = i !== focus;
+    const hovered = i === focus;
     if (isLine) {
       dataset.borderWidth = hovered ? 6 : (faded ? 1.25 : 2.5);
       dataset.pointRadius = hovered ? 6 : (faded ? 0 : dataset._basePointRadius);
@@ -473,10 +510,17 @@ function applyLegendFocus(chart, index) {
   chart.update("none");
 }
 
+function clearChartFocus(chart) {
+  if (!chart) return;
+  chart.$focus = null;
+  applyLegendFocus(chart, null);
+}
+
 function setChartFocus(chart, index) {
-  if (chart.$focus === index) return;
-  chart.$focus = index;
-  applyLegendFocus(chart, index);
+  const focus = normalizeFocusIndex(index, chart);
+  if (chart.$focus === focus) return;
+  chart.$focus = focus;
+  applyLegendFocus(chart, focus);
 }
 
 function makeChart(canvas, config, track) {
@@ -521,39 +565,49 @@ function makeChart(canvas, config, track) {
       if (prevLegendLeave) prevLegendLeave.call(this, event, legendItem, legend);
       if (event.native && event.native.target) event.native.target.style.cursor = "default";
     };
+    legend.onClick = function (event, legendItem, legend) {
+      setChartFocus(legend.chart, legendItem.datasetIndex);
+    };
     config.options.plugins.legend = legend;
     const prevOnHover = config.options.onHover;
     config.options.onHover = function (event, elements, chart) {
       if (prevOnHover) prevOnHover.call(this, event, elements, chart);
       if (elements.length) setChartFocus(chart, elements[0].datasetIndex);
     };
-    config.plugins = config.plugins || [];
-    config.plugins.push({
-      id: "legendFocus",
-      afterDatasetsDraw: function (chart) {
-        if (chart.$focus == null) return;
-        const meta = chart.getDatasetMeta(chart.$focus);
-        if (!meta || meta.hidden || !meta.controller) return;
-        const area = chart.chartArea;
-        const ctx = chart.ctx;
-        ctx.save();
-        ctx.beginPath();
-        ctx.rect(area.left, area.top, area.right - area.left, area.bottom - area.top);
-        ctx.clip();
-        meta.controller.draw();
-        ctx.restore();
-      },
-    });
+    if (config.type === "line") {
+      config.plugins = config.plugins || [];
+      config.plugins.push({
+        id: "legendFocus",
+        afterDatasetsDraw: function (chart) {
+          const focus = normalizeFocusIndex(chart.$focus, chart);
+          if (focus == null) return;
+          const meta = chart.getDatasetMeta(focus);
+          if (!meta || meta.hidden || !meta.controller) return;
+          const area = chart.chartArea;
+          const ctx = chart.ctx;
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(area.left, area.top, area.right - area.left, area.bottom - area.top);
+          ctx.clip();
+          meta.controller.draw();
+          ctx.restore();
+        },
+      });
+    }
   }
   const chart = new Chart(canvas, config);
+  chart.$focus = null;
+  if (canFocus) resetDatasetColors(chart);
   if (track !== false) charts.push(chart);
   if (!canFocus) return chart;
-  canvas.addEventListener("mouseleave", function () {
+  if (canvas._vballFocusLeave) {
+    canvas.removeEventListener("mouseleave", canvas._vballFocusLeave);
+  }
+  canvas._vballFocusLeave = function () {
     canvas.style.cursor = "default";
-    if (chart.$focus == null) return;
-    chart.$focus = null;
-    applyLegendFocus(chart, null);
-  });
+    clearChartFocus(chart);
+  };
+  canvas.addEventListener("mouseleave", canvas._vballFocusLeave);
   return chart;
 }
 
