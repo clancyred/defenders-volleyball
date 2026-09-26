@@ -1,0 +1,17 @@
+---
+description: Commit and push every change so GitHub Pages updates without being asked
+alwaysApply: true
+---
+
+# Publish changes to the live site
+
+This repo is the Defenders volleyball site. GitHub Pages deploys from `main`. A local edit is not live until it is on `origin/main`.
+
+After you finish a change the user asked for, commit it and push to `origin/main` in the same turn. Do not wait to be asked, and do not stop after a local edit.
+
+- Commit only the files for that change. Leave secrets and credentials untracked.
+- Push with a normal `git push` to `main`. Do not force-push.
+- `git:https://github.com` is already stored, so set `GCM_INTERACTIVE=Never` and `GIT_TERMINAL_PROMPT=0` and push without a login prompt.
+- Tell the user the push finished and that Pages will update from it. A hard refresh shows the new `app.js` if the browser cached the old one.
+
+Skip the push only when the user says to keep the change local, or when there is nothing to commit.
