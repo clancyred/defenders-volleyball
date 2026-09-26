@@ -578,6 +578,7 @@ function renderMatchChips() {
   const keys = allMatchKeys();
   const allOn = keys.every(function (key) { return state.matchKeys.has(key); });
   let html = '<button type="button" class="chip" data-match="all" aria-pressed="' + allOn + '">All</button>';
+  html += '<button type="button" class="chip" data-match="none">None</button>';
   keys.forEach(function (key) {
     const parts = key.split("|");
     const on = state.matchKeys.has(key);
@@ -889,7 +890,16 @@ function gradeCard(title, sub, players, field, bins, canvasId) {
     return players.indexOf(row.player) !== -1 && row[field] && row[field].length;
   });
   if (!any) return "";
-  return '<section class="card"><div class="card-head"><div><h2>' + esc(title) + '</h2><p class="sub">' + esc(sub + " " + nameList(players) + ". " + matchSpan(selectedMatchKeys()) + ".") + '</p></div>' + saveButton("grades", field) + '</div><div class="chart-box" style="height:' + chartHeight(players.length) + 'px"><canvas id="' + canvasId + '"></canvas></div></section>';
+  const height = chartHeight(players.length);
+  const shareTitle = field === "receiveGrades" ? "Share of serve receives" : "Share of serves";
+  const shareSub = field === "receiveGrades"
+    ? "Percent of that player's passes in each grade. One player's bars add up to 100%."
+    : "Percent of that player's serves in each score. One player's bars add up to 100%.";
+  let html = '<section class="card"><div class="card-head"><div><h2>' + esc(title) + '</h2><p class="sub">' + esc(sub + " " + nameList(players) + ". " + matchSpan(selectedMatchKeys()) + ".") + '</p></div>' + saveButton("grades", field) + '</div>';
+  html += '<div class="chart-box" style="height:' + height + 'px"><canvas id="' + canvasId + '"></canvas></div>';
+  html += '<div class="card-head" style="margin-top:18px"><div><h2>' + esc(shareTitle) + '</h2><p class="sub">' + esc(shareSub) + '</p></div>' + saveButton("grades", field, true) + '</div>';
+  html += '<div class="chart-box" style="height:' + height + 'px"><canvas id="' + canvasId + '-share"></canvas></div></section>';
+  return html;
 }
 
 function trendConfig(players, stat, keys, rows, opts) {
@@ -943,9 +953,8 @@ function drawTrend(players, stat) {
   makeChart(canvas, trendConfig(players, stat, selectedMatchKeys(), selectedPlayerRows()));
 }
 
-function gradeConfig(players, field, bins, rows, opts) {
-  const compact = opts && opts.compact;
-  const datasets = players.map(function (player, index) {
+function gradeCounts(players, field, bins, rows) {
+  return players.map(function (player) {
     const counts = bins.map(function () { return 0; });
     rows.forEach(function (row) {
       if (row.player !== player) return;
@@ -954,13 +963,37 @@ function gradeConfig(players, field, bins, rows, opts) {
         if (at >= 0) counts[at] += 1;
       });
     });
+    return counts;
+  });
+}
+
+function gradePercents(counts) {
+  const total = counts.reduce(function (sum, n) { return sum + n; }, 0);
+  if (!total) return counts.map(function () { return null; });
+  return counts.map(function (n) { return Math.round((n / total) * 1000) / 10; });
+}
+
+function formatGradePercent(value) {
+  if (value == null || isNaN(value)) return "—";
+  const rounded = Math.round(value * 10) / 10;
+  return (rounded % 1 === 0 ? String(rounded.toFixed(0)) : String(rounded)) + "%";
+}
+
+function gradeConfig(players, field, bins, rows, opts) {
+  const compact = opts && opts.compact;
+  const asPercent = opts && opts.percent;
+  const datasets = gradeCounts(players, field, bins, rows).map(function (counts, index) {
     return {
-      label: player,
-      data: counts,
+      label: players[index],
+      data: asPercent ? gradePercents(counts) : counts,
+      counts: counts,
       backgroundColor: SERIES[index % SERIES.length],
       borderRadius: 3,
     };
   });
+  const yTitle = asPercent
+    ? (field === "receiveGrades" ? "Percent of passes" : "Percent of serves")
+    : "How many";
   return {
     type: "bar",
     data: {
@@ -971,7 +1004,21 @@ function gradeConfig(players, field, bins, rows, opts) {
       responsive: true,
       maintainAspectRatio: false,
       layout: { padding: chartLayoutPadding() },
-      plugins: { legend: { position: "bottom", labels: { padding: 12, boxWidth: 12, font: { size: 11 } } } },
+      plugins: {
+        legend: { position: "bottom", labels: { padding: 12, boxWidth: 12, font: { size: 11 } } },
+        tooltip: {
+          callbacks: {
+            label: function (item) {
+              const counts = item.dataset.counts || [];
+              const count = counts[item.dataIndex];
+              if (!asPercent) return item.dataset.label + ": " + item.parsed.y;
+              const share = formatGradePercent(item.parsed.y);
+              const detail = count == null ? share : share + " (" + count + ")";
+              return item.dataset.label + ": " + detail;
+            },
+          },
+        },
+      },
       datasets: { bar: { categoryPercentage: 0.72, barPercentage: 0.9 } },
       scales: {
         x: {
@@ -979,16 +1026,26 @@ function gradeConfig(players, field, bins, rows, opts) {
           grid: { display: false },
           ticks: { maxRotation: compact ? 45 : 0, minRotation: compact ? 45 : 0, font: { size: compact ? 10 : 11 } },
         },
-        y: { beginAtZero: true, ticks: { precision: 0 }, grid: { color: "#efe8dc" }, title: { display: true, text: "How many" } },
+        y: asPercent
+          ? {
+            beginAtZero: true,
+            max: 100,
+            ticks: { callback: function (value) { return value + "%"; } },
+            grid: { color: "#efe8dc" },
+            title: { display: true, text: yTitle },
+          }
+          : { beginAtZero: true, ticks: { precision: 0 }, grid: { color: "#efe8dc" }, title: { display: true, text: yTitle } },
       },
     },
   };
 }
 
 function drawGrades(players, field, bins, canvasId) {
+  const rows = selectedPlayerRows();
   const canvas = document.getElementById(canvasId);
-  if (!canvas) return;
-  makeChart(canvas, gradeConfig(players, field, bins, selectedPlayerRows()));
+  if (canvas) makeChart(canvas, gradeConfig(players, field, bins, rows));
+  const share = document.getElementById(canvasId + "-share");
+  if (share) makeChart(share, gradeConfig(players, field, bins, rows, { percent: true }));
 }
 
 function matchRows(keys) {
@@ -1315,8 +1372,9 @@ function rotationTotals(keys) {
   });
 }
 
-function saveButton(kind, field) {
-  const extra = field ? ' data-field="' + field + '"' : "";
+function saveButton(kind, field, percent) {
+  let extra = field ? ' data-field="' + field + '"' : "";
+  if (percent) extra += ' data-percent="1"';
   return '<button type="button" class="text-btn" data-save="' + kind + '"' + extra + ">Save graph</button>";
 }
 
@@ -1405,7 +1463,10 @@ function defaultTitle(spec) {
   const stat = statById(spec.statId);
   if (spec.kind === "players") return stat.label + (spec.perMatch ? " per match" : "") + " by player";
   if (spec.kind === "trend") return stat.label + " by game";
-  if (spec.kind === "grades") return spec.field === "receiveGrades" ? "Serve receive grades" : "Serve scores";
+  if (spec.kind === "grades") {
+    const base = spec.field === "receiveGrades" ? "Serve receive grades" : "Serve scores";
+    return spec.percent ? base + " (%)" : base;
+  }
   if (spec.kind === "matches") return "Team hitting by match";
   if (spec.kind === "rotations") return "Points by rotation";
   if (spec.kind === "aces") return "Aces by match";
@@ -1428,7 +1489,10 @@ function describeSpec(spec) {
     const meaning = spec.field === "receiveGrades"
       ? "Serve receive grades. 3 is a perfect pass to the setter, 2 is average, 1 is out of system, and 0 is an ace against."
       : "Serve scores. 5 is an ace, 3 is out of system, 2 is in system, 1 is a perfect pass, and 0 is an error.";
-    return meaning + " Bars count how often each score shows up. Players: " + nameList(spec.players || []) + ". " + span + ".";
+    const measure = spec.percent
+      ? " Bars show the percent of that player's attempts in each bucket."
+      : " Bars count how often each score shows up.";
+    return meaning + measure + " Players: " + nameList(spec.players || []) + ". " + span + ".";
   }
   if (spec.kind === "matches") {
     return "Team hitting percentage by match. Navy bars are the figure written on the stat sheet. Red bars add up every player line: (kills - errors) / attack attempts. " + span + ".";
@@ -1494,7 +1558,7 @@ function graphConfig(spec, opts) {
   }
   if (spec.kind === "grades") {
     if (!(spec.players || []).length) return null;
-    return gradeConfig(spec.players, spec.field, gradeBins(spec.field), playerRowsFor(keys), opts);
+    return gradeConfig(spec.players, spec.field, gradeBins(spec.field), playerRowsFor(keys), Object.assign({}, opts, { percent: !!spec.percent }));
   }
   if (spec.kind === "matches") {
     const rows = matchRows(keys);
@@ -2071,6 +2135,8 @@ function onClick(event) {
   if (match) {
     if (match.dataset.match === "all") {
       allMatchKeys().forEach(function (key) { state.matchKeys.add(key); });
+    } else if (match.dataset.match === "none") {
+      state.matchKeys.clear();
     } else if (state.matchKeys.has(match.dataset.match)) {
       state.matchKeys.delete(match.dataset.match);
     } else {
@@ -2119,6 +2185,7 @@ function onClick(event) {
   if (save) {
     const extra = {};
     if (save.dataset.field) extra.field = save.dataset.field;
+    if (save.dataset.percent) extra.percent = true;
     savedGraphs.unshift(buildSpec(save.dataset.save, extra));
     persistGraphs();
     save.disabled = true;
