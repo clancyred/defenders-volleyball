@@ -64,12 +64,18 @@ SKIP_NAMES = {
 
 def parse_filename(name):
     base = os.path.basename(name).replace(".pdf", "")
-    rest = base.split("Varsity - ", 1)[1]
-    match = re.search(r"(\d{1,2})_(\d{1,2})$", rest)
+    rest = None
+    for sep in ("Varsity - ", "Varsity_-_", "Varsity_"):
+        if sep in base:
+            rest = base.split(sep, 1)[1]
+            break
+    if not rest:
+        raise ValueError(name)
+    match = re.search(r"(\d{1,2})_(\d{1,2})(?:_[\w]+)?$", rest)
     if not match:
         raise ValueError(name)
     month, day = int(match.group(1)), int(match.group(2))
-    opponent = rest[: match.start()].strip(" -")
+    opponent = rest[: match.start()].strip(" -_")
     date = "2026-{:02d}-{:02d}".format(month, day)
     return date, opponent
 
@@ -281,8 +287,12 @@ def checked_sequence(seq, attempts, rating, lo, hi):
 
 def parse_pdf(path):
     date, opponent = parse_filename(path)
-    page = fitz.open(path)[0]
-    words = page.get_text("words")
+    doc = fitz.open(path)
+    try:
+        page = doc[0]
+        words = page.get_text("words")
+    finally:
+        doc.close()
 
     player_header_y = y_of(words, "Player", 80)
     rotation_y = y_of(words, "Rotation", 80)

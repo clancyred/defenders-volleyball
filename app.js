@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.26.3";
+const SITE_VERSION = "2026.09.27.1";
 
 const STATS = [
   {
