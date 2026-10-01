@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.30.5";
+const SITE_VERSION = "2026.10.01.1";
 
 const STATS = [
   {
@@ -2364,7 +2364,15 @@ function renderSiteVersion() {
     el.className = "site-version";
     foot.appendChild(el);
   }
-  el.textContent = "Site version " + SITE_VERSION + " · Ctrl+F5 if this looks old after an update";
+  const parts = ["Site version " + SITE_VERSION];
+  const updated = DATA && DATA.updated ? new Date(DATA.updated) : null;
+  if (updated && !isNaN(updated)) {
+    parts.push("Stats updated " + updated.toLocaleString("en-US", {
+      month: "short", day: "numeric", hour: "numeric", minute: "2-digit",
+    }));
+  }
+  parts.push("Ctrl+F5 if this looks old after an update");
+  el.textContent = parts.join(" · ");
 }
 
 function init() {

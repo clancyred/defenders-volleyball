@@ -1,6 +1,6 @@
 """Turn volleyball_stats.xlsx into data.js for the stats explorer."""
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -30,6 +30,21 @@ def sheet_rows(ws):
             continue
         rows.append({header: iso(value) for header, value in zip(headers, row)})
     return rows
+
+
+# Keep the previous stamp when the stats are unchanged so rebuilding stays byte-identical
+# and the sheet sync workflow only commits and redeploys on real data changes.
+def updated_stamp(payload):
+    if OUT.exists():
+        text = OUT.read_text(encoding="utf-8")
+        try:
+            previous = json.loads(text[text.index("{"):text.rindex("}") + 1])
+        except ValueError:
+            previous = {}
+        stamp = previous.pop("updated", None)
+        if stamp and previous == payload:
+            return stamp
+    return datetime.now(timezone.utc).isoformat(timespec="minutes")
 
 
 def main():
@@ -121,6 +136,7 @@ def main():
         "serving": serving,
         "matches": matches,
     }
+    payload["updated"] = updated_stamp(payload)
     OUT.write_text(
         "window.DATA = " + json.dumps(payload, indent=2) + ";\n",
         encoding="utf-8",

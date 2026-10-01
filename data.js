@@ -12435,5 +12435,6 @@ window.DATA = {
       "teamHitting": 0.202,
       "note": ""
     }
-  ]
+  ],
+  "updated": "2026-10-01T16:31+00:00"
 };
