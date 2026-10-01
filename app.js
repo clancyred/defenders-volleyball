@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.30.4";
+const SITE_VERSION = "2026.09.30.5";
 
 const STATS = [
   {
@@ -462,23 +462,31 @@ function normalizeFocusIndex(index, chart) {
   return index;
 }
 
-function resetDatasetColors(chart) {
-  const isLine = chart.config.type === "line";
-  chart.data.datasets.forEach(function (dataset) {
-    const color = dataset._baseColor;
-    if (!color) return;
-    if (isLine) {
-      dataset.borderWidth = 2.5;
-      dataset.pointRadius = dataset._basePointRadius == null ? 3 : dataset._basePointRadius;
-      dataset.borderColor = color;
-      dataset.pointBackgroundColor = color;
-      dataset.pointBorderColor = color;
-    } else {
-      dataset.backgroundColor = color;
-      dataset.borderWidth = 0;
-      dataset.borderColor = "transparent";
-    }
-  });
+// Focus styling must be scriptable. Chart.js shares one resolved options object per
+// dataset and update("none") never refreshes it, so plain values set on the dataset
+// after creation never reach the drawn bars or points.
+function byFocus(normal, hovered, faded) {
+  return function (ctx) {
+    const focus = normalizeFocusIndex(ctx.chart.$focus, ctx.chart);
+    if (focus == null) return normal;
+    return focus === ctx.datasetIndex ? hovered : faded;
+  };
+}
+
+function applyFocusStyles(dataset, color, isLine) {
+  if (isLine) {
+    const radius = dataset.pointRadius == null ? 3 : dataset.pointRadius;
+    const stroke = byFocus(color, color, withAlpha(color, 0.16));
+    dataset.borderColor = stroke;
+    dataset.pointBackgroundColor = stroke;
+    dataset.pointBorderColor = stroke;
+    dataset.borderWidth = byFocus(2.5, 6, 1.25);
+    dataset.pointRadius = byFocus(radius, 6, 0);
+  } else {
+    dataset.backgroundColor = byFocus(color, color, withAlpha(color, 0.08));
+    dataset.borderWidth = byFocus(0, 3, 0);
+    dataset.borderColor = byFocus("transparent", "#1c1915", "transparent");
+  }
 }
 
 function legendDatasetAt(chart, x, y) {
@@ -500,45 +508,16 @@ function legendDatasetAt(chart, x, y) {
   return null;
 }
 
-function applyLegendFocus(chart, index) {
+function setChartFocus(chart, index) {
+  if (!chart) return;
   const focus = normalizeFocusIndex(index, chart);
-  resetDatasetColors(chart);
-  if (focus == null) {
-    chart.update("none");
-    return;
-  }
-  const isLine = chart.config.type === "line";
-  chart.data.datasets.forEach(function (dataset, i) {
-    const color = dataset._baseColor;
-    if (!color) return;
-    const faded = i !== focus;
-    const hovered = i === focus;
-    if (isLine) {
-      dataset.borderWidth = hovered ? 6 : (faded ? 1.25 : 2.5);
-      dataset.pointRadius = hovered ? 6 : (faded ? 0 : dataset._basePointRadius);
-      dataset.borderColor = faded ? withAlpha(color, 0.16) : color;
-      dataset.pointBackgroundColor = dataset.borderColor;
-      dataset.pointBorderColor = dataset.borderColor;
-    } else {
-      dataset.backgroundColor = faded ? withAlpha(color, 0.08) : color;
-      dataset.borderWidth = hovered ? 3 : 0;
-      dataset.borderColor = hovered ? "#1c1915" : "transparent";
-    }
-  });
+  if (chart.$focus === focus) return;
+  chart.$focus = focus;
   chart.update("none");
 }
 
 function clearChartFocus(chart) {
-  if (!chart) return;
-  chart.$focus = null;
-  applyLegendFocus(chart, null);
-}
-
-function setChartFocus(chart, index) {
-  const focus = normalizeFocusIndex(index, chart);
-  if (chart.$focus === focus) return;
-  chart.$focus = focus;
-  applyLegendFocus(chart, focus);
+  setChartFocus(chart, null);
 }
 
 function makeChart(canvas, config, track) {
@@ -547,12 +526,10 @@ function makeChart(canvas, config, track) {
   const colors = datasets.map(seriesColor);
   const canFocus = colors.length > 1 && colors.every(Boolean);
   if (canFocus) {
+    const isLine = config.type === "line";
     datasets.forEach(function (dataset, i) {
       dataset._baseColor = colors[i];
-      if (config.type === "line") {
-        dataset._basePointRadius = dataset.pointRadius == null ? 3 : dataset.pointRadius;
-        dataset.borderWidth = 2.5;
-      }
+      applyFocusStyles(dataset, colors[i], isLine);
     });
     config.options = config.options || {};
     config.options.plugins = config.options.plugins || {};
@@ -568,6 +545,7 @@ function makeChart(canvas, config, track) {
         if (!dataset || !dataset._baseColor) return;
         item.fillStyle = dataset._baseColor;
         item.strokeStyle = dataset._baseColor;
+        item.lineWidth = isLine ? 2.5 : 0;
       });
       return items;
     };
@@ -584,28 +562,27 @@ function makeChart(canvas, config, track) {
       setChartFocus(legend.chart, legendItem.datasetIndex);
     };
     config.options.plugins.legend = legend;
-    const prevOnHover = config.options.onHover;
-    config.options.onHover = function (event, elements, chart) {
-      if (prevOnHover) prevOnHover.call(this, event, elements, chart);
-      if (elements.length) setChartFocus(chart, elements[0].datasetIndex);
-    };
     config.plugins = config.plugins || [];
-    const focusPluginId = "vballLegendFocus-" + (canvas.id || "chart");
     config.plugins.push({
-      id: focusPluginId,
+      id: "vballLegendFocus-" + (canvas.id || "chart"),
       afterEvent: function (chart, args) {
+        if (args.replay) return;
         const evt = args.event;
+        const target = evt.native && evt.native.target;
         if (evt.type === "mouseout") {
-          if (evt.native && evt.native.target) evt.native.target.style.cursor = "default";
+          if (target) target.style.cursor = "default";
           clearChartFocus(chart);
           return;
         }
         if (evt.type !== "mousemove") return;
         const fromLegend = legendDatasetAt(chart, evt.x, evt.y);
+        if (target) target.style.cursor = fromLegend != null ? "pointer" : "default";
         if (fromLegend != null) {
           setChartFocus(chart, fromLegend);
-          if (evt.native && evt.native.target) evt.native.target.style.cursor = "pointer";
+          return;
         }
+        const active = chart.getActiveElements();
+        setChartFocus(chart, active.length ? active[0].datasetIndex : null);
       },
     });
     if (config.type === "line") {
@@ -641,7 +618,6 @@ function makeChart(canvas, config, track) {
   }
   const chart = new Chart(canvas, config);
   chart.$focus = null;
-  if (canFocus) resetDatasetColors(chart);
   if (track !== false) charts.push(chart);
   return chart;
 }
