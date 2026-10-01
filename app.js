@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.30.3";
+const SITE_VERSION = "2026.09.30.4";
 
 const STATS = [
   {
@@ -481,6 +481,25 @@ function resetDatasetColors(chart) {
   });
 }
 
+function legendDatasetAt(chart, x, y) {
+  const legend = chart.legend;
+  if (!legend || !legend.options.display || !legend.legendHitBoxes || !legend.legendItems) return null;
+  const pad = 4;
+  for (let i = 0; i < legend.legendHitBoxes.length; i += 1) {
+    const box = legend.legendHitBoxes[i];
+    if (
+      x >= box.left - pad
+      && x <= box.left + box.width + pad
+      && y >= box.top - pad
+      && y <= box.top + box.height + pad
+    ) {
+      const item = legend.legendItems[i];
+      return item ? normalizeFocusIndex(item.datasetIndex, chart) : null;
+    }
+  }
+  return null;
+}
+
 function applyLegendFocus(chart, index) {
   const focus = normalizeFocusIndex(index, chart);
   resetDatasetColors(chart);
@@ -513,7 +532,6 @@ function clearChartFocus(chart) {
   if (!chart) return;
   chart.$focus = null;
   applyLegendFocus(chart, null);
-  syncLegendFocus(chart);
 }
 
 function setChartFocus(chart, index) {
@@ -521,53 +539,6 @@ function setChartFocus(chart, index) {
   if (chart.$focus === focus) return;
   chart.$focus = focus;
   applyLegendFocus(chart, focus);
-  syncLegendFocus(chart);
-}
-
-function syncLegendFocus(chart) {
-  const box = chart.canvas && chart.canvas.parentElement;
-  if (!box) return;
-  const focus = chart.$focus;
-  box.querySelectorAll(".chart-legend-item").forEach(function (button) {
-    const index = Number(button.dataset.index);
-    const on = focus != null && index === focus;
-    button.classList.toggle("is-focused", on);
-    button.classList.toggle("is-faded", focus != null && !on);
-  });
-}
-
-function mountInteractiveLegend(chart) {
-  const canvas = chart.canvas;
-  const box = canvas.parentElement;
-  if (!box) return;
-  const existing = box.querySelector(".chart-legend");
-  if (existing) existing.remove();
-  const nav = document.createElement("div");
-  nav.className = "chart-legend";
-  nav.setAttribute("aria-label", "Chart series");
-  chart.data.datasets.forEach(function (dataset, index) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "chart-legend-item";
-    button.dataset.index = String(index);
-    const swatch = document.createElement("span");
-    swatch.className = "chart-legend-swatch";
-    swatch.style.backgroundColor = dataset._baseColor || SERIES[index % SERIES.length];
-    button.appendChild(swatch);
-    button.appendChild(document.createTextNode(dataset.label || "Series " + (index + 1)));
-    button.addEventListener("mouseenter", function () {
-      setChartFocus(chart, index);
-    });
-    nav.appendChild(button);
-  });
-  box.appendChild(nav);
-  if (box._vballLegendLeave) {
-    box.removeEventListener("mouseleave", box._vballLegendLeave);
-  }
-  box._vballLegendLeave = function () {
-    clearChartFocus(chart);
-  };
-  box.addEventListener("mouseleave", box._vballLegendLeave);
 }
 
 function makeChart(canvas, config, track) {
@@ -601,7 +572,17 @@ function makeChart(canvas, config, track) {
       return items;
     };
     legend.labels = labels;
-    legend.display = false;
+    if (legend.display == null) legend.display = true;
+    legend.onHover = function (event, legendItem, legend) {
+      setChartFocus(legend.chart, legendItem.datasetIndex);
+      if (event.native && event.native.target) event.native.target.style.cursor = "pointer";
+    };
+    legend.onLeave = function (event) {
+      if (event.native && event.native.target) event.native.target.style.cursor = "default";
+    };
+    legend.onClick = function (event, legendItem, legend) {
+      setChartFocus(legend.chart, legendItem.datasetIndex);
+    };
     config.options.plugins.legend = legend;
     const prevOnHover = config.options.onHover;
     config.options.onHover = function (event, elements, chart) {
@@ -609,9 +590,27 @@ function makeChart(canvas, config, track) {
       if (elements.length) setChartFocus(chart, elements[0].datasetIndex);
     };
     config.plugins = config.plugins || [];
+    const focusPluginId = "vballLegendFocus-" + (canvas.id || "chart");
+    config.plugins.push({
+      id: focusPluginId,
+      afterEvent: function (chart, args) {
+        const evt = args.event;
+        if (evt.type === "mouseout") {
+          if (evt.native && evt.native.target) evt.native.target.style.cursor = "default";
+          clearChartFocus(chart);
+          return;
+        }
+        if (evt.type !== "mousemove") return;
+        const fromLegend = legendDatasetAt(chart, evt.x, evt.y);
+        if (fromLegend != null) {
+          setChartFocus(chart, fromLegend);
+          if (evt.native && evt.native.target) evt.native.target.style.cursor = "pointer";
+        }
+      },
+    });
     if (config.type === "line") {
       config.plugins.push({
-        id: "legendFocusLine",
+        id: "legendFocusLine-" + (canvas.id || "chart"),
         afterDatasetsDraw: function (chart) {
           const focus = normalizeFocusIndex(chart.$focus, chart);
           if (focus == null) return;
@@ -627,14 +626,22 @@ function makeChart(canvas, config, track) {
           ctx.restore();
         },
       });
+    } else if (config.type === "bar") {
+      config.plugins.push({
+        id: "legendFocusBar-" + (canvas.id || "chart"),
+        afterDatasetsDraw: function (chart) {
+          const focus = normalizeFocusIndex(chart.$focus, chart);
+          if (focus == null) return;
+          const meta = chart.getDatasetMeta(focus);
+          if (!meta || meta.hidden || !meta.controller) return;
+          meta.controller.draw();
+        },
+      });
     }
   }
   const chart = new Chart(canvas, config);
   chart.$focus = null;
-  if (canFocus) {
-    resetDatasetColors(chart);
-    mountInteractiveLegend(chart);
-  }
+  if (canFocus) resetDatasetColors(chart);
   if (track !== false) charts.push(chart);
   return chart;
 }
