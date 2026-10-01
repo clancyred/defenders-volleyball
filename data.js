@@ -9343,7 +9343,7 @@ window.DATA = {
         3,
         3
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 6,
@@ -9381,14 +9381,16 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
+      "receiveAttempts": 7,
       "receiveRating": null,
       "receiveGrades": [
         0,
         1,
         1,
         1,
-        0
+        0,
+        2,
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": null,
@@ -12755,5 +12757,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-01T18:16+00:00"
+  "updated": "2026-10-01T18:21+00:00"
 };
