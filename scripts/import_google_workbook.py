@@ -100,15 +100,50 @@ def find_row(ws, start, predicate):
     return None
 
 
-def player_rows(ws, date, opponent):
+def serving_team_row(ws):
+    return find_row(
+        ws,
+        2,
+        lambda row: text(ws.cell(row, 1).value).lower() == "team"
+        and "total aces" in text(ws.cell(row, 2).value).lower(),
+    )
+
+
+def is_player_name(name):
+    if not name:
+        return False
+    lower = name.lower().strip()
+    if lower in {"player", "team", "total"}:
+        return False
+    if lower.startswith("rotation") or lower.startswith("set "):
+        return False
+    if lower.startswith("team kill") or lower.startswith("team pass"):
+        return False
+    if re.match(r"^-?\d+(\.\d+)?$", name.strip()):
+        return False
+    return bool(re.match(r"^[A-Za-z]", name.strip()))
+
+
+def player_section_end(ws):
+    stops = []
     rotation_row = find_row(
         ws,
         2,
         lambda row: "rotation" in text(ws.cell(row, 1).value).lower()
         and "setter" in text(ws.cell(row, 1).value).lower(),
     )
-    if rotation_row is None:
-        rotation_row = ws.max_row + 1
+    if rotation_row:
+        stops.append(rotation_row)
+    team_row = serving_team_row(ws)
+    if team_row:
+        stops.append(team_row)
+    if not stops:
+        return ws.max_row + 1
+    return min(stops)
+
+
+def player_rows(ws, date, opponent):
+    section_end = player_section_end(ws)
     header = header_map(ws, 1)
     cols = {
         "digs": col_by_label(header, ["dig"]),
@@ -142,11 +177,9 @@ def player_rows(ws, date, opponent):
             cols["kill_eff"] = col
 
     rows = []
-    for row in range(2, rotation_row):
+    for row in range(2, section_end):
         name = text(ws.cell(row, 1).value)
-        if not name or name.lower() == "player":
-            continue
-        if name.lower().startswith("rotation") or name.lower() == "team":
+        if not is_player_name(name):
             continue
         serve_scores = parse_digits(row_value(ws, row, cols["serve_scores"]))
         recv_grades = parse_digits(row_value(ws, row, cols["recv_grades"]))
@@ -255,12 +288,7 @@ def rotation_rows(ws, date, opponent):
 
 
 def serving_rows(ws, date, opponent):
-    team_row = find_row(
-        ws,
-        2,
-        lambda row: text(ws.cell(row, 1).value).lower() == "team"
-        and "total aces" in text(ws.cell(row, 2).value).lower(),
-    )
+    team_row = serving_team_row(ws)
     if team_row is None:
         return []
     rows = []
