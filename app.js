@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.10.01.1";
+const SITE_VERSION = "2026.10.01.2";
 
 const STATS = [
   {
@@ -196,6 +196,7 @@ const state = {
   sortDir: "desc",
   compare: [],
   nameQuery: "",
+  trend: false,
 };
 
 let charts = [];
@@ -476,12 +477,14 @@ function byFocus(normal, hovered, faded) {
 function applyFocusStyles(dataset, color, isLine) {
   if (isLine) {
     const radius = dataset.pointRadius == null ? 3 : dataset.pointRadius;
+    const dotsOnly = dataset.showLine === false;
     const stroke = byFocus(color, color, withAlpha(color, 0.16));
+    const dot = dotsOnly ? byFocus(withAlpha(color, 0.45), color, withAlpha(color, 0.12)) : stroke;
     dataset.borderColor = stroke;
-    dataset.pointBackgroundColor = stroke;
-    dataset.pointBorderColor = stroke;
+    dataset.pointBackgroundColor = dot;
+    dataset.pointBorderColor = dot;
     dataset.borderWidth = byFocus(2.5, 6, 1.25);
-    dataset.pointRadius = byFocus(radius, 6, 0);
+    dataset.pointRadius = dotsOnly ? byFocus(radius, 4, 2) : byFocus(radius, 6, 0);
   } else {
     dataset.backgroundColor = byFocus(color, color, withAlpha(color, 0.08));
     dataset.borderWidth = byFocus(0, 3, 0);
@@ -677,6 +680,12 @@ function controlsHtml() {
     html += '<button type="button" id="mode-per" aria-pressed="' + state.perMatch + '">Per match</button>';
     html += "</div></div>";
   }
+  if (state.view === "compare" || state.view === "bygame") {
+    html += '<div class="control"><span class="control-label">Lines</span><div class="segment">';
+    html += '<button type="button" id="lines-games" aria-pressed="' + (!state.trend) + '">Game to game</button>';
+    html += '<button type="button" id="lines-trend" aria-pressed="' + state.trend + '">Trend</button>';
+    html += "</div></div>";
+  }
   if (stat.sample && state.view === "players") {
     html += '<label class="control"><span class="control-label">At least ' + state.minSample + " " + esc(stat.sampleLabel) + '</span>';
     html += '<input class="slider" id="min-sample" type="range" min="0" max="40" value="' + state.minSample + '"></label>';
@@ -858,10 +867,11 @@ function renderCompare() {
     html += '<p class="empty">Pick a player. All selects everyone in the matches above.</p>';
     return { html: html, draw: function () {} };
   }
-  html += '<section class="card" style="margin-top:14px"><div class="card-head"><div><h2>' + esc(stat.label) + ' by game</h2><p class="sub">' + esc(trendCaption(chosen, stat, selectedMatchKeys())) + '</p></div>';
+  html += '<section class="card" style="margin-top:14px"><div class="card-head"><div><h2>' + esc(stat.label) + ' by game</h2><p class="sub">' + esc(trendCaption(chosen, stat, selectedMatchKeys(), state.trend)) + '</p></div>';
   html += saveButton("trend");
   html += "</div>";
-  html += '<div class="chart-box" style="height:' + chartHeight(chosen.length) + 'px"><canvas id="trend-chart"></canvas></div></section>';
+  html += '<div class="chart-box" style="height:' + chartHeight(chosen.length) + 'px"><canvas id="trend-chart"></canvas></div>';
+  html += trendCardExtras(chosen, stat) + "</section>";
   const records = aggregatePlayers(selectedPlayerRows()).filter(function (row) {
     return chosen.indexOf(row.player) !== -1;
   });
@@ -906,13 +916,129 @@ function chosenPlayers(names) {
   return state.compare.filter(function (name) { return names.indexOf(name) !== -1; });
 }
 
-function gameValue(player, key, stat, rows) {
+function gamePoint(player, key, stat, rows) {
   const source = rows || selectedPlayerRows();
   const mine = source.filter(function (row) {
     return matchKey(row) === key && row.player === player;
   });
   if (!mine.length) return null;
-  return valueOf(aggregatePlayers(mine)[0], stat);
+  const record = aggregatePlayers(mine)[0];
+  const value = valueOf(record, stat);
+  if (value == null) return null;
+  const weight = stat.kind === "sum" || !stat.sample ? 1 : (record[stat.sample] || 0);
+  return { value: value, weight: weight };
+}
+
+function gameValue(player, key, stat, rows) {
+  const point = gamePoint(player, key, stat, rows);
+  return point ? point.value : null;
+}
+
+// Weighted least-squares line over game order. Rates are weighted by attempts so a
+// 1-for-1 game does not pull the line as hard as a 20-swing game.
+function fitTrend(points) {
+  const usable = points.filter(function (p) { return p.weight > 0; });
+  if (usable.length < 3) return null;
+  let sw = 0, sx = 0, sy = 0;
+  usable.forEach(function (p) { sw += p.weight; sx += p.weight * p.x; sy += p.weight * p.y; });
+  const mx = sx / sw;
+  const my = sy / sw;
+  let sxx = 0, sxy = 0;
+  usable.forEach(function (p) {
+    sxx += p.weight * (p.x - mx) * (p.x - mx);
+    sxy += p.weight * (p.x - mx) * (p.y - my);
+  });
+  if (!sxx) return null;
+  const slope = sxy / sxx;
+  const x0 = usable[0].x;
+  const x1 = usable[usable.length - 1].x;
+  return {
+    x0: x0,
+    x1: x1,
+    y0: my + slope * (x0 - mx),
+    y1: my + slope * (x1 - mx),
+    games: usable.length,
+  };
+}
+
+function statBounds(stat) {
+  if (stat.format === "hitting") return [-1, 1];
+  return [0, stat.scaleMax || Infinity];
+}
+
+function playerTrends(players, stat, keys, rows) {
+  const bounds = statBounds(stat);
+  const clamp = function (value) { return Math.min(bounds[1], Math.max(bounds[0], value)); };
+  return players.map(function (player, index) {
+    const points = [];
+    keys.forEach(function (key, x) {
+      const point = gamePoint(player, key, stat, rows);
+      if (point) points.push({ x: x, y: point.value, weight: point.weight });
+    });
+    const fit = fitTrend(points);
+    if (fit) {
+      fit.y0 = clamp(fit.y0);
+      fit.y1 = clamp(fit.y1);
+    }
+    return { player: player, color: SERIES[index % SERIES.length], points: points, fit: fit };
+  });
+}
+
+function trendDirection(stat, fit) {
+  if (!fit) return "";
+  const delta = fit.y1 - fit.y0;
+  if (formatStat(stat, Math.abs(delta)) === formatStat(stat, 0)) return "→";
+  return delta > 0 ? "↑" : "↓";
+}
+
+function trendSummaryHtml(trends, stat) {
+  let html = '<div class="trend-summary"><span class="control-label">Trend across these games</span><ul>';
+  trends.forEach(function (trend) {
+    html += '<li><span class="trend-swatch" style="background:' + trend.color + '"></span><strong>' + esc(trend.player) + "</strong> ";
+    if (!trend.fit) {
+      html += '<span class="trend-muted">not enough games</span></li>';
+      return;
+    }
+    const delta = trend.fit.y1 - trend.fit.y0;
+    const arrow = trendDirection(stat, trend.fit);
+    const sign = arrow === "→" ? "±" : (delta > 0 ? "+" : "−");
+    html += esc(arrow + " " + formatStat(stat, trend.fit.y0) + " → " + formatStat(stat, trend.fit.y1));
+    html += ' <span class="trend-muted">(' + esc(sign + formatStat(stat, Math.abs(delta)) + " · " + trend.fit.games + " games") + ")</span></li>";
+  });
+  html += "</ul></div>";
+  return html;
+}
+
+function trendLinePlugin() {
+  return {
+    id: "trendLines",
+    afterDatasetsDraw: function (chart) {
+      const focus = normalizeFocusIndex(chart.$focus, chart);
+      const order = chart.data.datasets.map(function (_, i) { return i; }).filter(function (i) { return i !== focus; });
+      if (focus != null) order.push(focus);
+      const area = chart.chartArea;
+      const ctx = chart.ctx;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(area.left, area.top, area.right - area.left, area.bottom - area.top);
+      ctx.clip();
+      ctx.lineCap = "round";
+      order.forEach(function (i) {
+        const dataset = chart.data.datasets[i];
+        const fit = dataset._trend;
+        if (!fit || chart.getDatasetMeta(i).hidden) return;
+        const color = dataset._baseColor || dataset.borderColor;
+        const faded = focus != null && focus !== i;
+        ctx.strokeStyle = faded ? withAlpha(color, 0.15) : color;
+        ctx.lineWidth = focus === i ? 5 : (faded ? 1.5 : 3);
+        ctx.beginPath();
+        ctx.moveTo(chart.scales.x.getPixelForValue(fit.x0), chart.scales.y.getPixelForValue(fit.y0));
+        ctx.lineTo(chart.scales.x.getPixelForValue(fit.x1), chart.scales.y.getPixelForValue(fit.y1));
+        ctx.stroke();
+      });
+      ctx.restore();
+    },
+  };
 }
 
 function renderByGame() {
@@ -927,10 +1053,11 @@ function renderByGame() {
   }
   const keys = selectedMatchKeys();
   html += '<section class="card" style="margin-top:14px"><div class="card-head"><div><h2>' + esc(stat.label) + ' by game</h2>';
-  html += '<p class="sub">' + esc(trendCaption(chosen, stat, keys)) + '</p></div>';
+  html += '<p class="sub">' + esc(trendCaption(chosen, stat, keys, state.trend)) + '</p></div>';
   html += saveButton("trend");
   html += "</div>";
-  html += '<div class="chart-box" style="height:' + (chartHeight(chosen.length) + 28) + 'px"><canvas id="trend-chart"></canvas></div></section>';
+  html += '<div class="chart-box" style="height:' + (chartHeight(chosen.length) + 28) + 'px"><canvas id="trend-chart"></canvas></div>';
+  html += trendCardExtras(chosen, stat) + "</section>";
   const columns = [{ key: "game", label: "Game", left: true, sticky: true }].concat(chosen.map(function (name) {
     return { key: name, label: name, format: stat.format || "int" };
   }));
@@ -979,9 +1106,11 @@ function gradeCard(title, sub, players, field, bins, canvasId) {
 
 function trendConfig(players, stat, keys, rows, opts) {
   const compact = opts && opts.compact;
+  const showTrend = !!(opts && opts.trend);
   const labels = gameChartLabels(keys, compact);
+  const trends = showTrend ? playerTrends(players, stat, keys, rows) : null;
   const datasets = players.map(function (player, index) {
-    return {
+    const dataset = {
       label: player,
       data: keys.map(function (key) { return gameValue(player, key, stat, rows); }),
       borderColor: SERIES[index % SERIES.length],
@@ -991,7 +1120,23 @@ function trendConfig(players, stat, keys, rows, opts) {
       pointRadius: 4,
       pointHoverRadius: 6,
     };
+    if (showTrend) {
+      dataset.showLine = false;
+      dataset.pointRadius = 3;
+      dataset._trend = trends[index].fit;
+    }
+    return dataset;
   });
+  const legendLabels = { padding: 12, boxWidth: 12, font: { size: 11 } };
+  if (showTrend) {
+    legendLabels.generateLabels = function (chart) {
+      return Chart.defaults.plugins.legend.labels.generateLabels(chart).map(function (item) {
+        const arrow = trendDirection(stat, chart.data.datasets[item.datasetIndex]._trend);
+        if (arrow) item.text += " " + arrow;
+        return item;
+      });
+    };
+  }
   const scales = baseScales(stat, false);
   scales.y.title = { display: true, text: stat.label };
   scales.x.title = { display: !compact, text: "Game" };
@@ -999,12 +1144,13 @@ function trendConfig(players, stat, keys, rows, opts) {
   return {
     type: "line",
     data: { labels: labels, datasets: datasets },
+    plugins: showTrend ? [trendLinePlugin()] : [],
     options: {
       responsive: true,
       maintainAspectRatio: false,
       layout: { padding: chartLayoutPadding() },
       plugins: {
-        legend: { position: "bottom", labels: { padding: 12, boxWidth: 12, font: { size: 11 } } },
+        legend: { position: "bottom", labels: legendLabels },
         tooltip: {
           callbacks: {
             title: function (items) {
@@ -1025,7 +1171,12 @@ function trendConfig(players, stat, keys, rows, opts) {
 function drawTrend(players, stat) {
   const canvas = document.getElementById("trend-chart");
   if (!canvas) return;
-  makeChart(canvas, trendConfig(players, stat, selectedMatchKeys(), selectedPlayerRows()));
+  makeChart(canvas, trendConfig(players, stat, selectedMatchKeys(), selectedPlayerRows(), { trend: state.trend }));
+}
+
+function trendCardExtras(players, stat) {
+  if (!state.trend) return "";
+  return trendSummaryHtml(playerTrends(players, stat, selectedMatchKeys(), selectedPlayerRows()), stat);
 }
 
 function gradeCounts(players, field, bins, rows) {
@@ -1482,8 +1633,13 @@ function matchSpan(keys) {
   return ordered.slice(0, 5).map(label).join(", ") + ", and " + (ordered.length - 5) + " more";
 }
 
-function trendCaption(players, stat, keys) {
-  return "Each point is that player’s " + stat.label.toLowerCase() + " in one game. " + stat.hint + " Players: " + nameList(players) + ". " + matchSpan(keys) + ". A gap means that player has no line for that game.";
+function trendCaption(players, stat, keys, trend) {
+  const base = "Each point is that player’s " + stat.label.toLowerCase() + " in one game. " + stat.hint + " Players: " + nameList(players) + ". " + matchSpan(keys) + ".";
+  if (!trend) return base + " A gap means that player has no line for that game.";
+  const weighting = stat.kind === "sum" || !stat.sample
+    ? ""
+    : ", weighted by " + stat.sampleLabel + " so games with only a few count less";
+  return base + " The straight line is each player’s trend across these games" + weighting + ". It needs at least 3 games.";
 }
 
 function gradeBins(field) {
@@ -1559,7 +1715,7 @@ function describeSpec(spec) {
     const named = spec.nameQuery ? " Name filter: " + spec.nameQuery + "." : "";
     return stat.hint + mode + named + " " + count + " player" + (count === 1 ? "" : "s") + sample + ". " + span + ".";
   }
-  if (spec.kind === "trend") return trendCaption(spec.players || [], stat, spec.matchKeys || []);
+  if (spec.kind === "trend") return trendCaption(spec.players || [], stat, spec.matchKeys || [], !!spec.trend);
   if (spec.kind === "grades") {
     const meaning = spec.field === "receiveGrades"
       ? "Serve receive grades. 3 is a perfect pass to the setter, 2 is average, 1 is out of system, and 0 is an ace against."
@@ -1604,6 +1760,7 @@ function liveSpec(kind, extra) {
     nameQuery: state.nameQuery.trim(),
     sortKey: state.sortKey,
     sortDir: state.sortDir,
+    trend: kind === "trend" && state.trend,
     include: true,
     note: "",
   };
@@ -1629,7 +1786,7 @@ function graphConfig(spec, opts) {
   }
   if (spec.kind === "trend") {
     if (!(spec.players || []).length || !keys.length) return null;
-    return trendConfig(spec.players, stat, keys, playerRowsFor(keys), opts);
+    return trendConfig(spec.players, stat, keys, playerRowsFor(keys), Object.assign({}, opts, { trend: !!spec.trend }));
   }
   if (spec.kind === "grades") {
     if (!(spec.players || []).length) return null;
@@ -1924,6 +2081,7 @@ function encodeReport(graphs) {
     if (spec.sortKey) item.sk = spec.sortKey;
     if (spec.sortDir) item.sd = spec.sortDir;
     if (spec.field) item.f = spec.field;
+    if (spec.trend) item.tr = 1;
     return item;
   });
   return base64url(JSON.stringify(payload));
@@ -1947,6 +2105,7 @@ function decodeReport(text) {
       sortKey: item.sk || item.s,
       sortDir: item.sd || "desc",
       field: item.f || "",
+      trend: !!item.tr,
       include: true,
     };
     if (!spec.title) spec.title = defaultTitle(spec);
@@ -2169,6 +2328,8 @@ function saveState() {
       sortKey: state.sortKey,
       sortDir: state.sortDir,
       compare: state.compare,
+      trend: state.trend,
+      knownMatches: allMatchKeys(),
     }));
   } catch (err) {
     /* private mode */
@@ -2188,6 +2349,15 @@ function loadState() {
     if (VIEWS[saved.view]) state.view = saved.view;
     if (Array.isArray(saved.matchKeys) && saved.matchKeys.length) {
       state.matchKeys = new Set(saved.matchKeys.filter(function (key) { return keys.indexOf(key) !== -1; }));
+      // Matches added by a sheet sync since the last visit start selected. Older saves have no
+      // knownMatches, so treat everything up to their latest selected match as already seen.
+      const latest = saved.matchKeys.slice().sort().pop();
+      const known = Array.isArray(saved.knownMatches)
+        ? saved.knownMatches
+        : keys.filter(function (key) { return key <= latest; });
+      keys.forEach(function (key) {
+        if (known.indexOf(key) === -1) state.matchKeys.add(key);
+      });
     }
     if (statById(saved.statId).id === saved.statId) state.statId = saved.statId;
     if (typeof saved.perMatch === "boolean") state.perMatch = saved.perMatch;
@@ -2195,6 +2365,7 @@ function loadState() {
     if (saved.sortKey) state.sortKey = saved.sortKey;
     if (saved.sortDir) state.sortDir = saved.sortDir;
     if (Array.isArray(saved.compare) && saved.compare.length) state.compare = saved.compare;
+    if (typeof saved.trend === "boolean") state.trend = saved.trend;
   } catch (err) {
     /* ignore broken storage */
   }
@@ -2243,6 +2414,11 @@ function onClick(event) {
   }
   if (event.target.id === "mode-per") {
     state.perMatch = true;
+    render();
+    return;
+  }
+  if (event.target.id === "lines-games" || event.target.id === "lines-trend") {
+    state.trend = event.target.id === "lines-trend";
     render();
     return;
   }

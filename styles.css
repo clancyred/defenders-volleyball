@@ -216,6 +216,29 @@ h1 {
 
 .card .sub { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
 
+.trend-summary { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+
+.trend-summary ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 6px 18px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.trend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.trend-muted { color: var(--muted); }
+
 .text-btn {
   background: none;
   border: 1px solid var(--line);
