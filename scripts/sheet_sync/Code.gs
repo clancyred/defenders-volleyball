@@ -5,7 +5,8 @@
  * Setup (once, in the Google account the sheet is shared with):
  * 1. Go to https://script.new and paste this file into Code.gs.
  * 2. Project Settings: tick "Show appsscript.json manifest file in editor", then paste
- *    scripts/sheet_sync/appsscript.json over the manifest.
+ *    scripts/sheet_sync/appsscript.json over the manifest. SpreadsheetApp.openById needs the
+ *    full spreadsheets scope even though this script only reads.
  * 3. Project Settings > Script properties: add GITHUB_TOKEN, a fine-grained GitHub token
  *    limited to clancyred/defenders-volleyball with Contents: Read and write.
  * 4. In the editor, run syncNow once and approve the permissions. It pushes the sheet right away.
