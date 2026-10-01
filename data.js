@@ -9331,7 +9331,7 @@ window.DATA = {
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 6,
       "aces": 2,
       "serveErrors": 1,
       "serveRating": null,
@@ -9339,18 +9339,21 @@ window.DATA = {
         5,
         0,
         5,
-        2
+        2,
+        3,
+        3
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
+      "receiveAttempts": 6,
       "receiveRating": null,
       "receiveGrades": [
         0,
         3,
         3,
         1,
+        2,
         2
       ],
       "freeballAttempts": null,
@@ -9367,23 +9370,25 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
       "serveScores": [
-        0
+        0,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
+      "receiveAttempts": 5,
       "receiveRating": null,
       "receiveGrades": [
         0,
         1,
         1,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 3,
       "freeballRating": null,
@@ -9397,11 +9402,11 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Shiloh",
-      "digs": 6,
+      "digs": 7,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 2,
       "aces": null,
@@ -9414,13 +9419,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
+      "receiveAttempts": 5,
       "receiveRating": null,
       "receiveGrades": [
         2,
         0,
         0,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 1,
       "freeballRating": null,
@@ -9438,12 +9444,14 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 3,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
-        3
+        3,
+        3,
+        2
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -9464,9 +9472,9 @@ window.DATA = {
       "player": "Bridget",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 6,
       "aces": 1,
@@ -9494,7 +9502,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Annabelle",
-      "digs": 1,
+      "digs": 2,
       "assists": 2,
       "attackAttempts": 2,
       "kills": 1,
@@ -9512,12 +9520,16 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": null,
+      "receiveAttempts": 1,
       "receiveRating": null,
-      "receiveGrades": [],
-      "freeballAttempts": null,
+      "receiveGrades": [
+        1
+      ],
+      "freeballAttempts": 1,
       "freeballRating": null,
-      "freeballGrades": []
+      "freeballGrades": [
+        2
+      ]
     },
     {
       "date": "2026-09-30",
@@ -9525,7 +9537,7 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -12544,8 +12556,8 @@ window.DATA = {
       "errorsUs": 4,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 4,
-      "errorsThem": 5,
+      "acesThem": 6,
+      "errorsThem": 6,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12743,5 +12755,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-01T18:11+00:00"
+  "updated": "2026-10-01T18:16+00:00"
 };
