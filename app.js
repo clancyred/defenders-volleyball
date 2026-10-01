@@ -8,7 +8,7 @@ const SERIES = [
 ];
 
 /** Bump when you deploy user-visible site changes (shown in the page footer). */
-const SITE_VERSION = "2026.09.30.2";
+const SITE_VERSION = "2026.09.30.3";
 
 const STATS = [
   {
@@ -481,25 +481,6 @@ function resetDatasetColors(chart) {
   });
 }
 
-function legendDatasetAt(chart, x, y) {
-  const legend = chart.legend;
-  if (!legend || !legend.legendHitBoxes || !legend.legendItems) return null;
-  for (let i = 0; i < legend.legendHitBoxes.length; i += 1) {
-    const box = legend.legendHitBoxes[i];
-    if (x >= box.left && x <= box.left + box.width && y >= box.top && y <= box.top + box.height) {
-      const item = legend.legendItems[i];
-      return item ? normalizeFocusIndex(item.datasetIndex, chart) : null;
-    }
-  }
-  return null;
-}
-
-function barDatasetAt(chart, event) {
-  const hits = chart.getElementsAtEventForMode(event, "nearest", { intersect: true }, false);
-  if (!hits.length) return null;
-  return normalizeFocusIndex(hits[0].datasetIndex, chart);
-}
-
 function applyLegendFocus(chart, index) {
   const focus = normalizeFocusIndex(index, chart);
   resetDatasetColors(chart);
@@ -520,8 +501,8 @@ function applyLegendFocus(chart, index) {
       dataset.pointBackgroundColor = dataset.borderColor;
       dataset.pointBorderColor = dataset.borderColor;
     } else {
-      dataset.backgroundColor = faded ? withAlpha(color, 0.1) : color;
-      dataset.borderWidth = hovered ? 2 : 0;
+      dataset.backgroundColor = faded ? withAlpha(color, 0.08) : color;
+      dataset.borderWidth = hovered ? 3 : 0;
       dataset.borderColor = hovered ? "#1c1915" : "transparent";
     }
   });
@@ -532,6 +513,7 @@ function clearChartFocus(chart) {
   if (!chart) return;
   chart.$focus = null;
   applyLegendFocus(chart, null);
+  syncLegendFocus(chart);
 }
 
 function setChartFocus(chart, index) {
@@ -539,6 +521,53 @@ function setChartFocus(chart, index) {
   if (chart.$focus === focus) return;
   chart.$focus = focus;
   applyLegendFocus(chart, focus);
+  syncLegendFocus(chart);
+}
+
+function syncLegendFocus(chart) {
+  const box = chart.canvas && chart.canvas.parentElement;
+  if (!box) return;
+  const focus = chart.$focus;
+  box.querySelectorAll(".chart-legend-item").forEach(function (button) {
+    const index = Number(button.dataset.index);
+    const on = focus != null && index === focus;
+    button.classList.toggle("is-focused", on);
+    button.classList.toggle("is-faded", focus != null && !on);
+  });
+}
+
+function mountInteractiveLegend(chart) {
+  const canvas = chart.canvas;
+  const box = canvas.parentElement;
+  if (!box) return;
+  const existing = box.querySelector(".chart-legend");
+  if (existing) existing.remove();
+  const nav = document.createElement("div");
+  nav.className = "chart-legend";
+  nav.setAttribute("aria-label", "Chart series");
+  chart.data.datasets.forEach(function (dataset, index) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "chart-legend-item";
+    button.dataset.index = String(index);
+    const swatch = document.createElement("span");
+    swatch.className = "chart-legend-swatch";
+    swatch.style.backgroundColor = dataset._baseColor || SERIES[index % SERIES.length];
+    button.appendChild(swatch);
+    button.appendChild(document.createTextNode(dataset.label || "Series " + (index + 1)));
+    button.addEventListener("mouseenter", function () {
+      setChartFocus(chart, index);
+    });
+    nav.appendChild(button);
+  });
+  box.appendChild(nav);
+  if (box._vballLegendLeave) {
+    box.removeEventListener("mouseleave", box._vballLegendLeave);
+  }
+  box._vballLegendLeave = function () {
+    clearChartFocus(chart);
+  };
+  box.addEventListener("mouseleave", box._vballLegendLeave);
 }
 
 function makeChart(canvas, config, track) {
@@ -572,33 +601,14 @@ function makeChart(canvas, config, track) {
       return items;
     };
     legend.labels = labels;
-    legend.onClick = function (event, legendItem, legend) {
-      setChartFocus(legend.chart, legendItem.datasetIndex);
-    };
+    legend.display = false;
     config.options.plugins.legend = legend;
-    config.options.events = ["mousemove", "mouseout"];
+    const prevOnHover = config.options.onHover;
+    config.options.onHover = function (event, elements, chart) {
+      if (prevOnHover) prevOnHover.call(this, event, elements, chart);
+      if (elements.length) setChartFocus(chart, elements[0].datasetIndex);
+    };
     config.plugins = config.plugins || [];
-    config.plugins.push({
-      id: "vballLegendFocus",
-      afterEvent: function (chart, args) {
-        const evt = args.event;
-        if (evt.type === "mouseout") {
-          if (evt.native && evt.native.target) evt.native.target.style.cursor = "default";
-          clearChartFocus(chart);
-          return;
-        }
-        if (evt.type !== "mousemove") return;
-        let focus = legendDatasetAt(chart, evt.x, evt.y);
-        if (focus == null) focus = barDatasetAt(chart, evt);
-        if (focus == null) {
-          if (chart.$focus != null) clearChartFocus(chart);
-          if (evt.native && evt.native.target) evt.native.target.style.cursor = "default";
-          return;
-        }
-        setChartFocus(chart, focus);
-        if (evt.native && evt.native.target) evt.native.target.style.cursor = "pointer";
-      },
-    });
     if (config.type === "line") {
       config.plugins.push({
         id: "legendFocusLine",
@@ -621,7 +631,10 @@ function makeChart(canvas, config, track) {
   }
   const chart = new Chart(canvas, config);
   chart.$focus = null;
-  if (canFocus) resetDatasetColors(chart);
+  if (canFocus) {
+    resetDatasetColors(chart);
+    mountInteractiveLegend(chart);
+  }
   if (track !== false) charts.push(chart);
   return chart;
 }
