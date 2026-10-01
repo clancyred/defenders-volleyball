@@ -9346,13 +9346,14 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
+      "receiveAttempts": 7,
       "receiveRating": null,
       "receiveGrades": [
         0,
         3,
         3,
         1,
+        2,
         2,
         2
       ],
@@ -9381,7 +9382,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
+      "receiveAttempts": 8,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9390,7 +9391,8 @@ window.DATA = {
         1,
         0,
         2,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 3,
       "freeballRating": null,
@@ -9404,11 +9406,11 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Shiloh",
-      "digs": 7,
+      "digs": 8,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
-      "killErrors": 2,
+      "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 4,
       "aces": null,
@@ -9444,7 +9446,7 @@ window.DATA = {
       "opponent": "Cornerstone",
       "player": "Nataly",
       "digs": 7,
-      "assists": 1,
+      "assists": 2,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
@@ -9477,11 +9479,11 @@ window.DATA = {
       "player": "Bridget",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 3,
-      "kills": null,
+      "attackAttempts": 4,
+      "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": 1,
       "serveErrors": 1,
       "serveRating": null,
@@ -9491,7 +9493,8 @@ window.DATA = {
         2,
         0,
         5,
-        3
+        3,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12574,7 +12577,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 1,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -12760,5 +12763,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-01T18:46+00:00"
+  "updated": "2026-10-01T18:51+00:00"
 };
