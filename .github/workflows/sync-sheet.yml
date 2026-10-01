@@ -19,36 +19,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
-          fetch-depth: 0
+          ref: main
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Install dependencies
         run: pip install openpyxl
 
-      - name: Import workbook and build data.js
-        run: |
-          python scripts/import_google_workbook.py
-          python scripts/build_data.py
-
+      # Always build from the newest workbook on main. If main moves while building
+      # (another sheet push or a duplicate run), start over from it instead of rebasing.
       # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the deploy explicitly.
-      - name: Commit and deploy if the stats changed
+      - name: Build, commit, and deploy if the stats changed
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- data.js; then
-            echo "Sheet changed but the site data did not."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898978+github-actions[bot]@users.noreply.github.com"
-          git add data.js volleyball_stats.xlsx
-          git commit -m "Update stats from Google Sheet"
-          git pull --rebase origin main
-          git push origin HEAD:main
-          gh workflow run deploy-pages.yml --ref main
+          for attempt in 1 2 3; do
+            git fetch --quiet origin main
+            git reset --quiet --hard origin/main
+            python scripts/import_google_workbook.py
+            python scripts/build_data.py
+            if git diff --quiet -- data.js; then
+              echo "Site data already matches the newest workbook."
+              exit 0
+            fi
+            git add data.js volleyball_stats.xlsx
+            git commit --quiet -m "Update stats from Google Sheet"
+            if git push origin HEAD:main; then
+              gh workflow run deploy-pages.yml --ref main
+              exit 0
+            fi
+            echo "main moved during the build; rebuilding from the latest workbook (attempt $attempt)."
+          done
+          exit 1
