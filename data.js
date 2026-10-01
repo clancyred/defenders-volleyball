@@ -9327,8 +9327,8 @@ window.DATA = {
       "player": "Tea",
       "digs": null,
       "assists": null,
-      "attackAttempts": null,
-      "kills": null,
+      "attackAttempts": 3,
+      "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -9339,10 +9339,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
+      "receiveAttempts": 3,
       "receiveRating": null,
       "receiveGrades": [
-        0
+        0,
+        3,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -9352,7 +9354,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Anna",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -9371,6 +9373,114 @@ window.DATA = {
       "receiveGrades": [
         0
       ],
+      "freeballAttempts": 1,
+      "freeballRating": null,
+      "freeballGrades": [
+        3
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Shiloh",
+      "digs": 2,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [
+        3
+      ],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Nataly",
+      "digs": 1,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": 1,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": 1,
+      "freeballRating": null,
+      "freeballGrades": [
+        1
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Bridget",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [
+        1
+      ],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Annabelle",
+      "digs": null,
+      "assists": 1,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -12574,5 +12684,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-01T17:46+00:00"
+  "updated": "2026-10-01T17:51+00:00"
 };
