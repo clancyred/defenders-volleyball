@@ -1,0 +1,54 @@
+name: Rebuild data from stat sheet
+
+on:
+  push:
+    branches: [main]
+    paths: [source/varsity_stat_workbook.xlsx]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sheet-sync
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install openpyxl
+
+      - name: Import workbook and build data.js
+        run: |
+          python scripts/import_google_workbook.py
+          python scripts/build_data.py
+
+      # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the deploy explicitly.
+      - name: Commit and deploy if the stats changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data.js; then
+            echo "Sheet changed but the site data did not."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898978+github-actions[bot]@users.noreply.github.com"
+          git add data.js volleyball_stats.xlsx
+          git commit -m "Update stats from Google Sheet"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh workflow run deploy-pages.yml --ref main

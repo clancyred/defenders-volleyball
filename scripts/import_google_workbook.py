@@ -565,7 +565,8 @@ def import_workbook(src_path):
         matches_out,
     )
     wb.save(XLSX)
-    shutil.copyfile(XLSX, DOWNLOADS)
+    if DOWNLOADS.parent.is_dir():
+        shutil.copyfile(XLSX, DOWNLOADS)
     print("Imported {} game tabs from {}".format(len(games), src.name))
     for game in games:
         print(
