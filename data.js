@@ -9325,13 +9325,13 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Tea",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
       "attackAttempts": 9,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 7,
+      "serveAttempts": 8,
       "aces": 2,
       "serveErrors": 1,
       "serveRating": null,
@@ -9340,6 +9340,7 @@ window.DATA = {
         0,
         5,
         2,
+        3,
         3,
         3,
         3
@@ -9405,13 +9406,14 @@ window.DATA = {
         2,
         1
       ],
-      "freeballAttempts": 4,
+      "freeballAttempts": 5,
       "freeballRating": null,
       "freeballGrades": [
         3,
         1,
         3,
-        2
+        2,
+        3
       ]
     },
     {
@@ -9420,7 +9422,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 10,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 8,
       "kills": 2,
       "killErrors": 3,
       "hittingSheet": null,
@@ -9435,10 +9437,10 @@ window.DATA = {
         3,
         3
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
+      "receiveAttempts": 9,
       "receiveRating": null,
       "receiveGrades": [
         2,
@@ -9448,7 +9450,8 @@ window.DATA = {
         0,
         3,
         1,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 4,
       "freeballRating": null,
@@ -9557,9 +9560,10 @@ window.DATA = {
       "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
+      "receiveAttempts": 2,
       "receiveRating": null,
       "receiveGrades": [
+        1,
         1
       ],
       "freeballAttempts": 1,
@@ -9599,7 +9603,7 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 4,
+      "attackAttempts": 5,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -12656,8 +12660,8 @@ window.DATA = {
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 2,
-      "errorsThem": 2,
+      "acesThem": 3,
+      "errorsThem": 3,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12842,5 +12846,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T18:01+00:00"
+  "updated": "2026-10-02T18:06+00:00"
 };
