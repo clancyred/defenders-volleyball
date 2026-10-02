@@ -9327,7 +9327,7 @@ window.DATA = {
       "player": "Tea",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 8,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
@@ -9418,7 +9418,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Shiloh",
-      "digs": 8,
+      "digs": 10,
       "assists": null,
       "attackAttempts": 6,
       "kills": 2,
@@ -9448,9 +9448,11 @@ window.DATA = {
         0,
         3
       ],
-      "freeballAttempts": 2,
+      "freeballAttempts": 4,
       "freeballRating": null,
       "freeballGrades": [
+        3,
+        2,
         3,
         2
       ]
@@ -9530,7 +9532,7 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 6,
       "assists": 2,
-      "attackAttempts": 3,
+      "attackAttempts": 5,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
@@ -9590,7 +9592,7 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -9600,6 +9602,31 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": 1,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Corena",
+      "digs": 1,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12808,5 +12835,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T17:46+00:00"
+  "updated": "2026-10-02T17:51+00:00"
 };
