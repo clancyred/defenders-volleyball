@@ -9346,7 +9346,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
+      "receiveAttempts": 8,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9355,7 +9355,8 @@ window.DATA = {
         1,
         2,
         2,
-        2
+        2,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -9382,7 +9383,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
+      "receiveAttempts": 9,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9392,7 +9393,8 @@ window.DATA = {
         0,
         2,
         1,
-        0
+        0,
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": null,
@@ -9425,14 +9427,15 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
+      "receiveAttempts": 6,
       "receiveRating": null,
       "receiveGrades": [
         2,
         0,
         0,
         1,
-        0
+        0,
+        3
       ],
       "freeballAttempts": 2,
       "freeballRating": null,
@@ -9516,16 +9519,18 @@ window.DATA = {
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 3,
-      "aces": null,
-      "serveErrors": 1,
+      "serveAttempts": 5,
+      "aces": 1,
+      "serveErrors": 2,
       "serveRating": null,
       "serveScores": [
         0,
         3,
-        3
+        3,
+        5,
+        0
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 1,
@@ -9545,9 +9550,9 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 4,
+      "attackAttempts": 5,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -12573,12 +12578,12 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "set": 2,
-      "acesUs": null,
-      "errorsUs": null,
+      "acesUs": 1,
+      "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12763,5 +12768,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-01T18:51+00:00"
+  "updated": "2026-10-02T17:36+00:00"
 };
