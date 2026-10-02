@@ -12822,11 +12822,11 @@ window.DATA = {
       "acesUs": 10,
       "errorsUs": 14,
       "acePctUs": 0.15,
-      "errorPctUs": null,
+      "errorPctUs": 0.22,
       "acesThem": 12,
       "errorsThem": 16,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acePctThem": 0.16,
+      "errorPctThem": 0.22
     }
   ],
   "matches": [
@@ -12957,5 +12957,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T23:11+00:00"
+  "updated": "2026-10-02T23:16+00:00"
 };
