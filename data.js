@@ -9327,8 +9327,8 @@ window.DATA = {
       "player": "Tea",
       "digs": 5,
       "assists": null,
-      "attackAttempts": 12,
-      "kills": 3,
+      "attackAttempts": 13,
+      "kills": 4,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": 13,
@@ -9353,7 +9353,7 @@ window.DATA = {
       "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
+      "receiveAttempts": 14,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9368,7 +9368,8 @@ window.DATA = {
         2,
         0,
         2,
-        2
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -9384,7 +9385,7 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
@@ -9393,12 +9394,13 @@ window.DATA = {
         3,
         1,
         3,
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 20,
+      "receiveAttempts": 22,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9420,16 +9422,19 @@ window.DATA = {
         3,
         2,
         2,
-        3
+        3,
+        3,
+        2
       ],
-      "freeballAttempts": 5,
+      "freeballAttempts": 6,
       "freeballRating": null,
       "freeballGrades": [
         3,
         1,
         3,
         2,
-        3
+        3,
+        2
       ]
     },
     {
@@ -9438,9 +9443,9 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 11,
       "assists": null,
-      "attackAttempts": 17,
+      "attackAttempts": 21,
       "kills": 6,
-      "killErrors": 6,
+      "killErrors": 8,
       "hittingSheet": null,
       "serveAttempts": 13,
       "aces": 2,
@@ -9497,14 +9502,14 @@ window.DATA = {
       "opponent": "Cornerstone",
       "player": "Nataly",
       "digs": 9,
-      "assists": 11,
+      "assists": 12,
       "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 8,
+      "serveAttempts": 9,
       "aces": null,
-      "serveErrors": 2,
+      "serveErrors": 3,
       "serveRating": null,
       "serveScores": [
         3,
@@ -9516,7 +9521,7 @@ window.DATA = {
         0,
         3
       ],
-      "unforcedErrors": 6,
+      "unforcedErrors": 7,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12770,11 +12775,11 @@ window.DATA = {
       "opponent": "Cornerstone",
       "set": 3,
       "acesUs": 2,
-      "errorsUs": 5,
+      "errorsUs": 6,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
-      "errorsThem": 4,
+      "acesThem": 2,
+      "errorsThem": 5,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12946,5 +12951,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T22:36+00:00"
+  "updated": "2026-10-02T22:41+00:00"
 };
