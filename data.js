@@ -9393,7 +9393,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 16,
+      "receiveAttempts": 17,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9411,6 +9411,7 @@ window.DATA = {
         3,
         2,
         1,
+        3,
         3
       ],
       "freeballAttempts": 5,
@@ -9429,8 +9430,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 10,
       "assists": null,
-      "attackAttempts": 15,
-      "kills": 4,
+      "attackAttempts": 16,
+      "kills": 5,
       "killErrors": 6,
       "hittingSheet": null,
       "serveAttempts": 9,
@@ -9481,7 +9482,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Nataly",
-      "digs": 8,
+      "digs": 9,
       "assists": 9,
       "attackAttempts": 3,
       "kills": null,
@@ -9628,7 +9629,7 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -12901,5 +12902,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T22:21+00:00"
+  "updated": "2026-10-02T22:26+00:00"
 };
