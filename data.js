@@ -9325,13 +9325,13 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Tea",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": 6,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": 2,
       "serveErrors": 1,
       "serveRating": null,
@@ -9341,12 +9341,13 @@ window.DATA = {
         5,
         2,
         3,
+        3,
         3
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
+      "receiveAttempts": 9,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9356,7 +9357,8 @@ window.DATA = {
         2,
         2,
         2,
-        1
+        1,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -9372,18 +9374,19 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
       "serveScores": [
         0,
-        3
+        3,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 9,
+      "receiveAttempts": 13,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -9394,14 +9397,19 @@ window.DATA = {
         2,
         1,
         0,
-        1
+        1,
+        0,
+        1,
+        2,
+        3
       ],
-      "freeballAttempts": 3,
+      "freeballAttempts": 4,
       "freeballRating": null,
       "freeballGrades": [
         3,
         1,
-        3
+        3,
+        2
       ]
     },
     {
@@ -9410,8 +9418,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 8,
       "assists": null,
-      "attackAttempts": 4,
-      "kills": null,
+      "attackAttempts": 5,
+      "kills": 1,
       "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 4,
@@ -9449,21 +9457,22 @@ window.DATA = {
       "opponent": "Cornerstone",
       "player": "Nataly",
       "digs": 7,
-      "assists": 2,
+      "assists": 4,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
         3,
         3,
+        2,
         2
       ],
-      "unforcedErrors": 2,
+      "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -9513,7 +9522,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Annabelle",
-      "digs": 3,
+      "digs": 4,
       "assists": 2,
       "attackAttempts": 3,
       "kills": 1,
@@ -9560,6 +9569,31 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Agnes",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": 1,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12582,8 +12616,8 @@ window.DATA = {
       "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
-      "errorsThem": 1,
+      "acesThem": 2,
+      "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12768,5 +12802,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T17:36+00:00"
+  "updated": "2026-10-02T17:41+00:00"
 };
