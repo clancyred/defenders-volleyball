@@ -9334,7 +9334,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 2.77,
       "serveScores": [
         5,
         0,
@@ -9389,7 +9389,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 1.67,
       "serveScores": [
         0,
         3,
@@ -9452,7 +9452,7 @@ window.DATA = {
       "serveAttempts": 14,
       "aces": 2,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 2.64,
       "serveScores": [
         3,
         2,
@@ -12957,5 +12957,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T22:47+00:00"
+  "updated": "2026-10-02T23:06+00:00"
 };
