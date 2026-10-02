@@ -9325,7 +9325,7 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Tea",
-      "digs": 3,
+      "digs": 4,
       "assists": null,
       "attackAttempts": 10,
       "kills": 3,
@@ -9373,13 +9373,13 @@ window.DATA = {
       "date": "2026-09-30",
       "opponent": "Cornerstone",
       "player": "Anna",
-      "digs": 8,
+      "digs": 10,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
@@ -9387,7 +9387,8 @@ window.DATA = {
         0,
         3,
         1,
-        3
+        3,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -9428,8 +9429,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 10,
       "assists": null,
-      "attackAttempts": 12,
-      "kills": 3,
+      "attackAttempts": 15,
+      "kills": 4,
       "killErrors": 6,
       "hittingSheet": null,
       "serveAttempts": 9,
@@ -9450,7 +9451,7 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
+      "receiveAttempts": 12,
       "receiveRating": null,
       "receiveGrades": [
         2,
@@ -9463,7 +9464,8 @@ window.DATA = {
         2,
         1,
         2,
-        3
+        3,
+        2
       ],
       "freeballAttempts": 5,
       "freeballRating": null,
@@ -9480,12 +9482,12 @@ window.DATA = {
       "opponent": "Cornerstone",
       "player": "Nataly",
       "digs": 8,
-      "assists": 8,
+      "assists": 9,
       "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 7,
+      "serveAttempts": 8,
       "aces": null,
       "serveErrors": 2,
       "serveRating": null,
@@ -9496,9 +9498,10 @@ window.DATA = {
         2,
         1,
         0,
-        0
+        0,
+        3
       ],
-      "unforcedErrors": 3,
+      "unforcedErrors": 4,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -9585,11 +9588,12 @@ window.DATA = {
         1,
         1
       ],
-      "freeballAttempts": 3,
+      "freeballAttempts": 4,
       "freeballRating": null,
       "freeballGrades": [
         2,
         1,
+        3,
         3
       ]
     },
@@ -9624,7 +9628,7 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 7,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -12725,7 +12729,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": 2,
+      "errorsThem": 3,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -12897,5 +12901,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T22:16+00:00"
+  "updated": "2026-10-02T22:21+00:00"
 };
