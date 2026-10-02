@@ -9424,7 +9424,7 @@ window.DATA = {
       "assists": null,
       "attackAttempts": 8,
       "kills": 2,
-      "killErrors": 3,
+      "killErrors": 4,
       "hittingSheet": null,
       "serveAttempts": 5,
       "aces": null,
@@ -9643,6 +9643,33 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-09-30",
+      "opponent": "Cornerstone",
+      "player": "Gaby",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": null,
+      "receiveGrades": [
+        0
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -12660,7 +12687,7 @@ window.DATA = {
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
+      "acesThem": 4,
       "errorsThem": 3,
       "acePctThem": null,
       "errorPctThem": null
@@ -12846,5 +12873,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T18:06+00:00"
+  "updated": "2026-10-02T18:11+00:00"
 };
