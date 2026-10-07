@@ -21,7 +21,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 12,
+      "receiveAttempts": 13,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -36,6 +36,7 @@ window.DATA = {
         0,
         2,
         0,
+        1,
         1
       ],
       "freeballAttempts": null,
@@ -169,9 +170,11 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
+      "freeballAttempts": 1,
       "freeballRating": null,
-      "freeballGrades": []
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-01-07",
@@ -322,6 +325,31 @@ window.DATA = {
         2
       ],
       "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "player": "Bridget",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -11543,7 +11571,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -13372,5 +13400,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T22:16+00:00"
+  "updated": "2026-10-07T22:21+00:00"
 };
