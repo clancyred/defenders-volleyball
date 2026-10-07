@@ -48,25 +48,26 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Shiloh",
-      "digs": 5,
-      "assists": null,
-      "attackAttempts": 7,
+      "digs": 6,
+      "assists": 1,
+      "attackAttempts": 8,
       "kills": null,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
         2,
         1,
-        3
+        3,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
+      "receiveAttempts": 13,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -79,11 +80,14 @@ window.DATA = {
         3,
         2,
         0,
-        2
+        2,
+        2,
+        0
       ],
-      "freeballAttempts": 1,
+      "freeballAttempts": 2,
       "freeballRating": null,
       "freeballGrades": [
+        2,
         2
       ]
     },
@@ -91,8 +95,8 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Nataly",
-      "digs": 1,
-      "assists": 3,
+      "digs": 2,
+      "assists": 4,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -123,8 +127,8 @@ window.DATA = {
       "player": "Tea",
       "digs": 9,
       "assists": null,
-      "attackAttempts": 6,
-      "kills": 1,
+      "attackAttempts": 7,
+      "kills": 2,
       "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 4,
@@ -140,7 +144,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
+      "receiveAttempts": 9,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -149,7 +153,9 @@ window.DATA = {
         2,
         2,
         2,
-        3
+        3,
+        1,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -161,8 +167,8 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 3,
-      "kills": 1,
+      "attackAttempts": 5,
+      "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 2,
@@ -195,7 +201,7 @@ window.DATA = {
       "kills": null,
       "killErrors": 3,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 1,
       "serveErrors": null,
       "serveRating": null,
@@ -203,14 +209,17 @@ window.DATA = {
         5,
         2,
         1,
-        3
+        3,
+        2
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 1,
       "receiveRating": null,
-      "receiveGrades": [],
+      "receiveGrades": [
+        2
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -219,7 +228,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Cora",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": 3,
       "kills": null,
@@ -231,11 +240,13 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": null,
-      "stuffBlocks": null,
+      "stuffBlocks": 1,
       "blockTouches": null,
-      "receiveAttempts": null,
+      "receiveAttempts": 1,
       "receiveRating": null,
-      "receiveGrades": [],
+      "receiveGrades": [
+        1
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -11606,7 +11617,7 @@ window.DATA = {
       "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
+      "acesThem": 3,
       "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
@@ -13436,5 +13447,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T22:31+00:00"
+  "updated": "2026-10-07T22:36+00:00"
 };
