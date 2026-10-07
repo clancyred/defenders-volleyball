@@ -1,6 +1,34 @@
 window.DATA = {
   "players": [
     {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "player": "Anna",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 2,
+      "receiveRating": null,
+      "receiveGrades": [
+        0,
+        1
+      ],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "player": "Cora",
@@ -11191,6 +11219,84 @@ window.DATA = {
   ],
   "serving": [
     {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": 1,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "set": 1,
@@ -12831,6 +12937,12 @@ window.DATA = {
   ],
   "matches": [
     {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "teamHitting": null,
+      "note": ""
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "teamHitting": -0.109,
@@ -12957,5 +13069,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-02T23:16+00:00"
+  "updated": "2026-10-07T21:46+00:00"
 };
