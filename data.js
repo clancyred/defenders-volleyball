@@ -4,21 +4,23 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Anna",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
-      "serveScores": [],
+      "serveScores": [
+        1
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
+      "receiveAttempts": 9,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -29,7 +31,8 @@ window.DATA = {
         3,
         2,
         1,
-        1
+        1,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -39,9 +42,9 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Shiloh",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -55,16 +58,19 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
+      "receiveAttempts": 4,
       "receiveRating": null,
       "receiveGrades": [
         3,
         2,
-        3
+        3,
+        2
       ],
-      "freeballAttempts": null,
+      "freeballAttempts": 1,
       "freeballRating": null,
-      "freeballGrades": []
+      "freeballGrades": [
+        2
+      ]
     },
     {
       "date": "2026-01-07",
@@ -98,18 +104,21 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Tea",
-      "digs": null,
+      "digs": 3,
       "assists": null,
       "attackAttempts": 3,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": null,
-      "aces": null,
+      "serveAttempts": 2,
+      "aces": 1,
       "serveErrors": null,
       "serveRating": null,
-      "serveScores": [],
-      "unforcedErrors": 1,
+      "serveScores": [
+        5,
+        2
+      ],
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 4,
@@ -134,11 +143,13 @@ window.DATA = {
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
-      "serveErrors": null,
+      "serveErrors": 1,
       "serveRating": null,
-      "serveScores": [],
+      "serveScores": [
+        0
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -168,6 +179,31 @@ window.DATA = {
         2,
         1
       ],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-01-07",
+      "opponent": "First Baptist",
+      "player": "Cora",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -11372,12 +11408,12 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "set": 1,
-      "acesUs": 1,
-      "errorsUs": null,
+      "acesUs": 2,
+      "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 4,
-      "errorsThem": null,
+      "acesThem": 5,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -13219,5 +13255,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T22:01+00:00"
+  "updated": "2026-10-07T22:06+00:00"
 };
