@@ -22,7 +22,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 16,
+      "receiveAttempts": 17,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -41,7 +41,8 @@ window.DATA = {
         1,
         0,
         2,
-        0
+        0,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -103,7 +104,7 @@ window.DATA = {
       "opponent": "First Baptist",
       "player": "Nataly",
       "digs": 2,
-      "assists": 5,
+      "assists": 6,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -278,8 +279,8 @@ window.DATA = {
       "player": "Piper",
       "digs": null,
       "assists": null,
-      "attackAttempts": 4,
-      "kills": 3,
+      "attackAttempts": 5,
+      "kills": 4,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -13502,5 +13503,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T23:36+00:00"
+  "updated": "2026-10-07T23:41+00:00"
 };
