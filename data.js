@@ -65,7 +65,7 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
+      "receiveAttempts": 8,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -74,7 +74,8 @@ window.DATA = {
         2,
         3,
         2,
-        2
+        2,
+        3
       ],
       "freeballAttempts": 1,
       "freeballRating": null,
@@ -116,19 +117,21 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Tea",
-      "digs": 4,
+      "digs": 6,
       "assists": null,
       "attackAttempts": 6,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 2,
-      "aces": 1,
+      "serveAttempts": 4,
+      "aces": 2,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
         5,
-        2
+        2,
+        5,
+        3
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -212,7 +215,7 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -340,7 +343,7 @@ window.DATA = {
       "player": "Bridget",
       "digs": null,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -11553,7 +11556,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "set": 1,
-      "acesUs": 2,
+      "acesUs": 3,
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
@@ -13400,5 +13403,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T22:21+00:00"
+  "updated": "2026-10-07T22:26+00:00"
 };
