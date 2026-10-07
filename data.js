@@ -55,9 +55,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
+      "receiveAttempts": 3,
       "receiveRating": null,
       "receiveGrades": [
+        3,
+        2,
         3
       ],
       "freeballAttempts": null,
@@ -69,7 +71,7 @@ window.DATA = {
       "opponent": "First Baptist",
       "player": "Nataly",
       "digs": null,
-      "assists": 1,
+      "assists": 2,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -98,7 +100,7 @@ window.DATA = {
       "player": "Tea",
       "digs": null,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
@@ -128,8 +130,8 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 2,
-      "kills": null,
+      "attackAttempts": 3,
+      "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -157,13 +159,14 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": 1,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
         5,
-        2
+        2,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13216,5 +13219,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T21:56+00:00"
+  "updated": "2026-10-07T22:01+00:00"
 };
