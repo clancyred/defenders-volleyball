@@ -50,7 +50,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 6,
       "assists": 1,
-      "attackAttempts": 8,
+      "attackAttempts": 10,
       "kills": null,
       "killErrors": 2,
       "hittingSheet": null,
@@ -67,7 +67,7 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
+      "receiveAttempts": 14,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -82,13 +82,15 @@ window.DATA = {
         0,
         2,
         2,
-        0
+        0,
+        3
       ],
-      "freeballAttempts": 2,
+      "freeballAttempts": 3,
       "freeballRating": null,
       "freeballGrades": [
         2,
-        2
+        2,
+        3
       ]
     },
     {
@@ -127,24 +129,25 @@ window.DATA = {
       "player": "Tea",
       "digs": 9,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 2,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 2,
-      "serveErrors": null,
+      "serveErrors": 1,
       "serveRating": null,
       "serveScores": [
         5,
         2,
         5,
-        3
+        3,
+        0
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 9,
+      "receiveAttempts": 10,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -155,7 +158,8 @@ window.DATA = {
         2,
         3,
         1,
-        2
+        2,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -166,18 +170,20 @@ window.DATA = {
       "opponent": "First Baptist",
       "player": "Annabelle",
       "digs": 3,
-      "assists": null,
+      "assists": 1,
       "attackAttempts": 5,
       "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 4,
       "aces": null,
-      "serveErrors": 1,
+      "serveErrors": 2,
       "serveRating": null,
       "serveScores": [
         0,
-        3
+        3,
+        3,
+        0
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -195,10 +201,10 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Agnes",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
-      "attackAttempts": 7,
-      "kills": null,
+      "attackAttempts": 8,
+      "kills": 1,
       "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 5,
@@ -215,10 +221,12 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
+      "receiveAttempts": 3,
       "receiveRating": null,
       "receiveGrades": [
-        2
+        2,
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -230,8 +238,8 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 3,
-      "kills": null,
+      "attackAttempts": 4,
+      "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -387,7 +395,7 @@ window.DATA = {
       "player": "Addy",
       "digs": null,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -11614,10 +11622,10 @@ window.DATA = {
       "opponent": "First Baptist",
       "set": 2,
       "acesUs": null,
-      "errorsUs": 1,
+      "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
+      "acesThem": 4,
       "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
@@ -13447,5 +13455,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T22:36+00:00"
+  "updated": "2026-10-07T22:41+00:00"
 };
