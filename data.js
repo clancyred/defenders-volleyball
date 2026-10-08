@@ -10,7 +10,7 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
@@ -18,7 +18,8 @@ window.DATA = {
         1,
         0,
         3,
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -206,9 +207,10 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": 1,
+      "freeballAttempts": 2,
       "freeballRating": null,
       "freeballGrades": [
+        3,
         3
       ]
     },
@@ -13504,5 +13506,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:16+00:00"
+  "updated": "2026-10-08T00:21+00:00"
 };
