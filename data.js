@@ -6,7 +6,7 @@ window.DATA = {
       "player": "Anna",
       "digs": 3,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -24,7 +24,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 17,
+      "receiveAttempts": 20,
       "receiveRating": null,
       "receiveGrades": [
         0,
@@ -44,6 +44,9 @@ window.DATA = {
         0,
         2,
         0,
+        3,
+        2,
+        1,
         3
       ],
       "freeballAttempts": null,
@@ -422,7 +425,7 @@ window.DATA = {
       "player": "Addy",
       "digs": null,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -434,7 +437,7 @@ window.DATA = {
         5,
         0
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -13513,5 +13516,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:31+00:00"
+  "updated": "2026-10-08T00:36+00:00"
 };
