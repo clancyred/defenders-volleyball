@@ -152,7 +152,7 @@ window.DATA = {
       "kills": 5,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 10,
+      "serveAttempts": 11,
       "aces": 2,
       "serveErrors": 1,
       "serveRating": null,
@@ -166,7 +166,8 @@ window.DATA = {
         3,
         3,
         1,
-        1
+        1,
+        2
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -199,7 +200,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Annabelle",
-      "digs": 6,
+      "digs": 8,
       "assists": 1,
       "attackAttempts": 9,
       "kills": 2,
@@ -277,8 +278,8 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 4,
-      "kills": 1,
+      "attackAttempts": 5,
+      "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -287,7 +288,7 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": 1,
-      "stuffBlocks": 1,
+      "stuffBlocks": 2,
       "blockTouches": null,
       "receiveAttempts": 1,
       "receiveRating": null,
@@ -13530,5 +13531,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:46+00:00"
+  "updated": "2026-10-08T00:51+00:00"
 };
