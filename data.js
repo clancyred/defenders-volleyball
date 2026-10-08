@@ -10,14 +10,15 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
       "serveScores": [
         1,
         0,
-        3
+        3,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -103,7 +104,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Nataly",
-      "digs": 2,
+      "digs": 3,
       "assists": 6,
       "attackAttempts": null,
       "kills": null,
@@ -13503,5 +13504,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-07T23:41+00:00"
+  "updated": "2026-10-08T00:16+00:00"
 };
