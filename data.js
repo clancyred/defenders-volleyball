@@ -88,7 +88,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 27,
+      "receiveAttempts": 28,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -117,7 +117,8 @@ window.DATA = {
         2,
         1,
         2,
-        0
+        0,
+        2
       ],
       "freeballAttempts": 8,
       "freeballRating": null,
@@ -170,7 +171,7 @@ window.DATA = {
       "player": "Tea",
       "digs": 11,
       "assists": null,
-      "attackAttempts": 16,
+      "attackAttempts": 17,
       "kills": 5,
       "killErrors": 2,
       "hittingSheet": null,
@@ -288,13 +289,14 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": 1,
-      "receiveAttempts": 4,
+      "receiveAttempts": 5,
       "receiveRating": null,
       "receiveGrades": [
         2,
         2,
         3,
-        3
+        3,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -367,7 +369,7 @@ window.DATA = {
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -13567,5 +13569,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T01:26+00:00"
+  "updated": "2026-10-08T01:31+00:00"
 };
