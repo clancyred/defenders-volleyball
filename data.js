@@ -10,7 +10,7 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": null,
       "serveErrors": 1,
       "serveRating": null,
@@ -19,6 +19,7 @@ window.DATA = {
         0,
         3,
         1,
+        2,
         2
       ],
       "unforcedErrors": null,
@@ -59,8 +60,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 7,
       "assists": 1,
-      "attackAttempts": 12,
-      "kills": 1,
+      "attackAttempts": 14,
+      "kills": 2,
       "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 5,
@@ -77,7 +78,7 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 20,
+      "receiveAttempts": 21,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -99,7 +100,8 @@ window.DATA = {
         1,
         2,
         0,
-        2
+        2,
+        3
       ],
       "freeballAttempts": 5,
       "freeballRating": null,
@@ -116,7 +118,7 @@ window.DATA = {
       "opponent": "First Baptist",
       "player": "Nataly",
       "digs": 3,
-      "assists": 8,
+      "assists": 10,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -146,13 +148,13 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Tea",
-      "digs": 10,
+      "digs": 11,
       "assists": null,
       "attackAttempts": 12,
       "kills": 5,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 11,
+      "serveAttempts": 12,
       "aces": 2,
       "serveErrors": 1,
       "serveRating": null,
@@ -167,7 +169,8 @@ window.DATA = {
         3,
         1,
         1,
-        2
+        2,
+        3
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -200,7 +203,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Annabelle",
-      "digs": 8,
+      "digs": 9,
       "assists": 1,
       "attackAttempts": 9,
       "kills": 2,
@@ -278,8 +281,8 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 5,
-      "kills": 2,
+      "attackAttempts": 6,
+      "kills": 3,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -13531,5 +13534,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:51+00:00"
+  "updated": "2026-10-08T00:56+00:00"
 };
