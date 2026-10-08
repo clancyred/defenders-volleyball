@@ -54,13 +54,13 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Shiloh",
-      "digs": 6,
+      "digs": 7,
       "assists": 1,
-      "attackAttempts": 10,
+      "attackAttempts": 11,
       "kills": null,
-      "killErrors": 2,
+      "killErrors": 3,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
@@ -68,12 +68,13 @@ window.DATA = {
         2,
         1,
         3,
-        2
+        2,
+        1
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 16,
+      "receiveAttempts": 17,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -91,7 +92,8 @@ window.DATA = {
         0,
         3,
         2,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 4,
       "freeballRating": null,
@@ -159,7 +161,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
+      "receiveAttempts": 14,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -174,11 +176,14 @@ window.DATA = {
         0,
         3,
         2,
-        3
+        3,
+        2
       ],
-      "freeballAttempts": null,
+      "freeballAttempts": 1,
       "freeballRating": null,
-      "freeballGrades": []
+      "freeballGrades": [
+        2
+      ]
     },
     {
       "date": "2026-01-07",
@@ -186,7 +191,7 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 4,
       "assists": 1,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 2,
       "killErrors": 2,
       "hittingSheet": null,
@@ -417,7 +422,7 @@ window.DATA = {
       "player": "Addy",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -13508,5 +13513,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:26+00:00"
+  "updated": "2026-10-08T00:31+00:00"
 };
