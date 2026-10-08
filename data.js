@@ -88,7 +88,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 30,
+      "receiveAttempts": 31,
       "receiveRating": null,
       "receiveGrades": [
         3,
@@ -120,7 +120,8 @@ window.DATA = {
         0,
         2,
         2,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 8,
       "freeballRating": null,
@@ -171,7 +172,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Tea",
-      "digs": 11,
+      "digs": 13,
       "assists": null,
       "attackAttempts": 19,
       "kills": 7,
@@ -295,7 +296,7 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": 1,
-      "receiveAttempts": 6,
+      "receiveAttempts": 8,
       "receiveRating": null,
       "receiveGrades": [
         2,
@@ -303,7 +304,9 @@ window.DATA = {
         3,
         3,
         0,
-        3
+        3,
+        0,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -315,7 +318,7 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": 1,
-      "attackAttempts": 6,
+      "attackAttempts": 8,
       "kills": 3,
       "killErrors": null,
       "hittingSheet": null,
@@ -11774,7 +11777,7 @@ window.DATA = {
       "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 5,
+      "acesThem": 7,
       "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
@@ -13578,5 +13581,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T14:56+00:00"
+  "updated": "2026-10-08T15:01+00:00"
 };
