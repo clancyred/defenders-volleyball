@@ -9,11 +9,11 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 6,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 1.5,
       "serveScores": [
         1,
         0,
@@ -66,11 +66,11 @@ window.DATA = {
       "attackAttempts": 19,
       "kills": 4,
       "killErrors": 4,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 12,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 2.58,
       "serveScores": [
         2,
         1,
@@ -149,7 +149,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 2.33,
       "serveScores": [
         3,
         1,
@@ -177,11 +177,11 @@ window.DATA = {
       "attackAttempts": 19,
       "kills": 7,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": 0.263,
       "serveAttempts": 14,
       "aces": 2,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 2.5,
       "serveScores": [
         5,
         2,
@@ -238,11 +238,11 @@ window.DATA = {
       "attackAttempts": 11,
       "kills": 2,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 14,
       "aces": 5,
       "serveErrors": 4,
-      "serveRating": null,
+      "serveRating": 2.71,
       "serveScores": [
         0,
         3,
@@ -281,11 +281,11 @@ window.DATA = {
       "attackAttempts": 15,
       "kills": 1,
       "killErrors": 6,
-      "hittingSheet": null,
+      "hittingSheet": -0.333,
       "serveAttempts": 5,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 2.6,
       "serveScores": [
         5,
         2,
@@ -321,7 +321,7 @@ window.DATA = {
       "attackAttempts": 8,
       "kills": 3,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0.375,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -348,7 +348,7 @@ window.DATA = {
       "attackAttempts": 6,
       "kills": 5,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0.667,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -400,11 +400,11 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 1,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 0,
       "serveScores": [
         0
       ],
@@ -431,7 +431,7 @@ window.DATA = {
       "serveAttempts": 4,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 3,
       "serveScores": [
         5,
         2,
@@ -457,11 +457,11 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 1,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 0,
       "serveScores": [
         0
       ],
@@ -488,11 +488,11 @@ window.DATA = {
       "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 7,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 2.71,
       "serveScores": [
         5,
         0,
@@ -13451,7 +13451,7 @@ window.DATA = {
     {
       "date": "2026-01-07",
       "opponent": "First Baptist",
-      "teamHitting": null,
+      "teamHitting": 0.083,
       "note": ""
     },
     {
@@ -13581,5 +13581,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T15:01+00:00"
+  "updated": "2026-10-08T15:21+00:00"
 };
