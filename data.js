@@ -58,14 +58,14 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "player": "Shiloh",
-      "digs": 7,
+      "digs": 8,
       "assists": 1,
       "attackAttempts": 14,
       "kills": 2,
       "killErrors": 3,
       "hittingSheet": null,
-      "serveAttempts": 5,
-      "aces": null,
+      "serveAttempts": 7,
+      "aces": 1,
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [
@@ -73,7 +73,9 @@ window.DATA = {
         1,
         3,
         2,
-        1
+        1,
+        5,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -245,9 +247,9 @@ window.DATA = {
       "player": "Agnes",
       "digs": 2,
       "assists": null,
-      "attackAttempts": 10,
+      "attackAttempts": 11,
       "kills": 1,
-      "killErrors": 3,
+      "killErrors": 4,
       "hittingSheet": null,
       "serveAttempts": 5,
       "aces": 1,
@@ -11726,7 +11728,7 @@ window.DATA = {
       "date": "2026-01-07",
       "opponent": "First Baptist",
       "set": 4,
-      "acesUs": null,
+      "acesUs": 1,
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
@@ -13534,5 +13536,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T00:56+00:00"
+  "updated": "2026-10-08T01:06+00:00"
 };
