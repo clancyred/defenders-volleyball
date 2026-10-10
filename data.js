@@ -10763,10 +10763,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 1,
+      "receiveAttempts": 2,
+      "receiveRating": 1.5,
       "receiveGrades": [
-        1
+        1,
+        2
       ],
       "freeballAttempts": 1,
       "freeballRating": 2,
@@ -10798,10 +10799,11 @@ window.DATA = {
         0,
         3
       ],
-      "freeballAttempts": 1,
-      "freeballRating": 3,
+      "freeballAttempts": 2,
+      "freeballRating": 2.5,
       "freeballGrades": [
-        3
+        3,
+        2
       ]
     },
     {
@@ -10865,6 +10867,31 @@ window.DATA = {
       "attackAttempts": 2,
       "kills": null,
       "killErrors": 1,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "Heritage",
+      "player": "Addy",
+      "digs": 1,
+      "assists": null,
+      "attackAttempts": 2,
+      "kills": null,
+      "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -14332,5 +14359,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T14:41+00:00"
+  "updated": "2026-10-10T17:51+00:00"
 };
