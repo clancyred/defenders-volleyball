@@ -3731,7 +3731,7 @@ window.DATA = {
       "serveAttempts": 1,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": null,
+      "serveRating": 0,
       "serveScores": [
         0,
         0
@@ -10209,37 +10209,6 @@ window.DATA = {
     {
       "date": "2026-10-07",
       "opponent": "First Baptist",
-      "player": "Bridget",
-      "digs": 3,
-      "assists": null,
-      "attackAttempts": 1,
-      "kills": null,
-      "killErrors": null,
-      "hittingSheet": 0,
-      "serveAttempts": 1,
-      "aces": null,
-      "serveErrors": 1,
-      "serveRating": 0,
-      "serveScores": [
-        0
-      ],
-      "unforcedErrors": 2,
-      "stuffBlocks": null,
-      "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 2,
-      "receiveGrades": [
-        2
-      ],
-      "freeballAttempts": 1,
-      "freeballRating": 3,
-      "freeballGrades": [
-        3
-      ]
-    },
-    {
-      "date": "2026-10-07",
-      "opponent": "First Baptist",
       "player": "Addy",
       "digs": 1,
       "assists": null,
@@ -10311,7 +10280,7 @@ window.DATA = {
       "serveAttempts": 1,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 3,
       "serveScores": [
         3
       ],
@@ -10319,7 +10288,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 10,
-      "receiveRating": null,
+      "receiveRating": 1.4,
       "receiveGrades": [
         3,
         0,
@@ -10333,7 +10302,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 1,
-      "freeballRating": null,
+      "freeballRating": 1,
       "freeballGrades": [
         1
       ]
@@ -10351,7 +10320,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 2.67,
       "serveScores": [
         3,
         2,
@@ -10364,14 +10333,14 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 3,
-      "receiveRating": null,
+      "receiveRating": 2,
       "receiveGrades": [
         2,
         3,
         1
       ],
       "freeballAttempts": 6,
-      "freeballRating": null,
+      "freeballRating": 1.83,
       "freeballGrades": [
         3,
         0,
@@ -10394,7 +10363,7 @@ window.DATA = {
       "serveAttempts": 5,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": null,
+      "serveRating": 2.6,
       "serveScores": [
         0,
         5,
@@ -10409,7 +10378,7 @@ window.DATA = {
       "receiveRating": null,
       "receiveGrades": [],
       "freeballAttempts": 2,
-      "freeballRating": null,
+      "freeballRating": 2.5,
       "freeballGrades": [
         2,
         3
@@ -10428,7 +10397,7 @@ window.DATA = {
       "serveAttempts": 2,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 3,
       "serveScores": [
         3,
         3
@@ -10437,13 +10406,13 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 2,
-      "receiveRating": null,
+      "receiveRating": 2.5,
       "receiveGrades": [
         3,
         2
       ],
       "freeballAttempts": 4,
-      "freeballRating": null,
+      "freeballRating": 2.5,
       "freeballGrades": [
         2,
         3,
@@ -10489,7 +10458,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 4,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 4.14,
       "serveScores": [
         3,
         3,
@@ -10503,7 +10472,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 6,
-      "receiveRating": null,
+      "receiveRating": 2.33,
       "receiveGrades": [
         2,
         3,
@@ -10513,7 +10482,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 8,
-      "freeballRating": null,
+      "freeballRating": 2.88,
       "freeballGrades": [
         3,
         3,
@@ -10563,7 +10532,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 3.67,
       "serveScores": [
         3,
         5,
@@ -10592,7 +10561,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": 3,
       "serveErrors": null,
-      "serveRating": null,
+      "serveRating": 4,
       "serveScores": [
         5,
         5,
@@ -13978,5 +13947,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T13:31+00:00"
+  "updated": "2026-10-10T13:32+00:00"
 };
