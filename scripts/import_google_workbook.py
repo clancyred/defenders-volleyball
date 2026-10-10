@@ -28,20 +28,39 @@ def parse_tab_name(name):
     if not match:
         return None
     digits = match.group(1)
-    if len(digits) == 4:
-        month, day = int(digits[:2]), int(digits[2:])
-    elif len(digits) == 3:
-        month, day = int(digits[0]), int(digits[1:])
-    elif len(digits) == 2:
-        month, day = int(digits[0]), int(digits[1])
-    else:
+    month_day = split_month_day(digits)
+    if not month_day:
         return None
+    month, day = month_day
     opponent = re.sub(r"[\s\-_]+(\d{2,4})\s*$", "", base).strip(" -_")
     opponent = re.sub(r"\s+", " ", opponent)
     if opponent.lower() == "heritage chrisian":
         opponent = "Heritage Christian"
     date = datetime(2026, month, day)
     return date, opponent
+
+
+def split_month_day(digits):
+    """Month and day are concatenated with no separator and no leading zeros.
+
+    821 is August 21, 91 is September 1, and 107 is October 7. A 3-digit
+    value starting with 10, 11, or 12 is that month plus a one-digit day.
+    Reading 107 as January 7 only works if the day is written with a leading
+    zero, which these tab names never do.
+    """
+    if len(digits) == 4:
+        month, day = int(digits[:2]), int(digits[2:])
+    elif len(digits) == 3 and digits.startswith(("10", "11", "12")):
+        month, day = int(digits[:2]), int(digits[2])
+    elif len(digits) == 3:
+        month, day = int(digits[0]), int(digits[1:])
+    elif len(digits) == 2:
+        month, day = int(digits[0]), int(digits[1])
+    else:
+        return None
+    if not (1 <= month <= 12 and 1 <= day <= 31):
+        return None
+    return month, day
 
 
 def parse_digits(value):
