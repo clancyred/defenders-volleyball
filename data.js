@@ -10690,9 +10690,9 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 1,
       "assists": 1,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -14332,5 +14332,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T14:36+00:00"
+  "updated": "2026-10-10T14:41+00:00"
 };
