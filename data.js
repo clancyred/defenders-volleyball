@@ -10686,7 +10686,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Annabelle",
-      "digs": null,
+      "digs": 1,
       "assists": 1,
       "attackAttempts": null,
       "kills": null,
@@ -10713,7 +10713,7 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
@@ -10742,15 +10742,19 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 10,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 3.33,
+      "serveRating": 2.9,
       "serveScores": [
         3,
         5,
         3,
         3,
+        3,
+        3,
+        2,
+        1,
         3,
         3
       ],
@@ -14267,5 +14271,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T14:26+00:00"
+  "updated": "2026-10-10T14:31+00:00"
 };
