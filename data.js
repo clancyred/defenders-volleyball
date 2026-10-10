@@ -544,7 +544,7 @@ window.DATA = {
       "date": "2026-01-08",
       "opponent": "Whitefield",
       "player": "Anna",
-      "digs": null,
+      "digs": 2,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -577,21 +577,29 @@ window.DATA = {
       "player": "Annabelle",
       "digs": null,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 5,
       "aces": null,
       "serveErrors": null,
       "serveRating": null,
-      "serveScores": [],
+      "serveScores": [
+        3,
+        2,
+        2,
+        3,
+        3
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": null,
+      "receiveAttempts": 1,
       "receiveRating": null,
-      "receiveGrades": [],
+      "receiveGrades": [
+        2
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -601,7 +609,7 @@ window.DATA = {
       "opponent": "Whitefield",
       "player": "Nataly",
       "digs": 1,
-      "assists": 1,
+      "assists": 2,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -627,25 +635,28 @@ window.DATA = {
       "player": "Tea",
       "digs": null,
       "assists": null,
-      "attackAttempts": 3,
-      "kills": 1,
+      "attackAttempts": 4,
+      "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
-      "serveErrors": null,
+      "serveErrors": 1,
       "serveRating": null,
-      "serveScores": [],
+      "serveScores": [
+        3
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": 1,
+      "freeballAttempts": 2,
       "freeballRating": null,
       "freeballGrades": [
-        2
+        2,
+        3
       ]
     },
     {
@@ -693,15 +704,44 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": null,
+      "receiveAttempts": 1,
       "receiveRating": null,
-      "receiveGrades": [],
-      "freeballAttempts": 2,
+      "receiveGrades": [
+        2
+      ],
+      "freeballAttempts": 4,
       "freeballRating": null,
       "freeballGrades": [
         3,
+        3,
+        3,
         3
       ]
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "player": "Agnes",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": 1,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
     },
     {
       "date": "2026-08-13",
@@ -11980,7 +12020,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -13828,5 +13868,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T12:51+00:00"
+  "updated": "2026-10-10T12:56+00:00"
 };
