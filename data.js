@@ -10713,8 +10713,8 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
-      "kills": 1,
+      "attackAttempts": 2,
+      "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -10742,11 +10742,16 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 6,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 1.5,
+      "serveRating": 3.33,
       "serveScores": [
+        3,
+        5,
+        3,
+        3,
+        3,
         3
       ],
       "unforcedErrors": null,
@@ -14041,7 +14046,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "set": 1,
-      "acesUs": null,
+      "acesUs": 1,
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
@@ -14262,5 +14267,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T14:21+00:00"
+  "updated": "2026-10-10T14:26+00:00"
 };
