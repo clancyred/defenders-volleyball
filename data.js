@@ -541,6 +541,33 @@ window.DATA = {
       "freeballGrades": []
     },
     {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "player": "Anna",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": null,
+      "receiveGrades": [
+        3
+      ],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "player": "Cora",
@@ -11809,6 +11836,84 @@ window.DATA = {
       "errorPctThem": 0.08
     },
     {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "set": 1,
@@ -13455,6 +13560,12 @@ window.DATA = {
       "note": ""
     },
     {
+      "date": "2026-01-08",
+      "opponent": "Whitefield",
+      "teamHitting": null,
+      "note": ""
+    },
+    {
       "date": "2026-08-13",
       "opponent": "Atchison",
       "teamHitting": -0.109,
@@ -13581,5 +13692,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-08T15:26+00:00"
+  "updated": "2026-10-10T12:46+00:00"
 };
