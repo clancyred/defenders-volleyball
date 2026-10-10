@@ -10480,8 +10480,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 2.25,
+      "receiveAttempts": 9,
+      "receiveRating": 2.22,
       "receiveGrades": [
         2,
         3,
@@ -10490,7 +10490,8 @@ window.DATA = {
         3,
         3,
         3,
-        1
+        1,
+        2
       ],
       "freeballAttempts": 8,
       "freeballRating": 2.88,
@@ -10511,7 +10512,7 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 10,
+      "attackAttempts": 11,
       "kills": 1,
       "killErrors": 4,
       "hittingSheet": null,
@@ -13986,5 +13987,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T13:41+00:00"
+  "updated": "2026-10-10T13:46+00:00"
 };
