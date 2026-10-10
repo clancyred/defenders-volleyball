@@ -10284,11 +10284,11 @@ window.DATA = {
       "serveScores": [
         3
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 12,
-      "receiveRating": 1.5,
+      "receiveAttempts": 13,
+      "receiveRating": 1.38,
       "receiveGrades": [
         3,
         0,
@@ -10303,18 +10303,19 @@ window.DATA = {
         2,
         2
       ],
-      "freeballAttempts": 2,
-      "freeballRating": 1.5,
+      "freeballAttempts": 3,
+      "freeballRating": 1,
       "freeballGrades": [
         1,
-        2
+        2,
+        0
       ]
     },
     {
       "date": "2026-10-08",
       "opponent": "Whitefield",
       "player": "Annabelle",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
       "attackAttempts": 13,
       "kills": 1,
@@ -10366,16 +10367,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.6,
+      "serveRating": 2.67,
       "serveScores": [
         0,
         5,
         5,
         3,
-        0
+        0,
+        3
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -10412,13 +10414,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 2.25,
+      "receiveAttempts": 5,
+      "receiveRating": 2.2,
       "receiveGrades": [
         3,
         2,
         1,
-        3
+        3,
+        2
       ],
       "freeballAttempts": 4,
       "freeballRating": 2.5,
@@ -10460,8 +10463,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 7,
       "assists": null,
-      "attackAttempts": 7,
-      "kills": 1,
+      "attackAttempts": 9,
+      "kills": 3,
       "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 7,
@@ -10480,8 +10483,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 9,
-      "receiveRating": 2.22,
+      "receiveAttempts": 10,
+      "receiveRating": 2.3,
       "receiveGrades": [
         2,
         3,
@@ -10491,7 +10494,8 @@ window.DATA = {
         3,
         3,
         1,
-        2
+        2,
+        3
       ],
       "freeballAttempts": 8,
       "freeballRating": 2.88,
@@ -10537,18 +10541,19 @@ window.DATA = {
       "player": "Addy",
       "digs": null,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 3.67,
+      "serveRating": 3.25,
       "serveScores": [
         3,
         5,
-        3
+        3,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -10599,8 +10604,8 @@ window.DATA = {
       "date": "2026-10-08",
       "opponent": "Whitefield",
       "player": "Corena",
-      "digs": null,
-      "assists": null,
+      "digs": 1,
+      "assists": 2,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
@@ -13987,5 +13992,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T13:46+00:00"
+  "updated": "2026-10-10T13:51+00:00"
 };
