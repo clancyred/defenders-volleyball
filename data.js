@@ -10686,7 +10686,7 @@ window.DATA = {
       "opponent": "Heritage",
       "player": "Tea",
       "digs": 1,
-      "assists": null,
+      "assists": 1,
       "attackAttempts": 3,
       "kills": 2,
       "killErrors": null,
@@ -10704,14 +10704,15 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 1.667,
+      "receiveAttempts": 7,
+      "receiveRating": 1.571,
       "receiveGrades": [
         1,
         3,
         2,
         3,
         0,
+        1,
         1
       ],
       "freeballAttempts": 1,
@@ -10759,8 +10760,8 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 5,
-      "kills": 4,
+      "attackAttempts": 6,
+      "kills": 5,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -10784,14 +10785,14 @@ window.DATA = {
       "player": "Shiloh",
       "digs": null,
       "assists": 1,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 14,
+      "serveAttempts": 15,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.571,
+      "serveRating": 2.533,
       "serveScores": [
         3,
         5,
@@ -10806,13 +10807,14 @@ window.DATA = {
         1,
         2,
         1,
-        3
+        3,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 1.375,
+      "receiveAttempts": 9,
+      "receiveRating": 1.333,
       "receiveGrades": [
         1,
         2,
@@ -10821,7 +10823,8 @@ window.DATA = {
         0,
         3,
         2,
-        0
+        0,
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": 2.333,
@@ -10849,14 +10852,17 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
-      "receiveRating": 2.4,
+      "receiveAttempts": 8,
+      "receiveRating": 2,
       "receiveGrades": [
         0,
         3,
         3,
         3,
-        3
+        3,
+        0,
+        3,
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": 2,
@@ -10876,12 +10882,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 0,
+      "serveRating": 1,
       "serveScores": [
-        0
+        0,
+        2
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -10937,9 +10944,9 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 4,
+      "attackAttempts": 6,
       "kills": null,
-      "killErrors": 3,
+      "killErrors": 4,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -10952,9 +10959,11 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-09",
@@ -10966,11 +10975,12 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
-      "serveErrors": 1,
+      "serveErrors": 2,
       "serveRating": 0,
       "serveScores": [
+        0,
         0
       ],
       "unforcedErrors": null,
@@ -14277,11 +14287,11 @@ window.DATA = {
       "opponent": "Heritage",
       "set": 2,
       "acesUs": 1,
-      "errorsUs": 1,
+      "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
-      "errorsThem": null,
+      "acesThem": 5,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -14484,5 +14494,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-11T21:31+00:00"
+  "updated": "2026-10-11T21:36+00:00"
 };
