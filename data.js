@@ -21,7 +21,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 0.71,
+      "receiveRating": 0.714,
       "receiveGrades": [
         0,
         1,
@@ -48,7 +48,7 @@ window.DATA = {
       "serveAttempts": 19,
       "aces": 9,
       "serveErrors": 1,
-      "serveRating": 3.89,
+      "serveRating": 3.895,
       "serveScores": [
         2,
         5,
@@ -77,7 +77,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 1.67,
+      "receiveRating": 1.636,
       "receiveGrades": [
         2,
         2,
@@ -108,7 +108,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 5,
       "serveErrors": 1,
-      "serveRating": 3.67,
+      "serveRating": 3.636,
       "serveScores": [
         0,
         5,
@@ -205,7 +205,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 3,
-      "receiveRating": 1.33,
+      "receiveRating": 1.333,
       "receiveGrades": [
         3,
         0,
@@ -228,7 +228,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 3.29,
+      "serveRating": 3.286,
       "serveScores": [
         3,
         3,
@@ -358,7 +358,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 17,
-      "receiveRating": 1.59,
+      "receiveRating": 1.706,
       "receiveGrades": [
         1,
         3,
@@ -470,7 +470,7 @@ window.DATA = {
       "serveAttempts": 23,
       "aces": 9,
       "serveErrors": 3,
-      "serveRating": 2.78,
+      "serveRating": 2.783,
       "serveScores": [
         3,
         5,
@@ -522,7 +522,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.29,
+      "freeballRating": 2.286,
       "freeballGrades": [
         3,
         2,
@@ -546,7 +546,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 5,
       "serveErrors": 2,
-      "serveRating": 2.92,
+      "serveRating": 2.923,
       "serveScores": [
         3,
         5,
@@ -569,7 +569,7 @@ window.DATA = {
       "receiveRating": null,
       "receiveGrades": [],
       "freeballAttempts": 3,
-      "freeballRating": 2.67,
+      "freeballRating": 2.667,
       "freeballGrades": [
         3,
         2,
@@ -608,7 +608,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 19,
-      "receiveRating": 1.37,
+      "receiveRating": 1.368,
       "receiveGrades": [
         2,
         3,
@@ -664,7 +664,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 1.77,
+      "receiveRating": 1.769,
       "receiveGrades": [
         1,
         0,
@@ -702,7 +702,7 @@ window.DATA = {
       "serveAttempts": 17,
       "aces": 4,
       "serveErrors": 3,
-      "serveRating": 2.59,
+      "serveRating": 2.588,
       "serveScores": [
         5,
         5,
@@ -726,7 +726,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 1.09,
+      "receiveRating": 1.091,
       "receiveGrades": [
         1,
         2,
@@ -760,7 +760,7 @@ window.DATA = {
       "serveAttempts": 18,
       "aces": 8,
       "serveErrors": 5,
-      "serveRating": 2.67,
+      "serveRating": 2.667,
       "serveScores": [
         0,
         2,
@@ -950,8 +950,7 @@ window.DATA = {
       "receiveAttempts": 1,
       "receiveRating": 1,
       "receiveGrades": [
-        1,
-        0
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -984,7 +983,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 22,
-      "receiveRating": 1.36,
+      "receiveRating": 1.364,
       "receiveGrades": [
         0,
         3,
@@ -1026,7 +1025,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 3,
       "serveErrors": null,
-      "serveRating": 3.29,
+      "serveRating": 3.286,
       "serveScores": [
         3,
         5,
@@ -1062,7 +1061,7 @@ window.DATA = {
       "serveAttempts": 18,
       "aces": 6,
       "serveErrors": 1,
-      "serveRating": 3.06,
+      "serveRating": 3.056,
       "serveScores": [
         3,
         3,
@@ -1110,7 +1109,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 1.86,
+      "serveRating": 1.857,
       "serveScores": [
         1,
         5,
@@ -1124,7 +1123,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 1.71,
+      "receiveRating": 1.714,
       "receiveGrades": [
         0,
         3,
@@ -1157,7 +1156,7 @@ window.DATA = {
       "serveAttempts": 8,
       "aces": null,
       "serveErrors": 2,
-      "serveRating": 1.13,
+      "serveRating": 1.125,
       "serveScores": [
         1,
         1,
@@ -1291,7 +1290,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 3,
-      "receiveRating": 0.67,
+      "receiveRating": 0.667,
       "receiveGrades": [
         1,
         0,
@@ -1369,7 +1368,7 @@ window.DATA = {
       "serveAttempts": 16,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.31,
+      "serveRating": 2.312,
       "serveScores": [
         3,
         3,
@@ -1392,7 +1391,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 21,
-      "receiveRating": 1.62,
+      "receiveRating": 1.619,
       "receiveGrades": [
         1,
         0,
@@ -1417,7 +1416,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.57,
+      "freeballRating": 2.571,
       "freeballGrades": [
         3,
         3,
@@ -1485,7 +1484,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 15,
-      "receiveRating": 1.87,
+      "receiveRating": 1.867,
       "receiveGrades": [
         1,
         3,
@@ -1504,7 +1503,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.29,
+      "freeballRating": 2.286,
       "freeballGrades": [
         3,
         2,
@@ -1537,7 +1536,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 1.45,
+      "receiveRating": 1.455,
       "receiveGrades": [
         3,
         0,
@@ -1553,7 +1552,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 1,
-      "freeballRating": 1.5,
+      "freeballRating": 2,
       "freeballGrades": [
         2
       ]
@@ -1571,7 +1570,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": 2.91,
+      "serveRating": 2.909,
       "serveScores": [
         5,
         0,
@@ -1614,7 +1613,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.36,
+      "serveRating": 2.364,
       "serveScores": [
         1,
         2,
@@ -1669,7 +1668,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 9,
-      "receiveRating": 1.11,
+      "receiveRating": 1.111,
       "receiveGrades": [
         0,
         0,
@@ -1931,7 +1930,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 16,
-      "receiveRating": 1.56,
+      "receiveRating": 1.562,
       "receiveGrades": [
         3,
         2,
@@ -1951,7 +1950,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.86,
+      "freeballRating": 2.857,
       "freeballGrades": [
         3,
         3,
@@ -1975,7 +1974,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 4,
       "serveErrors": 2,
-      "serveRating": 2.77,
+      "serveRating": 2.769,
       "serveScores": [
         5,
         2,
@@ -2020,7 +2019,7 @@ window.DATA = {
       "serveAttempts": 2,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 0,
+      "serveRating": 1,
       "serveScores": [
         2,
         0
@@ -2104,7 +2103,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.36,
+      "serveRating": 2.364,
       "serveScores": [
         1,
         0,
@@ -2122,7 +2121,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 6,
-      "receiveRating": 1.17,
+      "receiveRating": 1.5,
       "receiveGrades": [
         2,
         1,
@@ -2132,7 +2131,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 6,
-      "freeballRating": 1.5,
+      "freeballRating": 1.833,
       "freeballGrades": [
         1,
         1,
@@ -2172,7 +2171,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 9,
-      "receiveRating": 1.44,
+      "receiveRating": 1.444,
       "receiveGrades": [
         0,
         3,
@@ -2278,7 +2277,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.67,
+      "serveRating": 1.667,
       "serveScores": [
         0,
         3,
@@ -2449,7 +2448,7 @@ window.DATA = {
       "serveAttempts": 32,
       "aces": 11,
       "serveErrors": null,
-      "serveRating": 2.84,
+      "serveRating": 2.844,
       "serveScores": [
         1,
         5,
@@ -2488,7 +2487,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 14,
-      "receiveRating": 1.57,
+      "receiveRating": 1.571,
       "receiveGrades": [
         3,
         3,
@@ -2506,7 +2505,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 9,
-      "freeballRating": 2.56,
+      "freeballRating": 2.556,
       "freeballGrades": [
         2,
         2,
@@ -2532,7 +2531,7 @@ window.DATA = {
       "serveAttempts": 21,
       "aces": 6,
       "serveErrors": 9,
-      "serveRating": 2.1,
+      "serveRating": 2.095,
       "serveScores": [
         0,
         0,
@@ -2579,7 +2578,7 @@ window.DATA = {
       "serveAttempts": 19,
       "aces": 7,
       "serveErrors": 3,
-      "serveRating": 2.63,
+      "serveRating": 2.632,
       "serveScores": [
         3,
         2,
@@ -2612,7 +2611,7 @@ window.DATA = {
         0
       ],
       "freeballAttempts": 3,
-      "freeballRating": 2.33,
+      "freeballRating": 2.333,
       "freeballGrades": [
         3,
         3,
@@ -2632,7 +2631,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 3,
       "serveErrors": 3,
-      "serveRating": 2.38,
+      "serveRating": 2.385,
       "serveScores": [
         0,
         5,
@@ -2721,7 +2720,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 2,
       "serveErrors": 3,
-      "serveRating": 2.38,
+      "serveRating": 2.385,
       "serveScores": [
         0,
         0,
@@ -2741,7 +2740,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 16,
-      "receiveRating": 1.69,
+      "receiveRating": 1.688,
       "receiveGrades": [
         3,
         2,
@@ -2802,7 +2801,7 @@ window.DATA = {
       "serveAttempts": 8,
       "aces": 3,
       "serveErrors": 3,
-      "serveRating": 2.36,
+      "serveRating": 2.375,
       "serveScores": [
         2,
         5,
@@ -2817,7 +2816,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 24,
-      "receiveRating": 2.04,
+      "receiveRating": 2.042,
       "receiveGrades": [
         3,
         2,
@@ -2996,7 +2995,7 @@ window.DATA = {
       "serveAttempts": 5,
       "aces": null,
       "serveErrors": 2,
-      "serveRating": 2.5,
+      "serveRating": 1,
       "serveScores": [
         2,
         1,
@@ -3150,7 +3149,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 3,
-      "receiveRating": 1.667,
+      "receiveRating": 1.333,
       "receiveGrades": [
         2,
         2,
@@ -3175,7 +3174,7 @@ window.DATA = {
       "serveAttempts": 5,
       "aces": null,
       "serveErrors": 2,
-      "serveRating": 2.5,
+      "serveRating": 1,
       "serveScores": [
         1,
         3,
@@ -3365,8 +3364,7 @@ window.DATA = {
       "receiveAttempts": 1,
       "receiveRating": 2,
       "receiveGrades": [
-        2,
-        0
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -3573,8 +3571,7 @@ window.DATA = {
       "freeballAttempts": 1,
       "freeballRating": 1,
       "freeballGrades": [
-        1,
-        0
+        1
       ]
     },
     {
@@ -3606,8 +3603,7 @@ window.DATA = {
       "receiveAttempts": 1,
       "receiveRating": 1,
       "receiveGrades": [
-        1,
-        0
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": 1.333,
@@ -3733,7 +3729,6 @@ window.DATA = {
       "serveErrors": 1,
       "serveRating": 0,
       "serveScores": [
-        0,
         0
       ],
       "unforcedErrors": null,
@@ -3759,7 +3754,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 3.14,
+      "serveRating": 3.143,
       "serveScores": [
         3,
         5,
@@ -3796,7 +3791,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 8,
-      "freeballRating": 1.86,
+      "freeballRating": 1.875,
       "freeballGrades": [
         1,
         2,
@@ -3821,7 +3816,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 1,
       "serveErrors": 2,
-      "serveRating": 2.31,
+      "serveRating": 2.308,
       "serveScores": [
         3,
         3,
@@ -3841,7 +3836,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 27,
-      "receiveRating": 2.19,
+      "receiveRating": 2.148,
       "receiveGrades": [
         2,
         1,
@@ -3872,7 +3867,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 9,
-      "freeballRating": 2.56,
+      "freeballRating": 2.556,
       "freeballGrades": [
         3,
         3,
@@ -3898,7 +3893,7 @@ window.DATA = {
       "serveAttempts": 18,
       "aces": 7,
       "serveErrors": 3,
-      "serveRating": 3.33,
+      "serveRating": 3.333,
       "serveScores": [
         3,
         3,
@@ -3923,7 +3918,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 0.86,
+      "receiveRating": 0.857,
       "receiveGrades": [
         0,
         1,
@@ -3956,7 +3951,7 @@ window.DATA = {
       "serveAttempts": 14,
       "aces": 2,
       "serveErrors": 5,
-      "serveRating": 1.76,
+      "serveRating": 2,
       "serveScores": [
         3,
         5,
@@ -4007,7 +4002,7 @@ window.DATA = {
       "serveAttempts": 21,
       "aces": 6,
       "serveErrors": 7,
-      "serveRating": 2.43,
+      "serveRating": 2.429,
       "serveScores": [
         3,
         5,
@@ -4034,7 +4029,7 @@ window.DATA = {
       "stuffBlocks": 3,
       "blockTouches": 1,
       "receiveAttempts": 13,
-      "receiveRating": 1.69,
+      "receiveRating": 1.692,
       "receiveGrades": [
         0,
         2,
@@ -4097,7 +4092,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.44,
+      "serveRating": 2.444,
       "serveScores": [
         3,
         3,
@@ -4113,7 +4108,7 @@ window.DATA = {
       "stuffBlocks": 1,
       "blockTouches": 2,
       "receiveAttempts": 3,
-      "receiveRating": 2.33,
+      "receiveRating": 2.333,
       "receiveGrades": [
         2,
         3,
@@ -4140,7 +4135,7 @@ window.DATA = {
       "serveAttempts": 22,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.18,
+      "serveRating": 2.409,
       "serveScores": [
         0,
         3,
@@ -4193,7 +4188,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.56,
+      "serveRating": 1.556,
       "serveScores": [
         1,
         3,
@@ -4209,7 +4204,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 16,
-      "receiveRating": 1.06,
+      "receiveRating": 1.062,
       "receiveGrades": [
         2,
         0,
@@ -4325,7 +4320,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": 3,
       "serveErrors": 3,
-      "serveRating": 2.33,
+      "serveRating": 2.333,
       "serveScores": [
         0,
         0,
@@ -4384,7 +4379,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 15,
-      "receiveRating": 1.53,
+      "receiveRating": 1.533,
       "receiveGrades": [
         0,
         2,
@@ -4403,7 +4398,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 3,
-      "freeballRating": 2.67,
+      "freeballRating": 2.667,
       "freeballGrades": [
         3,
         3,
@@ -4455,7 +4450,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.89,
+      "serveRating": 1.889,
       "serveScores": [
         3,
         2,
@@ -4556,7 +4551,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.33,
+      "serveRating": 2.333,
       "serveScores": [
         1,
         0,
@@ -4569,7 +4564,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 8,
-      "receiveRating": 1,
+      "receiveRating": 1.125,
       "receiveGrades": [
         0,
         1,
@@ -4600,7 +4595,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 4,
       "serveErrors": 1,
-      "serveRating": 3.08,
+      "serveRating": 3.077,
       "serveScores": [
         3,
         1,
@@ -4620,14 +4615,14 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 3,
-      "receiveRating": 2.67,
+      "receiveRating": 2.667,
       "receiveGrades": [
         3,
         2,
         3
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.71,
+      "freeballRating": 2.429,
       "freeballGrades": [
         2,
         2,
@@ -4651,7 +4646,7 @@ window.DATA = {
       "serveAttempts": 23,
       "aces": 4,
       "serveErrors": 1,
-      "serveRating": 2.78,
+      "serveRating": 2.739,
       "serveScores": [
         2,
         2,
@@ -4693,7 +4688,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 13,
-      "freeballRating": 2.31,
+      "freeballRating": 2.308,
       "freeballGrades": [
         1,
         1,
@@ -4723,7 +4718,7 @@ window.DATA = {
       "serveAttempts": 8,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.36,
+      "serveRating": 2.375,
       "serveScores": [
         3,
         5,
@@ -4738,7 +4733,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 1.27,
+      "receiveRating": 1.273,
       "receiveGrades": [
         0,
         1,
@@ -4842,7 +4837,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 2.29,
+      "receiveRating": 2.286,
       "receiveGrades": [
         2,
         3,
@@ -4874,7 +4869,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": 3.33,
+      "serveRating": 3.333,
       "serveScores": [
         3,
         3,
@@ -5101,7 +5096,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 3,
-      "freeballRating": 2.33,
+      "freeballRating": 2.333,
       "freeballGrades": [
         2,
         3,
@@ -5121,7 +5116,7 @@ window.DATA = {
       "serveAttempts": 16,
       "aces": 4,
       "serveErrors": 2,
-      "serveRating": 2.94,
+      "serveRating": 2.938,
       "serveScores": [
         3,
         5,
@@ -5144,7 +5139,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 1.57,
+      "receiveRating": 1.571,
       "receiveGrades": [
         2,
         1,
@@ -5155,7 +5150,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 9,
-      "freeballRating": 2.56,
+      "freeballRating": 2.556,
       "freeballGrades": [
         3,
         3,
@@ -5181,7 +5176,7 @@ window.DATA = {
       "serveAttempts": 19,
       "aces": 9,
       "serveErrors": 2,
-      "serveRating": 3.47,
+      "serveRating": 3.474,
       "serveScores": [
         5,
         5,
@@ -5207,7 +5202,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 1.14,
+      "receiveRating": 1.143,
       "receiveGrades": [
         1,
         1,
@@ -5262,7 +5257,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 1.15,
+      "receiveRating": 1.154,
       "receiveGrades": [
         1,
         1,
@@ -5279,7 +5274,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 8,
-      "freeballRating": 2.13,
+      "freeballRating": 2.125,
       "freeballGrades": [
         2,
         3,
@@ -5304,7 +5299,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 3,
       "serveErrors": 4,
-      "serveRating": 2.31,
+      "serveRating": 2.308,
       "serveScores": [
         2,
         5,
@@ -5381,7 +5376,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 5,
       "serveErrors": 2,
-      "serveRating": 3.08,
+      "serveRating": 3.083,
       "serveScores": [
         3,
         5,
@@ -5477,7 +5472,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 1,
       "serveErrors": 2,
-      "serveRating": 2.17,
+      "serveRating": 2.167,
       "serveScores": [
         2,
         3,
@@ -5496,7 +5491,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 24,
-      "receiveRating": 1.92,
+      "receiveRating": 1.917,
       "receiveGrades": [
         0,
         0,
@@ -5551,7 +5546,7 @@ window.DATA = {
       "serveAttempts": 31,
       "aces": 11,
       "serveErrors": 1,
-      "serveRating": 3.42,
+      "serveRating": 3.419,
       "serveScores": [
         5,
         3,
@@ -5589,7 +5584,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 14,
-      "receiveRating": 1.64,
+      "receiveRating": 1.643,
       "receiveGrades": [
         1,
         2,
@@ -5607,7 +5602,7 @@ window.DATA = {
         0
       ],
       "freeballAttempts": 21,
-      "freeballRating": 2.49,
+      "freeballRating": 2.429,
       "freeballGrades": [
         3,
         2,
@@ -5645,7 +5640,7 @@ window.DATA = {
       "serveAttempts": 15,
       "aces": 3,
       "serveErrors": 5,
-      "serveRating": 2.07,
+      "serveRating": 2.067,
       "serveScores": [
         0,
         3,
@@ -5667,7 +5662,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": 1,
       "receiveAttempts": 13,
-      "receiveRating": 1.54,
+      "receiveRating": 1.538,
       "receiveGrades": [
         1,
         1,
@@ -5684,7 +5679,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 8,
-      "freeballRating": 2.13,
+      "freeballRating": 2.125,
       "freeballGrades": [
         2,
         3,
@@ -5769,7 +5764,7 @@ window.DATA = {
       "serveAttempts": 18,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.94,
+      "serveRating": 2.944,
       "serveScores": [
         2,
         3,
@@ -5794,7 +5789,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 14,
-      "receiveRating": 1.93,
+      "receiveRating": 1.929,
       "receiveGrades": [
         3,
         0,
@@ -5848,7 +5843,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 14,
-      "receiveRating": 1.64,
+      "receiveRating": 1.643,
       "receiveGrades": [
         2,
         1,
@@ -5866,7 +5861,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 9,
-      "freeballRating": 2.67,
+      "freeballRating": 2.667,
       "freeballGrades": [
         3,
         3,
@@ -5935,7 +5930,7 @@ window.DATA = {
       "receiveRating": null,
       "receiveGrades": [],
       "freeballAttempts": 7,
-      "freeballRating": 2.14,
+      "freeballRating": 2.143,
       "freeballGrades": [
         1,
         2,
@@ -5984,7 +5979,7 @@ window.DATA = {
       "serveAttempts": 15,
       "aces": 1,
       "serveErrors": 3,
-      "serveRating": 1.53,
+      "serveRating": 1.533,
       "serveScores": [
         5,
         2,
@@ -6025,7 +6020,7 @@ window.DATA = {
       "serveAttempts": 17,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.47,
+      "serveRating": 2.471,
       "serveScores": [
         0,
         2,
@@ -6049,7 +6044,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 22,
-      "receiveRating": 2.32,
+      "receiveRating": 2.318,
       "receiveGrades": [
         3,
         0,
@@ -6075,7 +6070,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 23,
-      "freeballRating": 2.48,
+      "freeballRating": 2.478,
       "freeballGrades": [
         3,
         3,
@@ -6127,7 +6122,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 17,
-      "receiveRating": 2.24,
+      "receiveRating": 2.235,
       "receiveGrades": [
         3,
         2,
@@ -6209,7 +6204,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 13,
-      "freeballRating": 2.15,
+      "freeballRating": 2.154,
       "freeballGrades": [
         2,
         3,
@@ -6239,7 +6234,7 @@ window.DATA = {
       "serveAttempts": 16,
       "aces": 4,
       "serveErrors": 5,
-      "serveRating": 2.31,
+      "serveRating": 2.312,
       "serveScores": [
         3,
         0,
@@ -6262,7 +6257,7 @@ window.DATA = {
       "stuffBlocks": 1,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 1.59,
+      "receiveRating": 1.538,
       "receiveGrades": [
         3,
         2,
@@ -6308,7 +6303,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 7,
-      "freeballRating": 1.86,
+      "freeballRating": 1.857,
       "freeballGrades": [
         2,
         1,
@@ -6332,7 +6327,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.67,
+      "serveRating": 1.667,
       "serveScores": [
         0,
         2,
@@ -6365,7 +6360,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": 3,
       "serveErrors": 3,
-      "serveRating": 2.56,
+      "serveRating": 2.556,
       "serveScores": [
         0,
         5,
@@ -6381,7 +6376,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 12,
-      "receiveRating": 1.67,
+      "receiveRating": 1.667,
       "receiveGrades": [
         2,
         3,
@@ -6441,7 +6436,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 2,
       "serveErrors": 1,
-      "serveRating": 2.45,
+      "serveRating": 2.455,
       "serveScores": [
         5,
         1,
@@ -6531,7 +6526,7 @@ window.DATA = {
       "serveAttempts": 8,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.36,
+      "serveRating": 1.375,
       "serveScores": [
         1,
         1,
@@ -6546,7 +6541,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 24,
-      "receiveRating": 1.38,
+      "receiveRating": 1.375,
       "receiveGrades": [
         1,
         0,
@@ -6574,7 +6569,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 6,
-      "freeballRating": 2.17,
+      "freeballRating": 2.167,
       "freeballGrades": [
         2,
         3,
@@ -6655,7 +6650,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 18,
-      "receiveRating": 1.39,
+      "receiveRating": 1.389,
       "receiveGrades": [
         1,
         0,
@@ -6704,7 +6699,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 3,
       "serveErrors": 5,
-      "serveRating": 2.17,
+      "serveRating": 2.167,
       "serveScores": [
         0,
         0,
@@ -6723,7 +6718,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 1.27,
+      "receiveRating": 1.273,
       "receiveGrades": [
         2,
         0,
@@ -6738,7 +6733,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 7,
-      "freeballRating": 2.57,
+      "freeballRating": 2.571,
       "freeballGrades": [
         3,
         3,
@@ -6762,7 +6757,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 1,
       "serveErrors": 2,
-      "serveRating": 2.18,
+      "serveRating": 2.182,
       "serveScores": [
         3,
         5,
@@ -6780,7 +6775,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 22,
-      "receiveRating": 1.59,
+      "receiveRating": 1.591,
       "receiveGrades": [
         2,
         1,
@@ -6860,7 +6855,7 @@ window.DATA = {
       "serveAttempts": 16,
       "aces": 2,
       "serveErrors": 4,
-      "serveRating": 2.31,
+      "serveRating": 2.312,
       "serveScores": [
         3,
         3,
@@ -7042,7 +7037,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 26,
-      "receiveRating": 1.73,
+      "receiveRating": 1.731,
       "receiveGrades": [
         0,
         1,
@@ -7091,7 +7086,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 2.82,
+      "serveRating": 2.818,
       "serveScores": [
         3,
         5,
@@ -7109,7 +7104,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 19,
-      "receiveRating": 1.59,
+      "receiveRating": 1.579,
       "receiveGrades": [
         2,
         1,
@@ -7208,7 +7203,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 10,
-      "receiveRating": 1.7,
+      "receiveRating": 1.8,
       "receiveGrades": [
         1,
         2,
@@ -7243,7 +7238,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.67,
+      "serveRating": 2.667,
       "serveScores": [
         3,
         2,
@@ -7491,7 +7486,7 @@ window.DATA = {
       "serveAttempts": 19,
       "aces": 7,
       "serveErrors": 3,
-      "serveRating": 3.11,
+      "serveRating": 3.105,
       "serveScores": [
         5,
         3,
@@ -7587,7 +7582,7 @@ window.DATA = {
       "serveAttempts": 20,
       "aces": 4,
       "serveErrors": 2,
-      "serveRating": 3.05,
+      "serveRating": 2.8,
       "serveScores": [
         0,
         2,
@@ -7614,7 +7609,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 17,
-      "receiveRating": 1.59,
+      "receiveRating": 1.588,
       "receiveGrades": [
         0,
         2,
@@ -7635,7 +7630,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 6,
-      "freeballRating": 2.17,
+      "freeballRating": 2.167,
       "freeballGrades": [
         2,
         3,
@@ -7679,7 +7674,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 3,
-      "freeballRating": 2.33,
+      "freeballRating": 2.333,
       "freeballGrades": [
         2,
         2,
@@ -7762,7 +7757,7 @@ window.DATA = {
         0
       ],
       "freeballAttempts": 4,
-      "freeballRating": 2.25,
+      "freeballRating": 2.5,
       "freeballGrades": [
         3,
         3,
@@ -7829,7 +7824,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 6,
       "serveErrors": 2,
-      "serveRating": 3.42,
+      "serveRating": 3.417,
       "serveScores": [
         5,
         3,
@@ -7925,7 +7920,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": 2,
       "serveErrors": 4,
-      "serveRating": 1.67,
+      "serveRating": 1.667,
       "serveScores": [
         0,
         0,
@@ -7938,7 +7933,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
-      "receiveRating": 0.86,
+      "receiveRating": 0.857,
       "receiveGrades": [
         0,
         0,
@@ -7965,7 +7960,7 @@ window.DATA = {
       "serveAttempts": 15,
       "aces": 8,
       "serveErrors": null,
-      "serveRating": 3.87,
+      "serveRating": 3.867,
       "serveScores": [
         5,
         5,
@@ -7987,7 +7982,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 15,
-      "receiveRating": 1.53,
+      "receiveRating": 1.533,
       "receiveGrades": [
         2,
         0,
@@ -8028,7 +8023,7 @@ window.DATA = {
       "serveAttempts": 8,
       "aces": 1,
       "serveErrors": 2,
-      "serveRating": 1.86,
+      "serveRating": 1.875,
       "serveScores": [
         3,
         5,
@@ -8043,7 +8038,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 8,
-      "receiveRating": 1.63,
+      "receiveRating": 1.625,
       "receiveGrades": [
         0,
         2,
@@ -8074,7 +8069,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": 1,
       "serveErrors": 2,
-      "serveRating": 2.11,
+      "serveRating": 2.111,
       "serveScores": [
         2,
         3,
@@ -8179,7 +8174,7 @@ window.DATA = {
       "serveAttempts": 17,
       "aces": 9,
       "serveErrors": 2,
-      "serveRating": 3.59,
+      "serveRating": 3.588,
       "serveScores": [
         3,
         5,
@@ -8203,7 +8198,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 2.15,
+      "receiveRating": 2.154,
       "receiveGrades": [
         3,
         1,
@@ -8238,7 +8233,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 4,
       "serveErrors": 3,
-      "serveRating": 2.64,
+      "serveRating": 2.636,
       "serveScores": [
         0,
         0,
@@ -8382,7 +8377,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 4,
       "serveErrors": 1,
-      "serveRating": 2.69,
+      "serveRating": 2.692,
       "serveScores": [
         1,
         5,
@@ -8402,7 +8397,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 22,
-      "receiveRating": 1.45,
+      "receiveRating": 1.455,
       "receiveGrades": [
         2,
         3,
@@ -8450,7 +8445,7 @@ window.DATA = {
       "serveAttempts": 11,
       "aces": 4,
       "serveErrors": 3,
-      "serveRating": 2.82,
+      "serveRating": 2.818,
       "serveScores": [
         5,
         5,
@@ -8516,7 +8511,7 @@ window.DATA = {
       "serveAttempts": 19,
       "aces": 5,
       "serveErrors": 2,
-      "serveRating": 2.63,
+      "serveRating": 2.632,
       "serveScores": [
         2,
         0,
@@ -8542,7 +8537,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 17,
-      "receiveRating": 1.71,
+      "receiveRating": 1.706,
       "receiveGrades": [
         1,
         1,
@@ -8706,7 +8701,7 @@ window.DATA = {
         0
       ],
       "freeballAttempts": 6,
-      "freeballRating": 1.83,
+      "freeballRating": 1.833,
       "freeballGrades": [
         3,
         2,
@@ -8760,7 +8755,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 3.67,
+      "serveRating": 3.667,
       "serveScores": [
         3,
         5,
@@ -8789,7 +8784,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.58,
+      "serveRating": 2.583,
       "serveScores": [
         3,
         0,
@@ -8808,7 +8803,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 24,
-      "receiveRating": 1.46,
+      "receiveRating": 1.458,
       "receiveGrades": [
         1,
         2,
@@ -8836,7 +8831,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 12,
-      "freeballRating": 2.58,
+      "freeballRating": 2.583,
       "freeballGrades": [
         2,
         3,
@@ -8865,7 +8860,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 3,
       "serveErrors": 7,
-      "serveRating": 1.62,
+      "serveRating": 1.615,
       "serveScores": [
         5,
         5,
@@ -8885,7 +8880,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 6,
-      "receiveRating": 1.17,
+      "receiveRating": 1.167,
       "receiveGrades": [
         0,
         1,
@@ -8895,7 +8890,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 11,
-      "freeballRating": 2.36,
+      "freeballRating": 2.364,
       "freeballGrades": [
         3,
         2,
@@ -8966,7 +8961,7 @@ window.DATA = {
       "serveAttempts": 28,
       "aces": 4,
       "serveErrors": 1,
-      "serveRating": 2.86,
+      "serveRating": 2.857,
       "serveScores": [
         2,
         5,
@@ -9001,7 +8996,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 32,
-      "receiveRating": 1.59,
+      "receiveRating": 1.594,
       "receiveGrades": [
         2,
         2,
@@ -9037,7 +9032,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 23,
-      "freeballRating": 2.43,
+      "freeballRating": 2.435,
       "freeballGrades": [
         3,
         3,
@@ -9077,7 +9072,7 @@ window.DATA = {
       "serveAttempts": 15,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.33,
+      "serveRating": 2.333,
       "serveScores": [
         2,
         3,
@@ -9099,7 +9094,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 19,
-      "receiveRating": 1.79,
+      "receiveRating": 1.789,
       "receiveGrades": [
         3,
         2,
@@ -9122,7 +9117,7 @@ window.DATA = {
         2
       ],
       "freeballAttempts": 17,
-      "freeballRating": 2.47,
+      "freeballRating": 2.471,
       "freeballGrades": [
         3,
         3,
@@ -9183,7 +9178,7 @@ window.DATA = {
       "serveAttempts": 17,
       "aces": 6,
       "serveErrors": 4,
-      "serveRating": 2.76,
+      "serveRating": 2.765,
       "serveScores": [
         5,
         5,
@@ -9334,7 +9329,7 @@ window.DATA = {
       "serveAttempts": 13,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": 2.77,
+      "serveRating": 2.769,
       "serveScores": [
         5,
         0,
@@ -9389,7 +9384,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.67,
+      "serveRating": 1.667,
       "serveScores": [
         0,
         3,
@@ -9402,7 +9397,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 23,
-      "receiveRating": 1.52,
+      "receiveRating": 1.522,
       "receiveGrades": [
         0,
         1,
@@ -9429,7 +9424,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 6,
-      "freeballRating": 2.33,
+      "freeballRating": 2.333,
       "freeballGrades": [
         3,
         1,
@@ -9452,7 +9447,7 @@ window.DATA = {
       "serveAttempts": 14,
       "aces": 2,
       "serveErrors": 1,
-      "serveRating": 2.64,
+      "serveRating": 2.643,
       "serveScores": [
         3,
         2,
@@ -9473,7 +9468,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 1.54,
+      "receiveRating": 1.538,
       "receiveGrades": [
         2,
         0,
@@ -9490,7 +9485,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 6,
-      "freeballRating": 2.66,
+      "freeballRating": 2.333,
       "freeballGrades": [
         3,
         2,
@@ -9513,7 +9508,7 @@ window.DATA = {
       "serveAttempts": 9,
       "aces": null,
       "serveErrors": 3,
-      "serveRating": 1.56,
+      "serveRating": 1.556,
       "serveScores": [
         3,
         3,
@@ -9784,7 +9779,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 23,
-      "receiveRating": 1.38,
+      "receiveRating": 1.348,
       "receiveGrades": [
         0,
         1,
@@ -9828,7 +9823,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 3,
       "serveErrors": 1,
-      "serveRating": 2.58,
+      "serveRating": 2.583,
       "serveScores": [
         2,
         1,
@@ -9847,7 +9842,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 31,
-      "receiveRating": 1.74,
+      "receiveRating": 1.742,
       "receiveGrades": [
         3,
         2,
@@ -9882,7 +9877,7 @@ window.DATA = {
         0
       ],
       "freeballAttempts": 8,
-      "freeballRating": 2.38,
+      "freeballRating": 2.375,
       "freeballGrades": [
         2,
         2,
@@ -9907,7 +9902,7 @@ window.DATA = {
       "serveAttempts": 3,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.33,
+      "serveRating": 2.333,
       "serveScores": [
         3,
         1,
@@ -9960,7 +9955,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 17,
-      "receiveRating": 1.76,
+      "receiveRating": 1.765,
       "receiveGrades": [
         3,
         0,
@@ -10000,7 +9995,7 @@ window.DATA = {
       "serveAttempts": 14,
       "aces": 5,
       "serveErrors": 4,
-      "serveRating": 2.71,
+      "serveRating": 2.714,
       "serveScores": [
         0,
         3,
@@ -10250,7 +10245,7 @@ window.DATA = {
       "serveAttempts": 7,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.71,
+      "serveRating": 2.714,
       "serveScores": [
         5,
         0,
@@ -10319,7 +10314,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 19,
-      "receiveRating": 1.53,
+      "receiveRating": 1.526,
       "receiveGrades": [
         3,
         0,
@@ -10392,7 +10387,7 @@ window.DATA = {
         1
       ],
       "freeballAttempts": 6,
-      "freeballRating": 1.83,
+      "freeballRating": 1.833,
       "freeballGrades": [
         3,
         0,
@@ -10415,7 +10410,7 @@ window.DATA = {
       "serveAttempts": 6,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.67,
+      "serveRating": 2.667,
       "serveScores": [
         0,
         5,
@@ -10461,7 +10456,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 6,
-      "receiveRating": 2.33,
+      "receiveRating": 2.333,
       "receiveGrades": [
         3,
         2,
@@ -10534,7 +10529,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 2.36,
+      "receiveRating": 2.364,
       "receiveGrades": [
         2,
         3,
@@ -10549,7 +10544,7 @@ window.DATA = {
         3
       ],
       "freeballAttempts": 14,
-      "freeballRating": 2.64,
+      "freeballRating": 2.643,
       "freeballGrades": [
         3,
         3,
@@ -10636,7 +10631,7 @@ window.DATA = {
       "serveAttempts": 12,
       "aces": 6,
       "serveErrors": 1,
-      "serveRating": 3.58,
+      "serveRating": 3.583,
       "serveScores": [
         5,
         5,
@@ -14390,5 +14385,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-11T20:40+00:00"
+  "updated": "2026-10-11T20:50+00:00"
 };
