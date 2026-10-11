@@ -94,18 +94,21 @@ def num(value):
     return int(token)
 
 
-def derived_rating(attempts, parts):
-    """Rating is the sum of the recorded grades divided by the attempts.
+def derived_rating(parts):
+    """Rating is the sum of the recorded grades divided by how many were written.
 
-    The typed rating cell is ignored. When the attempt count is blank, each
-    recorded grade counts as one attempt.
+    A typed rating and a typed attempt total are both ignored. Each written
+    grade, including a 0, is one attempt.
     """
     if not parts:
         return None
-    count = attempts if attempts else len(parts)
-    if not count:
-        return None
-    return round(sum(parts) / float(count), 3)
+    return round(sum(parts) / float(len(parts)), 3)
+
+
+def counted_attempts(written, parts):
+    if parts:
+        return len(parts)
+    return written
 
 
 def header_map(ws, row_index):
@@ -223,9 +226,9 @@ def player_rows(ws, date, opponent):
         serve_scores = parse_digits(row_value(ws, row, cols["serve_scores"]))
         recv_grades = parse_digits(row_value(ws, row, cols["recv_grades"]))
         fb_grades = parse_digits(row_value(ws, row, cols["fb_grades"]))
-        serve_attempts = num(row_value(ws, row, cols["serve_attempts"]))
-        receive_attempts = num(row_value(ws, row, cols["recv_attempts"]))
-        freeball_attempts = num(row_value(ws, row, cols["fb_attempts"]))
+        serve_attempts = counted_attempts(num(row_value(ws, row, cols["serve_attempts"])), serve_scores)
+        receive_attempts = counted_attempts(num(row_value(ws, row, cols["recv_attempts"])), recv_grades)
+        freeball_attempts = counted_attempts(num(row_value(ws, row, cols["fb_attempts"])), fb_grades)
         rows.append(
             {
                 "date": date,
@@ -240,16 +243,16 @@ def player_rows(ws, date, opponent):
                 "serve_attempts": serve_attempts,
                 "aces": num(row_value(ws, row, cols["aces"])),
                 "serve_errors": num(row_value(ws, row, cols["serve_errors"])),
-                "serve_rating": derived_rating(serve_attempts, serve_scores),
+                "serve_rating": derived_rating(serve_scores),
                 "serving_scores": scores_string(serve_scores),
                 "unforced_errors": num(row_value(ws, row, cols["unforced"])),
                 "stuff_blocks": num(row_value(ws, row, cols["stuff"])),
                 "block_touches": num(row_value(ws, row, cols["touch"])),
                 "serve_receive_attempts": receive_attempts,
-                "serve_receive_rating": derived_rating(receive_attempts, recv_grades),
+                "serve_receive_rating": derived_rating(recv_grades),
                 "serve_receive_grades": scores_string(recv_grades),
                 "freeball_attempts": freeball_attempts,
-                "freeball_rating": derived_rating(freeball_attempts, fb_grades),
+                "freeball_rating": derived_rating(fb_grades),
                 "freeball_grades": scores_string(fb_grades),
             }
         )
