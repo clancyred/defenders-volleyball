@@ -10687,7 +10687,7 @@ window.DATA = {
       "player": "Tea",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
@@ -10701,13 +10701,15 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 2.25,
+      "receiveAttempts": 6,
+      "receiveRating": 1.667,
       "receiveGrades": [
         1,
         3,
         2,
-        3
+        3,
+        0,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -10725,7 +10727,7 @@ window.DATA = {
       "hittingSheet": null,
       "serveAttempts": 2,
       "aces": null,
-      "serveErrors": 2,
+      "serveErrors": 3,
       "serveRating": 0,
       "serveScores": [
         0,
@@ -10778,10 +10780,10 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 13,
+      "serveAttempts": 14,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.538,
+      "serveRating": 2.571,
       "serveScores": [
         3,
         5,
@@ -10795,7 +10797,8 @@ window.DATA = {
         3,
         1,
         2,
-        1
+        1,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -10836,10 +10839,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
-      "receiveRating": 1.5,
+      "receiveAttempts": 3,
+      "receiveRating": 2,
       "receiveGrades": [
         0,
+        3,
         3
       ],
       "freeballAttempts": 3,
@@ -10867,17 +10871,18 @@ window.DATA = {
       "serveScores": [
         0
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": 2,
-      "freeballRating": 2,
+      "freeballAttempts": 3,
+      "freeballRating": 1.667,
       "freeballGrades": [
         2,
-        2
+        2,
+        1
       ]
     },
     {
@@ -10890,16 +10895,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.4,
+      "serveRating": 2.167,
       "serveScores": [
         0,
         5,
         2,
         5,
-        0
+        0,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -10907,9 +10913,11 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 2,
+      "freeballGrades": [
+        2
+      ]
     },
     {
       "date": "2026-10-09",
@@ -14260,7 +14268,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 1,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -14464,5 +14472,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-11T21:21+00:00"
+  "updated": "2026-10-11T21:26+00:00"
 };
