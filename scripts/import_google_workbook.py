@@ -209,14 +209,6 @@ def player_rows(ws, date, opponent):
         name = text(ws.cell(row, 1).value)
         if not is_player_name(name):
             continue
-        # Entered on the Oct 7 First Baptist tab, but she did not play that match.
-        if (
-            name == "Bridget"
-            and opponent == "First Baptist"
-            and date.month == 10
-            and date.day == 7
-        ):
-            continue
         serve_scores = parse_digits(row_value(ws, row, cols["serve_scores"]))
         recv_grades = parse_digits(row_value(ws, row, cols["recv_grades"]))
         fb_grades = parse_digits(row_value(ws, row, cols["fb_grades"]))

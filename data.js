@@ -10209,6 +10209,37 @@ window.DATA = {
     {
       "date": "2026-10-07",
       "opponent": "First Baptist",
+      "player": "Bridget",
+      "digs": 3,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": 0,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": 1,
+      "serveRating": 0,
+      "serveScores": [
+        0
+      ],
+      "unforcedErrors": 2,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": 2,
+      "receiveGrades": [
+        2
+      ],
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "opponent": "First Baptist",
       "player": "Addy",
       "digs": 1,
       "assists": null,
@@ -14359,5 +14390,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-10T17:51+00:00"
+  "updated": "2026-10-11T20:40+00:00"
 };
