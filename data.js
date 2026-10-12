@@ -11196,11 +11196,11 @@ window.DATA = {
         2,
         3
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
-      "receiveRating": 1.286,
+      "receiveAttempts": 8,
+      "receiveRating": 1.375,
       "receiveGrades": [
         1,
         2,
@@ -11208,6 +11208,7 @@ window.DATA = {
         2,
         0,
         1,
+        2,
         2
       ],
       "freeballAttempts": null,
@@ -11220,7 +11221,7 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 8,
+      "attackAttempts": 9,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
@@ -11245,9 +11246,9 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 2,
       "assists": null,
-      "attackAttempts": 13,
+      "attackAttempts": 15,
       "kills": 4,
-      "killErrors": 3,
+      "killErrors": 4,
       "hittingSheet": null,
       "serveAttempts": 8,
       "aces": 3,
@@ -14982,5 +14983,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T21:56+00:00"
+  "updated": "2026-10-12T22:01+00:00"
 };
