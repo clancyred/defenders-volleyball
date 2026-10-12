@@ -14826,12 +14826,12 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "New Hope",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
+      "acesUs": 6,
+      "errorsUs": 7,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
+      "acesThem": 10,
+      "errorsThem": 4,
       "acePctThem": null,
       "errorPctThem": null
     }
@@ -14988,5 +14988,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T22:31+00:00"
+  "updated": "2026-10-12T22:36+00:00"
 };
