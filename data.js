@@ -14402,6 +14402,84 @@ window.DATA = {
       "errorsThem": 9,
       "acePctThem": 0.26,
       "errorPctThem": 0.17
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
     }
   ],
   "matches": [
@@ -14548,7 +14626,13 @@ window.DATA = {
       "opponent": "Heritage",
       "teamHitting": 0.185,
       "note": ""
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "New Hope",
+      "teamHitting": null,
+      "note": ""
     }
   ],
-  "updated": "2026-10-12T13:51+00:00"
+  "updated": "2026-10-12T20:51+00:00"
 };
