@@ -10980,9 +10980,10 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": 1,
+      "freeballAttempts": 2,
       "freeballRating": 2,
       "freeballGrades": [
+        2,
         2
       ]
     },
@@ -14393,14 +14394,14 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
-      "acePctUs": null,
-      "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acesUs": 9,
+      "errorsUs": 12,
+      "acePctUs": 0.15,
+      "errorPctUs": 0.2,
+      "acesThem": 14,
+      "errorsThem": 9,
+      "acePctThem": 0.26,
+      "errorPctThem": 0.17
     }
   ],
   "matches": [
@@ -14549,5 +14550,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T13:47+00:00"
+  "updated": "2026-10-12T13:51+00:00"
 };
