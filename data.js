@@ -11103,7 +11103,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "New Hope",
       "player": "Anna",
-      "digs": 5,
+      "digs": 6,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -11121,8 +11121,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 1.625,
+      "receiveAttempts": 11,
+      "receiveRating": 1.636,
       "receiveGrades": [
         2,
         1,
@@ -11131,6 +11131,9 @@ window.DATA = {
         0,
         3,
         3,
+        2,
+        3,
+        0,
         2
       ],
       "freeballAttempts": 3,
@@ -11199,8 +11202,8 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 1.375,
+      "receiveAttempts": 10,
+      "receiveRating": 1.7,
       "receiveGrades": [
         1,
         2,
@@ -11209,7 +11212,9 @@ window.DATA = {
         0,
         1,
         2,
-        2
+        2,
+        3,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -11337,9 +11342,9 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 8,
+      "attackAttempts": 10,
       "kills": 4,
-      "killErrors": 2,
+      "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 5,
       "aces": 1,
@@ -14773,7 +14778,7 @@ window.DATA = {
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
+      "acesThem": 4,
       "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
@@ -14983,5 +14988,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T22:01+00:00"
+  "updated": "2026-10-12T22:26+00:00"
 };
