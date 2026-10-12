@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Defenders serves — First Baptist video</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;560;650&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f0e8;
+      --ink: #1c1915;
+      --muted: #645d53;
+      --line: #e3dbcf;
+      --card: #fffdf9;
+      --accent: #b8431f;
+      --accent-soft: #f8ece6;
+      --shadow: 0 1px 2px rgba(50, 36, 18, 0.04), 0 10px 28px rgba(50, 36, 18, 0.05);
+      --sans: "Outfit", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .page { max-width: 1080px; margin: 0 auto; padding: 28px 20px 72px; }
+    h1 { font-size: 28px; font-weight: 650; letter-spacing: -0.03em; margin: 0 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 22px; }
+    .sub a { color: var(--accent); }
+    .counts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .counts button {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+    .counts button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .counts button.unknown.on { background: var(--accent); border-color: var(--accent); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+    th { font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); font-weight: 560; }
+    tr:last-child td { border-bottom: 0; }
+    tr.unknown { background: #fdf6f3; }
+    tr.current { background: #f6d5c8; }
+    tr.current td:first-child { box-shadow: inset 6px 0 0 var(--accent); }
+    tr.current td.time::after {
+      content: "Last watched";
+      display: block;
+      margin-top: 2px;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    select {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      padding: 6px 8px;
+      min-width: 190px;
+    }
+    tr.unknown select { border-color: #e7c2b6; }
+    button.textbtn {
+      border: 0;
+      background: none;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+    }
+    a.watch {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-weight: 560;
+    }
+    a.watch:hover { filter: brightness(1.05); }
+    .note { color: var(--muted); font-size: 13px; margin-top: 16px; }
+    td.num { font-variant-numeric: tabular-nums; color: var(--muted); width: 42px; }
+    td.time, td.score, td.set { font-variant-numeric: tabular-nums; }
+    td.time { font-weight: 650; width: 72px; }
+    td.set { width: 48px; color: var(--muted); }
+    td.score { font-weight: 650; white-space: nowrap; }
+    tr.gap td.score { color: var(--accent); }
+    tr.gap td.score::after {
+      content: "gap";
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 11px;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Defenders serve attempts</h1>
+    <p class="sub">St. Joseph Defenders vs. First Baptist, full match on <a href="https://youtu.be/0fgfPJ3AD_M">YouTube</a>. Each link opens a few seconds before the toss. The score is the board just before that serve, Defenders then First Baptist. A gap means the Defenders number jumped by more than 1, so a serve is missing before that row. The row you open stays highlighted when you come back. Use the dropdown to set who served. Your choices stay in this browser.</p>
+    <div class="counts" id="counts"></div>
+    <table>
+      <thead>
+        <tr><th></th><th>Set</th><th>Time</th><th>Score</th><th>Player</th><th></th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="note"><span id="showing"></span> <button type="button" class="textbtn" id="reset">Reset my changes</button></p>
+  </div>
+  <script>
+    const NAMES = {
+      "11": "Shiloh", "33": "Agnes", "4": "Anna", "42": "Nataly", "27": "Tea",
+      "12": "Annabelle", "22": "Corena", "13": "Cora", "10": "Bridget",
+      "40": "Piper", "7": "Elena", "17": "Addy", "5": "Kinley"
+    };
+    // t is the toss/contact second. link opens 4 seconds earlier.
+    // t, jersey, note, set, defenders score, opponent score (null if blocked)
+    const SERVES = [
+      [300, "", "not confirmed", 1, 8, 18],
+      [448, "33", "confirmed", 1, 2, 14],
+      [459, "33", "confirmed", 1, 2, 14],
+      [499, "", "not confirmed", 1, 4, 14],
+      [853, "", "not confirmed", 1, 10, 20],
+      [902, "", "not confirmed", 1, 11, 21],
+      [1349, "", "not confirmed", 2, 0, 0],
+      [1417, "5", "front, after the serve", 2, 1, 1],
+      [1438, "5", "front, after the serve", 2, 2, 1],
+      [1976, "", "not confirmed", 2, 8, 11],
+      [2210, "", "not confirmed", 2, 10, null],
+      [2237, "", "not confirmed", 2, 11, 17],
+      [2289, "", "not confirmed", 2, 12, 18],
+      [2779, "5", "confirmed", 3, 1, 0],
+      [2868, "", "not confirmed", 3, 3, 2],
+      [3082, "", "not confirmed", 3, 7, 7],
+      [3458, "", "not confirmed", 3, 10, 10],
+      [3545, "", "not confirmed", 3, 11, 12],
+      [3922, "", "not confirmed", 3, 19, 19],
+      [3951, "", "not confirmed", 3, 20, 19],
+      [3992, "", "not confirmed", 3, 22, 19],
+      [4062, "", "not confirmed", 3, 22, 19],
+      [4365, "", "not confirmed", 4, 0, 0],
+      [4381, "", "not confirmed", 4, 1, 0],
+      [4547, "", "not confirmed", 4, 3, 4],
+      [4634, "", "not confirmed", 4, 4, 7],
+      [4695, "", "not confirmed", 4, 5, 8],
+      [4787, "", "not confirmed", 4, 6, 10],
+      [4881, "", "not confirmed", 4, 7, 12],
+      [4952, "", "not confirmed", 4, 10, 12],
+      [4972, "", "not confirmed", 4, 11, 12],
+      [5200, "", "not confirmed", 4, 14, 18],
+      [5218, "", "not confirmed", 4, 15, 18],
+      [5260, "", "not confirmed", 4, 16, 19]
+    ];
+
+    function clock(t) {
+      const m = Math.floor(t / 60);
+      const s = t % 60;
+      return m + ":" + String(s).padStart(2, "0");
+    }
+    function link(t) {
+      const start = Math.max(0, t - 4);
+      return "https://www.youtube.com/watch?v=0fgfPJ3AD_M&t=" + start + "s";
+    }
+
+    const STORE = "vball-serves-0fgfPJ3AD_M";
+    const LAST = "vball-serves-last-0fgfPJ3AD_M";
+    let lastWatched = null;
+    const PLAYER_KEYS = Object.keys(NAMES).sort((a, b) => NAMES[a].localeCompare(NAMES[b]));
+    let filter = "all";
+    const counts = document.getElementById("counts");
+    const rows = document.getElementById("rows");
+
+    function loadSaved() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORE) || "null");
+        if (!saved) return;
+        SERVES.forEach((row) => {
+          const key = String(row[0]);
+          if (Object.prototype.hasOwnProperty.call(saved, key)) row[1] = saved[key] || "";
+        });
+      } catch (err) {}
+    }
+
+    function save() {
+      const saved = {};
+      SERVES.forEach(([t, num]) => { saved[String(t)] = num || ""; });
+      localStorage.setItem(STORE, JSON.stringify(saved));
+    }
+
+    function tally() {
+      const map = {};
+      SERVES.forEach(([, num]) => {
+        const key = num || "?";
+        map[key] = (map[key] || 0) + 1;
+      });
+      return map;
+    }
+
+    function playerSelect(t, num) {
+      const options = ['<option value="">Unknown</option>'].concat(PLAYER_KEYS.map((k) =>
+        '<option value="' + k + '"' + (k === num ? " selected" : "") + ">" +
+        NAMES[k] + " " + k + "</option>"
+      ));
+      return '<select data-t="' + t + '" aria-label="Who served at ' + clock(t) + '">' +
+        options.join("") + "</select>";
+    }
+
+    function renderCounts() {
+      const map = tally();
+      const keys = Object.keys(map).sort((a, b) => map[b] - map[a] || a - b);
+      const buttons = [{ id: "all", label: "All " + SERVES.length }];
+      keys.forEach((k) => {
+        const name = k === "?" ? "Unknown" : NAMES[k] || ("#" + k);
+        buttons.push({ id: k, label: name + " " + map[k], unknown: k === "?" });
+      });
+      if (!map["?"]) buttons.push({ id: "?", label: "Unknown 0", unknown: true });
+      counts.innerHTML = buttons.map((b) =>
+        '<button type="button" data-id="' + b.id + '" class="' +
+        (b.id === filter ? "on" : "") + (b.unknown ? " unknown" : "") + '">' +
+        b.label + "</button>"
+      ).join("");
+      counts.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filter = btn.dataset.id;
+          render();
+        });
+      });
+    }
+
+    function shownNote() {
+      const shown = rows.querySelectorAll("tr").length;
+      document.getElementById("showing").textContent =
+        shown + (shown === 1 ? " serve" : " serves") + " shown.";
+    }
+
+    function scoreText(us, them) {
+      return us + "–" + (them == null ? "?" : them);
+    }
+
+    function missedBefore(index) {
+      const row = SERVES[index];
+      let prev = null;
+      for (let i = index - 1; i >= 0; i--) {
+        if (SERVES[i][3] === row[3]) { prev = SERVES[i]; break; }
+      }
+      if (!prev) return row[4] > 1;
+      return row[4] > prev[4] + 1;
+    }
+
+    function renderRows() {
+      const list = SERVES
+        .map((row, i) => [row, i])
+        .filter(([[, num]]) => filter === "all" || (num || "?") === filter);
+      rows.innerHTML = list.map(([[t, num, , set, us, them], i]) => {
+        const classes = [];
+        if (!num) classes.push("unknown");
+        if (t === lastWatched) classes.push("current");
+        if (missedBefore(i)) classes.push("gap");
+        return "<tr data-t=\"" + t + "\" class=\"" + classes.join(" ") + "\">" +
+          "<td class=\"num\">" + (i + 1) + "</td>" +
+          "<td class=\"set\">" + set + "</td>" +
+          "<td class=\"time\">" + clock(t) + "</td>" +
+          "<td class=\"score\">" + scoreText(us, them) + "</td>" +
+          "<td>" + playerSelect(t, num) + "</td>" +
+          "<td><a class=\"watch\" target=\"_blank\" rel=\"noopener\" href=\"" + link(t) + "\">Watch</a></td>" +
+          "</tr>";
+      }).join("");
+      shownNote();
+    }
+
+    function scrollToCurrent() {
+      if (!lastWatched) return;
+      let tr = rows.querySelector('tr[data-t="' + lastWatched + '"]');
+      if (!tr) {
+        filter = "all";
+        render();
+        tr = rows.querySelector('tr[data-t="' + lastWatched + '"]');
+      }
+      if (tr) tr.scrollIntoView({ block: "center" });
+    }
+
+    function markWatched(t) {
+      lastWatched = t;
+      localStorage.setItem(LAST, String(t));
+      rows.querySelectorAll("tr.current").forEach((tr) => tr.classList.remove("current"));
+      const tr = rows.querySelector('tr[data-t="' + t + '"]');
+      if (!tr) return;
+      tr.classList.add("current");
+      tr.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+
+    rows.addEventListener("click", (event) => {
+      const link = event.target.closest("a.watch");
+      if (!link) return;
+      const tr = link.closest("tr");
+      if (tr) markWatched(Number(tr.dataset.t));
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") scrollToCurrent();
+    });
+
+    rows.addEventListener("change", (event) => {
+      const sel = event.target;
+      if (!sel || sel.tagName !== "SELECT") return;
+      const t = Number(sel.dataset.t);
+      const row = SERVES.find((serve) => serve[0] === t);
+      if (!row) return;
+      row[1] = sel.value;
+      save();
+      const tr = sel.closest("tr");
+      tr.classList.toggle("unknown", !sel.value);
+      renderCounts();
+      if (filter !== "all" && (sel.value || "?") !== filter) tr.remove();
+      shownNote();
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      localStorage.removeItem(STORE);
+      location.reload();
+    });
+
+    function render() {
+      renderCounts();
+      renderRows();
+    }
+    loadSaved();
+    lastWatched = Number(localStorage.getItem(LAST) || "") || null;
+    render();
+    scrollToCurrent();
+  </script>
+</body>
+</html>
