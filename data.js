@@ -11163,7 +11163,7 @@ window.DATA = {
         3,
         1
       ],
-      "unforcedErrors": 2,
+      "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -11182,7 +11182,7 @@ window.DATA = {
       "attackAttempts": 7,
       "kills": 1,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 10,
       "aces": null,
       "serveErrors": null,
@@ -11229,7 +11229,7 @@ window.DATA = {
       "attackAttempts": 9,
       "kills": 1,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": -0.111,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -11254,7 +11254,7 @@ window.DATA = {
       "attackAttempts": 15,
       "kills": 4,
       "killErrors": 4,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 8,
       "aces": 3,
       "serveErrors": 2,
@@ -11345,7 +11345,7 @@ window.DATA = {
       "attackAttempts": 10,
       "kills": 4,
       "killErrors": 3,
-      "hittingSheet": null,
+      "hittingSheet": 0.1,
       "serveAttempts": 5,
       "aces": 1,
       "serveErrors": 2,
@@ -11381,7 +11381,7 @@ window.DATA = {
       "attackAttempts": 3,
       "kills": 1,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0.333,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -11437,7 +11437,7 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": 1,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 1,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -14984,9 +14984,9 @@ window.DATA = {
     {
       "date": "2026-10-09",
       "opponent": "New Hope",
-      "teamHitting": null,
+      "teamHitting": 0.044,
       "note": ""
     }
   ],
-  "updated": "2026-10-12T22:26+00:00"
+  "updated": "2026-10-12T22:31+00:00"
 };
