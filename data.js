@@ -11132,7 +11132,7 @@ window.DATA = {
       "opponent": "New Hope",
       "player": "Nataly",
       "digs": null,
-      "assists": 1,
+      "assists": 2,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
@@ -11213,9 +11213,9 @@ window.DATA = {
       "player": "Shilolh",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 1,
       "aces": null,
@@ -11227,10 +11227,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 1.667,
+      "receiveAttempts": 4,
+      "receiveRating": 1.75,
       "receiveGrades": [
         1,
+        2,
         2,
         2
       ],
@@ -11301,8 +11302,8 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
-      "kills": null,
+      "attackAttempts": 2,
+      "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -14855,5 +14856,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T21:01+00:00"
+  "updated": "2026-10-12T21:06+00:00"
 };
