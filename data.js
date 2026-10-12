@@ -11109,13 +11109,14 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 5,
+      "serveRating": 4.333,
       "serveScores": [
         5,
-        5
+        5,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -11132,9 +11133,10 @@ window.DATA = {
         3,
         2
       ],
-      "freeballAttempts": 2,
+      "freeballAttempts": 3,
       "freeballRating": 3,
       "freeballGrades": [
+        3,
         3,
         3
       ]
@@ -11149,13 +11151,14 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.5,
+      "serveRating": 2,
       "serveScores": [
         2,
-        3
+        3,
+        1
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -11215,11 +11218,11 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "New Hope",
       "player": "Cora",
-      "digs": null,
+      "digs": 1,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 1,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -11239,12 +11242,12 @@ window.DATA = {
     {
       "date": "2026-10-09",
       "opponent": "New Hope",
-      "player": "Shilolh",
+      "player": "Shiloh",
       "digs": 2,
       "assists": null,
-      "attackAttempts": 10,
+      "attackAttempts": 13,
       "kills": 4,
-      "killErrors": 2,
+      "killErrors": 3,
       "hittingSheet": null,
       "serveAttempts": 8,
       "aces": 3,
@@ -11260,11 +11263,11 @@ window.DATA = {
         3,
         2
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 17,
-      "receiveRating": 1.529,
+      "receiveAttempts": 20,
+      "receiveRating": 1.65,
       "receiveGrades": [
         1,
         2,
@@ -11282,7 +11285,10 @@ window.DATA = {
         2,
         2,
         0,
-        2
+        2,
+        2,
+        2,
+        3
       ],
       "freeballAttempts": 5,
       "freeballRating": 2.8,
@@ -11328,7 +11334,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "New Hope",
       "player": "Annabelle",
-      "digs": 2,
+      "digs": 3,
       "assists": null,
       "attackAttempts": 8,
       "kills": 4,
@@ -11351,12 +11357,13 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": 3,
-      "freeballRating": 2,
+      "freeballAttempts": 4,
+      "freeballRating": 2.25,
       "freeballGrades": [
         1,
         3,
-        2
+        2,
+        3
       ]
     },
     {
@@ -14975,5 +14982,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T21:51+00:00"
+  "updated": "2026-10-12T21:56+00:00"
 };
