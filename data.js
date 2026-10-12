@@ -10796,10 +10796,10 @@ window.DATA = {
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 17,
+      "serveAttempts": 18,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 2.588,
+      "serveRating": 2.556,
       "serveScores": [
         3,
         5,
@@ -10817,13 +10817,14 @@ window.DATA = {
         3,
         2,
         5,
-        1
+        1,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
-      "receiveRating": 1.462,
+      "receiveAttempts": 14,
+      "receiveRating": 1.429,
       "receiveGrades": [
         1,
         2,
@@ -10836,6 +10837,7 @@ window.DATA = {
         1,
         2,
         3,
+        1,
         1,
         1
       ],
@@ -10868,8 +10870,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
-      "receiveRating": 1.636,
+      "receiveAttempts": 12,
+      "receiveRating": 1.583,
       "receiveGrades": [
         0,
         3,
@@ -10881,7 +10883,8 @@ window.DATA = {
         1,
         0,
         2,
-        0
+        0,
+        1
       ],
       "freeballAttempts": 3,
       "freeballRating": 2,
@@ -10895,7 +10898,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Nataly",
-      "digs": 2,
+      "digs": 3,
       "assists": 6,
       "attackAttempts": null,
       "kills": null,
@@ -10935,10 +10938,10 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 9,
+      "serveAttempts": 11,
       "aces": 2,
-      "serveErrors": 2,
-      "serveRating": 2.333,
+      "serveErrors": 3,
+      "serveRating": 2,
       "serveScores": [
         0,
         5,
@@ -10948,7 +10951,9 @@ window.DATA = {
         1,
         3,
         2,
-        3
+        3,
+        1,
+        0
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -14327,11 +14332,11 @@ window.DATA = {
       "opponent": "Heritage",
       "set": 3,
       "acesUs": null,
-      "errorsUs": null,
+      "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
+      "acesThem": 1,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -14521,5 +14526,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-11T21:56+00:00"
+  "updated": "2026-10-12T13:26+00:00"
 };
