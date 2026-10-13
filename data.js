@@ -11349,7 +11349,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Nataly",
-      "digs": 4,
+      "digs": 5,
       "assists": 10,
       "attackAttempts": 2,
       "kills": 1,
@@ -11417,10 +11417,10 @@ window.DATA = {
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 7,
+      "serveAttempts": 8,
       "aces": 2,
       "serveErrors": 4,
-      "serveRating": 1.714,
+      "serveRating": 1.75,
       "serveScores": [
         0,
         2,
@@ -11428,7 +11428,8 @@ window.DATA = {
         0,
         0,
         5,
-        5
+        5,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -15488,5 +15489,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T19:21+00:00"
+  "updated": "2026-10-13T20:56+00:00"
 };
