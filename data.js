@@ -11315,17 +11315,18 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.167,
+      "serveRating": 2.286,
       "serveScores": [
         2,
         5,
         1,
         2,
         1,
-        2
+        2,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -15198,7 +15199,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15478,5 +15479,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:46+00:00"
+  "updated": "2026-10-13T18:51+00:00"
 };
