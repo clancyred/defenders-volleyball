@@ -11151,7 +11151,7 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 9,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 9,
       "kills": 2,
       "killErrors": 2,
       "hittingSheet": null,
@@ -11232,13 +11232,14 @@ window.DATA = {
         3,
         2
       ],
-      "freeballAttempts": 5,
-      "freeballRating": 2.8,
+      "freeballAttempts": 6,
+      "freeballRating": 2.667,
       "freeballGrades": [
         3,
         3,
         3,
         3,
+        2,
         2
       ]
     },
@@ -11272,8 +11273,8 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
-      "receiveRating": 1.143,
+      "receiveAttempts": 9,
+      "receiveRating": 1.333,
       "receiveGrades": [
         2,
         0,
@@ -11281,7 +11282,9 @@ window.DATA = {
         2,
         2,
         1,
-        0
+        0,
+        1,
+        3
       ],
       "freeballAttempts": 9,
       "freeballRating": 2.444,
@@ -15256,14 +15259,14 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
-      "acePctUs": null,
-      "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acesUs": 13,
+      "errorsUs": 13,
+      "acePctUs": 0.25,
+      "errorPctUs": 0.25,
+      "acesThem": 10,
+      "errorsThem": 16,
+      "acePctThem": 0.16,
+      "errorPctThem": 0.26
     },
     {
       "date": "2026-10-09",
@@ -15492,7 +15495,7 @@ window.DATA = {
     {
       "date": "2026-10-09",
       "opponent": "Heritage",
-      "teamHitting": null,
+      "teamHitting": 0.107,
       "note": ""
     },
     {
@@ -15502,5 +15505,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T21:06+00:00"
+  "updated": "2026-10-13T21:12+00:00"
 };
