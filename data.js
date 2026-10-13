@@ -14603,6 +14603,84 @@ window.DATA = {
     },
     {
       "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
+      "opponent": "Heritage",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-08",
       "opponent": "Whitefield",
       "set": 1,
       "acesUs": 7,
@@ -14828,12 +14906,12 @@ window.DATA = {
       "set": "Total",
       "acesUs": 6,
       "errorsUs": 7,
-      "acePctUs": null,
-      "errorPctUs": null,
+      "acePctUs": 0.18,
+      "errorPctUs": 0.21,
       "acesThem": 10,
       "errorsThem": 4,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acePctThem": 0.2,
+      "errorPctThem": 0.08
     }
   ],
   "matches": [
@@ -14971,6 +15049,12 @@ window.DATA = {
     },
     {
       "date": "2026-10-08",
+      "opponent": "Heritage",
+      "teamHitting": null,
+      "note": ""
+    },
+    {
+      "date": "2026-10-08",
       "opponent": "Whitefield",
       "teamHitting": 0.016,
       "note": ""
@@ -14988,5 +15072,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-12T22:36+00:00"
+  "updated": "2026-10-13T01:46+00:00"
 };
