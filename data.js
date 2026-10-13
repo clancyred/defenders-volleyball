@@ -11103,7 +11103,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Anna",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -11130,7 +11130,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Annabelle",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
       "attackAttempts": 2,
       "kills": null,
@@ -11181,9 +11181,11 @@ window.DATA = {
       "receiveGrades": [
         2
       ],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-09",
@@ -11191,7 +11193,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 1,
       "assists": 1,
-      "attackAttempts": null,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -11274,19 +11276,22 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Nataly",
-      "digs": null,
+      "digs": 1,
       "assists": 1,
       "attackAttempts": 1,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
-      "aces": 2,
+      "serveAttempts": 5,
+      "aces": 3,
       "serveErrors": null,
-      "serveRating": 5,
+      "serveRating": 3.6,
       "serveScores": [
         5,
-        5
+        5,
+        5,
+        2,
+        1
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -15012,7 +15017,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "set": 1,
-      "acesUs": 3,
+      "acesUs": 4,
       "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
@@ -15323,5 +15328,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T16:36+00:00"
+  "updated": "2026-10-13T17:21+00:00"
 };
