@@ -11208,8 +11208,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 2,
       "assists": 1,
-      "attackAttempts": 4,
-      "kills": null,
+      "attackAttempts": 5,
+      "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 6,
@@ -11227,12 +11227,13 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 1,
+      "receiveAttempts": 4,
+      "receiveRating": 1.25,
       "receiveGrades": [
         2,
         0,
-        1
+        1,
+        2
       ],
       "freeballAttempts": 4,
       "freeballRating": 2.25,
@@ -11412,7 +11413,7 @@ window.DATA = {
       "opponent": "Heritage",
       "player": "Corena",
       "digs": 1,
-      "assists": 1,
+      "assists": 2,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
@@ -15430,5 +15431,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T17:46+00:00"
+  "updated": "2026-10-13T17:51+00:00"
 };
