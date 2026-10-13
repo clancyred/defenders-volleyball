@@ -11130,9 +11130,9 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Annabelle",
-      "digs": null,
+      "digs": 1,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -11155,9 +11155,9 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Tea",
-      "digs": null,
+      "digs": 1,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -11182,7 +11182,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Shiloh",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -11222,6 +11222,33 @@ window.DATA = {
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "Heritage",
+      "player": "Kinley",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": 2,
+      "serveScores": [
+        2
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -14899,7 +14926,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15205,5 +15232,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T14:56+00:00"
+  "updated": "2026-10-13T16:26+00:00"
 };
