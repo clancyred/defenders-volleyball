@@ -11234,7 +11234,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Shiloh",
-      "digs": 4,
+      "digs": 3,
       "assists": 1,
       "attackAttempts": 11,
       "kills": 5,
@@ -11269,13 +11269,14 @@ window.DATA = {
         2,
         2
       ],
-      "freeballAttempts": 6,
-      "freeballRating": 2.5,
+      "freeballAttempts": 7,
+      "freeballRating": 2.571,
       "freeballGrades": [
         3,
         2,
         2,
         2,
+        3,
         3,
         3
       ]
@@ -15479,5 +15480,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:51+00:00"
+  "updated": "2026-10-13T18:56+00:00"
 };
