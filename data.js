@@ -11176,10 +11176,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 2,
+      "receiveAttempts": 2,
+      "receiveRating": 1.5,
       "receiveGrades": [
-        2
+        2,
+        1
       ],
       "freeballAttempts": 1,
       "freeballRating": 3,
@@ -11198,7 +11199,7 @@ window.DATA = {
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": 1,
-      "aces": null,
+      "aces": 1,
       "serveErrors": 1,
       "serveRating": 0,
       "serveScores": [
@@ -11346,6 +11347,31 @@ window.DATA = {
         0
       ],
       "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-09",
+      "opponent": "Heritage",
+      "player": "Piper",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": 1,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -15022,7 +15048,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 3,
-      "errorsThem": 3,
+      "errorsThem": 4,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15328,5 +15354,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T17:21+00:00"
+  "updated": "2026-10-13T17:26+00:00"
 };
