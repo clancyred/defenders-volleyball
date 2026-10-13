@@ -11103,7 +11103,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Anna",
-      "digs": 2,
+      "digs": 3,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -11124,17 +11124,18 @@ window.DATA = {
         3,
         1
       ],
-      "freeballAttempts": 1,
-      "freeballRating": 3,
+      "freeballAttempts": 2,
+      "freeballRating": 2.5,
       "freeballGrades": [
-        3
+        3,
+        2
       ]
     },
     {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Annabelle",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
       "attackAttempts": 2,
       "kills": null,
@@ -11186,14 +11187,15 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
-      "receiveRating": 2,
+      "receiveAttempts": 6,
+      "receiveRating": 1.833,
       "receiveGrades": [
         2,
         1,
         3,
         2,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 2,
       "freeballRating": 3,
@@ -11212,17 +11214,18 @@ window.DATA = {
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": 2,
       "serveErrors": 2,
-      "serveRating": 2.167,
+      "serveRating": 2.286,
       "serveScores": [
         0,
         5,
         2,
         1,
         5,
-        0
+        0,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -11250,9 +11253,9 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 5,
+      "attackAttempts": 6,
       "kills": 2,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -11302,7 +11305,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Nataly",
-      "digs": 1,
+      "digs": 2,
       "assists": 1,
       "attackAttempts": 1,
       "kills": 1,
@@ -11320,7 +11323,7 @@ window.DATA = {
         1,
         0
       ],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -15126,7 +15129,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 3,
-      "errorsThem": 6,
+      "errorsThem": 7,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15139,7 +15142,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15432,5 +15435,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T17:56+00:00"
+  "updated": "2026-10-13T18:21+00:00"
 };
