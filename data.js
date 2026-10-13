@@ -11117,8 +11117,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 12,
-      "receiveRating": 2,
+      "receiveAttempts": 13,
+      "receiveRating": 2.077,
       "receiveGrades": [
         3,
         3,
@@ -11131,7 +11131,8 @@ window.DATA = {
         2,
         3,
         0,
-        2
+        2,
+        3
       ],
       "freeballAttempts": 2,
       "freeballRating": 2.5,
@@ -11146,8 +11147,8 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 8,
       "assists": null,
-      "attackAttempts": 4,
-      "kills": null,
+      "attackAttempts": 5,
+      "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 7,
@@ -11185,8 +11186,8 @@ window.DATA = {
       "player": "Tea",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 6,
-      "kills": null,
+      "attackAttempts": 7,
+      "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 7,
@@ -11205,8 +11206,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 10,
-      "receiveRating": 1.8,
+      "receiveAttempts": 11,
+      "receiveRating": 1.818,
       "receiveGrades": [
         2,
         1,
@@ -11217,7 +11218,8 @@ window.DATA = {
         2,
         2,
         3,
-        0
+        0,
+        2
       ],
       "freeballAttempts": 4,
       "freeballRating": 3,
@@ -11232,16 +11234,16 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Shiloh",
-      "digs": 3,
+      "digs": 4,
       "assists": 1,
       "attackAttempts": 11,
       "kills": 5,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 10,
+      "serveAttempts": 11,
       "aces": 2,
       "serveErrors": 3,
-      "serveRating": 2.1,
+      "serveRating": 2.091,
       "serveScores": [
         0,
         5,
@@ -11252,7 +11254,8 @@ window.DATA = {
         3,
         2,
         0,
-        3
+        3,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -11312,16 +11315,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.2,
+      "serveRating": 2.167,
       "serveScores": [
         2,
         5,
         1,
         2,
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -11338,7 +11342,7 @@ window.DATA = {
       "opponent": "Heritage",
       "player": "Nataly",
       "digs": 3,
-      "assists": 7,
+      "assists": 9,
       "attackAttempts": 2,
       "kills": 1,
       "killErrors": null,
@@ -11364,9 +11368,11 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 1,
+      "freeballGrades": [
+        1
+      ]
     },
     {
       "date": "2026-10-09",
@@ -11374,9 +11380,9 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": 1,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -15178,7 +15184,7 @@ window.DATA = {
       "errorsUs": 5,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 2,
+      "acesThem": 5,
       "errorsThem": 6,
       "acePctThem": null,
       "errorPctThem": null
@@ -15472,5 +15478,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:41+00:00"
+  "updated": "2026-10-13T18:46+00:00"
 };
