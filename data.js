@@ -11117,11 +11117,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 2,
+      "receiveAttempts": 5,
+      "receiveRating": 1.8,
       "receiveGrades": [
         3,
         3,
+        1,
         1,
         1
       ],
@@ -11178,15 +11179,16 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 3.5,
+      "serveRating": 3.4,
       "serveScores": [
         5,
         2,
         5,
-        2
+        2,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -11328,7 +11330,7 @@ window.DATA = {
         1,
         0
       ],
-      "unforcedErrors": 2,
+      "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -11373,13 +11375,14 @@ window.DATA = {
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
-      "serveErrors": 2,
-      "serveRating": 0.667,
+      "serveErrors": 3,
+      "serveRating": 0.5,
       "serveScores": [
         0,
         2,
+        0,
         0
       ],
       "unforcedErrors": null,
@@ -15143,11 +15146,11 @@ window.DATA = {
       "opponent": "Heritage",
       "set": 2,
       "acesUs": 2,
-      "errorsUs": null,
+      "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": 2,
+      "errorsThem": 4,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15440,5 +15443,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:24+00:00"
+  "updated": "2026-10-13T18:26+00:00"
 };
