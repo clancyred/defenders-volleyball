@@ -11117,11 +11117,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 2.333,
+      "receiveAttempts": 4,
+      "receiveRating": 2,
       "receiveGrades": [
         3,
         3,
+        1,
         1
       ],
       "freeballAttempts": 2,
@@ -11141,13 +11142,16 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 2,
-      "aces": null,
+      "serveAttempts": 5,
+      "aces": 2,
       "serveErrors": 1,
-      "serveRating": 1.5,
+      "serveRating": 3,
       "serveScores": [
         0,
-        3
+        3,
+        5,
+        5,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -11208,7 +11212,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Shiloh",
-      "digs": 2,
+      "digs": 3,
       "assists": 1,
       "attackAttempts": 5,
       "kills": 1,
@@ -11282,14 +11286,15 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.667,
+      "serveRating": 2.5,
       "serveScores": [
         2,
         5,
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -11305,7 +11310,7 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "player": "Nataly",
-      "digs": 2,
+      "digs": 3,
       "assists": 1,
       "attackAttempts": 1,
       "kills": 1,
@@ -15137,12 +15142,12 @@ window.DATA = {
       "date": "2026-10-09",
       "opponent": "Heritage",
       "set": 2,
-      "acesUs": null,
+      "acesUs": 2,
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": 1,
+      "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15435,5 +15440,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:21+00:00"
+  "updated": "2026-10-13T18:24+00:00"
 };
