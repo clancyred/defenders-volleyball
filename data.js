@@ -11117,8 +11117,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 14,
-      "receiveRating": 2.071,
+      "receiveAttempts": 17,
+      "receiveRating": 1.824,
       "receiveGrades": [
         3,
         3,
@@ -11133,7 +11133,10 @@ window.DATA = {
         0,
         2,
         3,
-        2
+        2,
+        1,
+        0,
+        1
       ],
       "freeballAttempts": 2,
       "freeballRating": 2.5,
@@ -11211,8 +11214,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
-      "receiveRating": 1.923,
+      "receiveAttempts": 14,
+      "receiveRating": 1.929,
       "receiveGrades": [
         2,
         1,
@@ -11226,7 +11229,8 @@ window.DATA = {
         0,
         2,
         2,
-        3
+        3,
+        2
       ],
       "freeballAttempts": 5,
       "freeballRating": 2.8,
@@ -11244,7 +11248,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 3,
       "assists": 1,
-      "attackAttempts": 16,
+      "attackAttempts": 17,
       "kills": 6,
       "killErrors": 3,
       "hittingSheet": null,
@@ -11268,15 +11272,16 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 1.333,
+      "receiveAttempts": 7,
+      "receiveRating": 1.143,
       "receiveGrades": [
         2,
         0,
         1,
         2,
         2,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 9,
       "freeballRating": 2.444,
@@ -15216,7 +15221,7 @@ window.DATA = {
       "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
+      "acesThem": 2,
       "errorsThem": 3,
       "acePctThem": null,
       "errorPctThem": null
@@ -15497,5 +15502,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T21:01+00:00"
+  "updated": "2026-10-13T21:06+00:00"
 };
