@@ -11117,8 +11117,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
-      "receiveRating": 2.077,
+      "receiveAttempts": 14,
+      "receiveRating": 2.071,
       "receiveGrades": [
         3,
         3,
@@ -11132,7 +11132,8 @@ window.DATA = {
         3,
         0,
         2,
-        3
+        3,
+        2
       ],
       "freeballAttempts": 2,
       "freeballRating": 2.5,
@@ -11147,7 +11148,7 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 8,
       "assists": null,
-      "attackAttempts": 5,
+      "attackAttempts": 6,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
@@ -11269,13 +11270,14 @@ window.DATA = {
         2,
         2
       ],
-      "freeballAttempts": 7,
-      "freeballRating": 2.571,
+      "freeballAttempts": 8,
+      "freeballRating": 2.625,
       "freeballGrades": [
         3,
         2,
         2,
         2,
+        3,
         3,
         3,
         3
@@ -11364,7 +11366,7 @@ window.DATA = {
         2,
         0
       ],
-      "unforcedErrors": 3,
+      "unforcedErrors": 4,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -15480,5 +15482,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T18:56+00:00"
+  "updated": "2026-10-13T19:01+00:00"
 };
