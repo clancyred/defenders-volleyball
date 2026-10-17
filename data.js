@@ -13397,6 +13397,58 @@ window.DATA = {
       "errorPctThem": 0.19
     },
     {
+      "date": "2026-08-13",
+      "opponent": "Atchison",
+      "set": 1,
+      "acesUs": 23,
+      "errorsUs": 25,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-08-13",
+      "opponent": "Atchison",
+      "set": 2,
+      "acesUs": 25,
+      "errorsUs": 14,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-08-13",
+      "opponent": "Atchison",
+      "set": 3,
+      "acesUs": 15,
+      "errorsUs": 25,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-08-13",
+      "opponent": "Atchison",
+      "set": 4,
+      "acesUs": 18,
+      "errorsUs": 25,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
       "date": "2026-08-17",
       "opponent": "Shawnee Mission",
       "set": 1,
@@ -15505,5 +15557,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-13T21:12+00:00"
+  "updated": "2026-10-17T16:21+00:00"
 };
