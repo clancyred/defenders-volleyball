@@ -11911,8 +11911,8 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
-      "receiveRating": 1.182,
+      "receiveAttempts": 12,
+      "receiveRating": 1.083,
       "receiveGrades": [
         0,
         1,
@@ -11924,7 +11924,8 @@ window.DATA = {
         0,
         1,
         2,
-        1
+        1,
+        0
       ],
       "freeballAttempts": 2,
       "freeballRating": 2,
@@ -11978,23 +11979,24 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Shiloh",
-      "digs": 5,
+      "digs": 6,
       "assists": null,
       "attackAttempts": 8,
       "kills": 3,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.333,
+      "serveRating": 2.429,
       "serveScores": [
         3,
         3,
         3,
         1,
         2,
-        2
+        2,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12026,14 +12028,15 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 3,
+      "serveRating": 2.75,
       "serveScores": [
         1,
         5,
-        3
+        3,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12087,9 +12090,9 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 4,
+      "attackAttempts": 5,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 4,
       "aces": 1,
@@ -15676,8 +15679,8 @@ window.DATA = {
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 2,
-      "errorsThem": 2,
+      "acesThem": 3,
+      "errorsThem": 3,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15898,5 +15901,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T18:26+00:00"
+  "updated": "2026-10-21T19:06+00:00"
 };
