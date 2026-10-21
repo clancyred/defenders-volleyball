@@ -11911,8 +11911,8 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 10,
-      "receiveRating": 1.2,
+      "receiveAttempts": 11,
+      "receiveRating": 1.182,
       "receiveGrades": [
         0,
         1,
@@ -11923,7 +11923,8 @@ window.DATA = {
         2,
         0,
         1,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 2,
       "freeballRating": 2,
@@ -11967,9 +11968,11 @@ window.DATA = {
         0,
         1
       ],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-21",
@@ -11977,7 +11980,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 5,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 3,
       "killErrors": 2,
       "hittingSheet": null,
@@ -12004,11 +12007,12 @@ window.DATA = {
         3,
         3
       ],
-      "freeballAttempts": 3,
-      "freeballRating": 2,
+      "freeballAttempts": 4,
+      "freeballRating": 2.25,
       "freeballGrades": [
         2,
         1,
+        3,
         3
       ]
     },
@@ -12017,7 +12021,7 @@ window.DATA = {
       "opponent": "Atchison",
       "player": "Nataly",
       "digs": 2,
-      "assists": null,
+      "assists": 3,
       "attackAttempts": 4,
       "kills": null,
       "killErrors": 1,
@@ -12049,8 +12053,8 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 5,
-      "kills": null,
+      "attackAttempts": 6,
+      "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 8,
@@ -15894,5 +15898,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T18:21+00:00"
+  "updated": "2026-10-21T18:26+00:00"
 };
