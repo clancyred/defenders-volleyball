@@ -11911,8 +11911,8 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 12,
-      "receiveRating": 1.083,
+      "receiveAttempts": 13,
+      "receiveRating": 1.231,
       "receiveGrades": [
         0,
         1,
@@ -11925,7 +11925,8 @@ window.DATA = {
         1,
         2,
         1,
-        0
+        0,
+        3
       ],
       "freeballAttempts": 2,
       "freeballRating": 2,
@@ -11938,7 +11939,7 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Anna",
-      "digs": 2,
+      "digs": 3,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -12001,12 +12002,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 2.25,
+      "receiveAttempts": 6,
+      "receiveRating": 2.333,
       "receiveGrades": [
         2,
         1,
         3,
+        3,
+        2,
         3
       ],
       "freeballAttempts": 4,
@@ -12023,7 +12026,7 @@ window.DATA = {
       "opponent": "Atchison",
       "player": "Nataly",
       "digs": 2,
-      "assists": 3,
+      "assists": 4,
       "attackAttempts": 4,
       "kills": null,
       "killErrors": 1,
@@ -12056,14 +12059,14 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 6,
-      "kills": 1,
+      "attackAttempts": 7,
+      "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 8,
+      "serveAttempts": 9,
       "aces": 4,
-      "serveErrors": 2,
-      "serveRating": 3.125,
+      "serveErrors": 3,
+      "serveRating": 2.778,
       "serveScores": [
         5,
         0,
@@ -12072,6 +12075,7 @@ window.DATA = {
         5,
         5,
         5,
+        0,
         0
       ],
       "unforcedErrors": null,
@@ -12094,14 +12098,15 @@ window.DATA = {
       "kills": null,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 1,
-      "serveErrors": 2,
-      "serveRating": 1.75,
+      "serveErrors": 3,
+      "serveRating": 1.4,
       "serveScores": [
         0,
         5,
         2,
+        0,
         0
       ],
       "unforcedErrors": 2,
@@ -12127,7 +12132,7 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -15676,7 +15681,7 @@ window.DATA = {
       "opponent": "Atchison",
       "set": 2,
       "acesUs": 3,
-      "errorsUs": 2,
+      "errorsUs": 4,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 3,
@@ -15901,5 +15906,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T19:06+00:00"
+  "updated": "2026-10-21T19:11+00:00"
 };
