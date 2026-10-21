@@ -15397,6 +15397,84 @@ window.DATA = {
       "errorsThem": 4,
       "acePctThem": 0.2,
       "errorPctThem": 0.08
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
     }
   ],
   "matches": [
@@ -15555,7 +15633,13 @@ window.DATA = {
       "opponent": "New Hope",
       "teamHitting": 0.044,
       "note": ""
+    },
+    {
+      "date": "2026-10-21",
+      "opponent": "Atchison",
+      "teamHitting": null,
+      "note": ""
     }
   ],
-  "updated": "2026-10-17T16:21+00:00"
+  "updated": "2026-10-21T13:36+00:00"
 };
