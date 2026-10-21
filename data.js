@@ -12078,14 +12078,15 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": 1,
-      "serveErrors": 1,
-      "serveRating": 2.333,
+      "serveErrors": 2,
+      "serveRating": 1.75,
       "serveScores": [
         0,
         5,
-        2
+        2,
+        0
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -15657,7 +15658,7 @@ window.DATA = {
       "opponent": "Atchison",
       "set": 2,
       "acesUs": 3,
-      "errorsUs": 1,
+      "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
@@ -15882,5 +15883,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T17:36+00:00"
+  "updated": "2026-10-21T17:41+00:00"
 };
