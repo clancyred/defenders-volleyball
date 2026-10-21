@@ -11896,14 +11896,15 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 1,
-      "aces": null,
+      "serveAttempts": 2,
+      "aces": 1,
       "serveErrors": null,
-      "serveRating": 3,
+      "serveRating": 4,
       "serveScores": [
-        3
+        3,
+        5
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 5,
@@ -11925,7 +11926,7 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Anna",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -11941,14 +11942,15 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
-      "receiveRating": 1,
+      "receiveAttempts": 6,
+      "receiveRating": 0.833,
       "receiveGrades": [
         1,
         0,
         2,
         1,
-        1
+        1,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -11960,9 +11962,9 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": 1,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 2,
       "aces": null,
@@ -12022,13 +12024,14 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.5,
+      "serveRating": 2.667,
       "serveScores": [
         5,
-        0
+        0,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12050,12 +12053,14 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 1,
-      "aces": null,
+      "serveAttempts": 3,
+      "aces": 1,
       "serveErrors": 1,
-      "serveRating": 0,
+      "serveRating": 2.333,
       "serveScores": [
-        0
+        0,
+        5,
+        2
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -15612,12 +15617,12 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "set": 1,
-      "acesUs": 1,
+      "acesUs": 3,
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
-      "errorsThem": 2,
+      "acesThem": 5,
+      "errorsThem": 5,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -15851,5 +15856,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T13:51+00:00"
+  "updated": "2026-10-21T13:56+00:00"
 };
