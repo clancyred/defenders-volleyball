@@ -11890,20 +11890,21 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Bridget",
-      "digs": 2,
-      "assists": null,
+      "digs": 3,
+      "assists": 1,
       "attackAttempts": 5,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 4,
+      "serveRating": 3.8,
       "serveScores": [
         3,
         5,
         5,
+        3,
         3
       ],
       "unforcedErrors": 2,
@@ -11970,8 +11971,8 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 5,
       "assists": null,
-      "attackAttempts": 5,
-      "kills": 2,
+      "attackAttempts": 6,
+      "kills": 3,
       "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 6,
@@ -12011,7 +12012,7 @@ window.DATA = {
       "player": "Nataly",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -12030,9 +12031,11 @@ window.DATA = {
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-21",
@@ -12091,10 +12094,11 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 1,
+      "receiveAttempts": 2,
+      "receiveRating": 1.5,
       "receiveGrades": [
-        1
+        1,
+        2
       ],
       "freeballAttempts": 2,
       "freeballRating": 2.5,
@@ -15883,5 +15887,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T17:41+00:00"
+  "updated": "2026-10-21T18:01+00:00"
 };
