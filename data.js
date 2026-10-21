@@ -11896,13 +11896,15 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 2,
-      "aces": 1,
+      "serveAttempts": 4,
+      "aces": 2,
       "serveErrors": null,
       "serveRating": 4,
       "serveScores": [
         3,
-        5
+        5,
+        5,
+        3
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -15856,5 +15858,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T13:56+00:00"
+  "updated": "2026-10-21T16:51+00:00"
 };
