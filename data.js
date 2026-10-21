@@ -11892,7 +11892,7 @@ window.DATA = {
       "player": "Bridget",
       "digs": 2,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -11965,30 +11965,33 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Shiloh",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
       "attackAttempts": 5,
       "kills": 2,
       "killErrors": 2,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 6,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.5,
+      "serveRating": 2.333,
       "serveScores": [
         3,
         3,
         3,
-        1
+        1,
+        2,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 2,
+      "receiveAttempts": 4,
+      "receiveRating": 2.25,
       "receiveGrades": [
         2,
         1,
+        3,
         3
       ],
       "freeballAttempts": null,
@@ -12030,9 +12033,9 @@ window.DATA = {
       "player": "Agnes",
       "digs": null,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 5,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 3,
       "aces": 1,
@@ -12059,7 +12062,7 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
@@ -12080,10 +12083,11 @@ window.DATA = {
       "receiveGrades": [
         1
       ],
-      "freeballAttempts": 1,
-      "freeballRating": 3,
+      "freeballAttempts": 2,
+      "freeballRating": 2.5,
       "freeballGrades": [
-        3
+        3,
+        2
       ]
     },
     {
@@ -15866,5 +15870,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T16:56+00:00"
+  "updated": "2026-10-21T17:01+00:00"
 };
