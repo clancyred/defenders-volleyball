@@ -11896,16 +11896,17 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": 2,
       "serveErrors": null,
-      "serveRating": 3.8,
+      "serveRating": 3.5,
       "serveScores": [
         3,
         5,
         5,
         3,
-        3
+        3,
+        2
       ],
       "unforcedErrors": 2,
       "stuffBlocks": null,
@@ -11947,7 +11948,7 @@ window.DATA = {
         2,
         2
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 7,
@@ -12010,7 +12011,7 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "player": "Nataly",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
       "attackAttempts": 3,
       "kills": null,
@@ -12094,11 +12095,12 @@ window.DATA = {
       "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
-      "receiveRating": 1.5,
+      "receiveAttempts": 3,
+      "receiveRating": 1.333,
       "receiveGrades": [
         1,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 2,
       "freeballRating": 2.5,
@@ -15887,5 +15889,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T18:01+00:00"
+  "updated": "2026-10-21T18:16+00:00"
 };
