@@ -11947,15 +11947,16 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 0.833,
+      "receiveAttempts": 7,
+      "receiveRating": 0.857,
       "receiveGrades": [
         1,
         0,
         2,
         1,
         1,
-        0
+        0,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -11994,9 +11995,11 @@ window.DATA = {
         3,
         3
       ],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 2,
+      "freeballGrades": [
+        2
+      ]
     },
     {
       "date": "2026-10-21",
@@ -15870,5 +15873,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-21T17:01+00:00"
+  "updated": "2026-10-21T17:31+00:00"
 };
