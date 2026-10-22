@@ -11895,7 +11895,7 @@ window.DATA = {
       "attackAttempts": 7,
       "kills": 1,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 15,
       "aces": 4,
       "serveErrors": null,
@@ -12006,7 +12006,7 @@ window.DATA = {
       "attackAttempts": 20,
       "kills": 6,
       "killErrors": 6,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 10,
       "aces": 2,
       "serveErrors": null,
@@ -15944,9 +15944,9 @@ window.DATA = {
     {
       "date": "2026-10-21",
       "opponent": "Atchison",
-      "teamHitting": null,
+      "teamHitting": -0.033,
       "note": ""
     }
   ],
-  "updated": "2026-10-21T19:41+00:00"
+  "updated": "2026-10-22T13:21+00:00"
 };
