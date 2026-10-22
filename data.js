@@ -12060,7 +12060,7 @@ window.DATA = {
       "attackAttempts": 6,
       "kills": null,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": -0.166,
       "serveAttempts": 8,
       "aces": 2,
       "serveErrors": 1,
@@ -12096,7 +12096,7 @@ window.DATA = {
       "attackAttempts": 12,
       "kills": 3,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": 0.083,
       "serveAttempts": 10,
       "aces": 4,
       "serveErrors": 4,
@@ -12134,7 +12134,7 @@ window.DATA = {
       "attackAttempts": 7,
       "kills": 1,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": -0.143,
       "serveAttempts": 7,
       "aces": 2,
       "serveErrors": 4,
@@ -12177,7 +12177,7 @@ window.DATA = {
       "attackAttempts": 8,
       "kills": null,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": -0.125,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -15774,12 +15774,12 @@ window.DATA = {
       "date": "2026-10-21",
       "opponent": "Atchison",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
+      "acesUs": 14,
+      "errorsUs": 9,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
+      "acesThem": 14,
+      "errorsThem": 14,
       "acePctThem": null,
       "errorPctThem": null
     }
@@ -15948,5 +15948,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-22T13:21+00:00"
+  "updated": "2026-10-22T13:26+00:00"
 };
