@@ -15776,12 +15776,12 @@ window.DATA = {
       "set": "Total",
       "acesUs": 14,
       "errorsUs": 9,
-      "acePctUs": null,
-      "errorPctUs": null,
+      "acePctUs": 0.25,
+      "errorPctUs": 0.16,
       "acesThem": 14,
       "errorsThem": 14,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acePctThem": 0.23,
+      "errorPctThem": 0.23
     }
   ],
   "matches": [
@@ -15948,5 +15948,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-22T13:26+00:00"
+  "updated": "2026-10-22T14:21+00:00"
 };
