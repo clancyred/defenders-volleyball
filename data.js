@@ -12626,7 +12626,7 @@ window.DATA = {
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
-      "blockTouches": null,
+      "blockTouches": 1,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
@@ -12640,8 +12640,8 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 4,
       "assists": null,
-      "attackAttempts": 1,
-      "kills": 1,
+      "attackAttempts": 3,
+      "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": null,
@@ -12681,9 +12681,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": null,
-      "receiveRating": null,
-      "receiveGrades": [],
+      "receiveAttempts": 2,
+      "receiveRating": 1.5,
+      "receiveGrades": [
+        3,
+        0
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -12693,8 +12696,8 @@ window.DATA = {
       "opponent": "Texas Serve",
       "player": "Nataly",
       "digs": 1,
-      "assists": 1,
-      "attackAttempts": 1,
+      "assists": 2,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12746,7 +12749,7 @@ window.DATA = {
       "player": "Tea",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12758,16 +12761,48 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 1.667,
+      "receiveAttempts": 4,
+      "receiveRating": 1.25,
       "receiveGrades": [
         3,
         1,
-        1
+        1,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Anna",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": 3,
+      "serveScores": [
+        3
+      ],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": 2,
+      "receiveGrades": [
+        2
+      ],
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     }
   ],
   "rotations": [
@@ -16458,7 +16493,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 2,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -16692,5 +16727,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T20:31+00:00"
+  "updated": "2026-10-24T20:36+00:00"
 };
