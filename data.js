@@ -12203,22 +12203,23 @@ window.DATA = {
       "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 5,
+      "serveAttempts": 6,
       "aces": 1,
       "serveErrors": 3,
-      "serveRating": 1.2,
+      "serveRating": 1.167,
       "serveScores": [
         1,
         0,
         0,
         5,
-        0
+        0,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 15,
-      "receiveRating": 1.867,
+      "receiveAttempts": 17,
+      "receiveRating": 1.824,
       "receiveGrades": [
         2,
         0,
@@ -12234,7 +12235,9 @@ window.DATA = {
         2,
         2,
         2,
-        2
+        2,
+        2,
+        1
       ],
       "freeballAttempts": 1,
       "freeballRating": 3,
@@ -12261,7 +12264,7 @@ window.DATA = {
         2,
         2
       ],
-      "unforcedErrors": 3,
+      "unforcedErrors": 4,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12348,20 +12351,21 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 2.333,
+      "serveRating": 2,
       "serveScores": [
         3,
         2,
-        2
+        2,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 10,
-      "receiveRating": 0.8,
+      "receiveAttempts": 11,
+      "receiveRating": 0.727,
       "receiveGrades": [
         0,
         2,
@@ -12372,6 +12376,7 @@ window.DATA = {
         0,
         0,
         2,
+        0,
         0
       ],
       "freeballAttempts": 1,
@@ -12439,17 +12444,18 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 1.833,
+      "serveRating": 2,
       "serveScores": [
         1,
         3,
         1,
         2,
         3,
-        1
+        1,
+        3
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -12470,7 +12476,7 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 10,
+      "attackAttempts": 11,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
@@ -16167,7 +16173,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 3,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -16382,5 +16388,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:21+00:00"
+  "updated": "2026-10-24T18:26+00:00"
 };
