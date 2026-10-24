@@ -12679,7 +12679,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12842,9 +12842,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": null,
-      "receiveRating": null,
-      "receiveGrades": [],
+      "receiveAttempts": 2,
+      "receiveRating": 0,
+      "receiveGrades": [
+        0,
+        0
+      ],
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
@@ -12859,11 +12862,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
-      "serveScores": [],
+      "serveRating": 2,
+      "serveScores": [
+        2
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -12919,7 +12924,7 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": null,
-      "stuffBlocks": null,
+      "stuffBlocks": 1,
       "blockTouches": null,
       "receiveAttempts": null,
       "receiveRating": null,
@@ -16617,8 +16622,8 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 5,
-      "errorsThem": 1,
+      "acesThem": 7,
+      "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -16851,5 +16856,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T20:51+00:00"
+  "updated": "2026-10-24T20:56+00:00"
 };
