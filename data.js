@@ -16265,14 +16265,14 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
-      "acePctUs": null,
-      "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acesUs": 7,
+      "errorsUs": 8,
+      "acePctUs": 0.16,
+      "errorPctUs": 0.18,
+      "acesThem": 21,
+      "errorsThem": 8,
+      "acePctThem": 0.29,
+      "errorPctThem": 0.11
     },
     {
       "date": "2026-10-22",
@@ -16529,5 +16529,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:56+00:00"
+  "updated": "2026-10-24T19:01+00:00"
 };
