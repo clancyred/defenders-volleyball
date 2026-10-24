@@ -12247,7 +12247,7 @@ window.DATA = {
       "player": "Nataly",
       "digs": 1,
       "assists": 2,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12276,9 +12276,9 @@ window.DATA = {
       "player": "Tea",
       "digs": 4,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 9,
       "kills": 4,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 3,
       "aces": null,
@@ -12292,15 +12292,19 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 0.833,
+      "receiveAttempts": 10,
+      "receiveRating": 1.2,
       "receiveGrades": [
         1,
         1,
         2,
         0,
         0,
-        1
+        1,
+        1,
+        2,
+        1,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -12335,7 +12339,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Anna",
-      "digs": 3,
+      "digs": 5,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -12352,8 +12356,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 0.75,
+      "receiveAttempts": 9,
+      "receiveRating": 0.889,
       "receiveGrades": [
         0,
         2,
@@ -12362,7 +12366,8 @@ window.DATA = {
         1,
         2,
         0,
-        0
+        0,
+        2
       ],
       "freeballAttempts": 1,
       "freeballRating": 3,
@@ -12374,16 +12379,16 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Annabelle",
-      "digs": 4,
+      "digs": 6,
       "assists": 1,
       "attackAttempts": 1,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 7,
+      "serveAttempts": 8,
       "aces": 2,
       "serveErrors": 1,
-      "serveRating": 2.857,
+      "serveRating": 2.875,
       "serveScores": [
         5,
         3,
@@ -12391,18 +12396,20 @@ window.DATA = {
         0,
         3,
         5,
-        2
+        2,
+        3
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 0.5,
+      "receiveAttempts": 5,
+      "receiveRating": 0.6,
       "receiveGrades": [
         0,
         0,
         0,
-        2
+        2,
+        1
       ],
       "freeballAttempts": 5,
       "freeballRating": 2,
@@ -12420,7 +12427,7 @@ window.DATA = {
       "player": "Bridget",
       "digs": 2,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12482,20 +12489,24 @@ window.DATA = {
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
-      "serveErrors": null,
-      "serveRating": null,
-      "serveScores": [],
+      "serveErrors": 1,
+      "serveRating": 0,
+      "serveScores": [
+        0
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-22",
@@ -16130,7 +16141,7 @@ window.DATA = {
       "opponent": "Lincoln Cougars",
       "set": 2,
       "acesUs": 2,
-      "errorsUs": 2,
+      "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 5,
@@ -16361,5 +16372,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:06+00:00"
+  "updated": "2026-10-24T18:11+00:00"
 };
