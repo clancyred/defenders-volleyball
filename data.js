@@ -12197,9 +12197,9 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Shiloh",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
-      "attackAttempts": 10,
+      "attackAttempts": 11,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
@@ -12217,8 +12217,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
-      "receiveRating": 1.846,
+      "receiveAttempts": 14,
+      "receiveRating": 1.857,
       "receiveGrades": [
         2,
         0,
@@ -12230,6 +12230,7 @@ window.DATA = {
         3,
         1,
         3,
+        2,
         2,
         2,
         2
@@ -12259,7 +12260,7 @@ window.DATA = {
         2,
         2
       ],
-      "unforcedErrors": 2,
+      "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12275,17 +12276,18 @@ window.DATA = {
       "player": "Tea",
       "digs": 4,
       "assists": null,
-      "attackAttempts": 5,
-      "kills": 3,
+      "attackAttempts": 6,
+      "kills": 4,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
+      "serveAttempts": 3,
       "aces": null,
-      "serveErrors": null,
-      "serveRating": 1,
+      "serveErrors": 1,
+      "serveRating": 0.667,
       "serveScores": [
         1,
-        1
+        1,
+        0
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12339,12 +12341,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 3,
+      "serveRating": 2.5,
       "serveScores": [
-        3
+        3,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12371,7 +12374,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Annabelle",
-      "digs": 3,
+      "digs": 4,
       "assists": 1,
       "attackAttempts": 1,
       "kills": 1,
@@ -12393,11 +12396,13 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
-      "receiveRating": 0,
+      "receiveAttempts": 4,
+      "receiveRating": 0.5,
       "receiveGrades": [
         0,
-        0
+        0,
+        0,
+        2
       ],
       "freeballAttempts": 5,
       "freeballRating": 2,
@@ -16125,11 +16130,11 @@ window.DATA = {
       "opponent": "Lincoln Cougars",
       "set": 2,
       "acesUs": 2,
-      "errorsUs": 1,
+      "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
-      "errorsThem": 1,
+      "acesThem": 5,
+      "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -16356,5 +16361,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:01+00:00"
+  "updated": "2026-10-24T18:06+00:00"
 };
