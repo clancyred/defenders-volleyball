@@ -15782,6 +15782,84 @@ window.DATA = {
       "errorsThem": 14,
       "acePctThem": 0.23,
       "errorPctThem": 0.23
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
     }
   ],
   "matches": [
@@ -15946,7 +16024,13 @@ window.DATA = {
       "opponent": "Atchison",
       "teamHitting": -0.033,
       "note": ""
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "teamHitting": null,
+      "note": ""
     }
   ],
-  "updated": "2026-10-22T14:21+00:00"
+  "updated": "2026-10-24T14:51+00:00"
 };
