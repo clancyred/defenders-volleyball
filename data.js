@@ -12203,12 +12203,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
-      "serveErrors": null,
-      "serveRating": 1,
+      "serveErrors": 1,
+      "serveRating": 0.5,
       "serveScores": [
-        1
+        1,
+        0
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12317,11 +12318,12 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
+      "receiveAttempts": 3,
       "receiveRating": 1,
       "receiveGrades": [
         0,
-        2
+        2,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -12343,6 +12345,33 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Lincoln Cougars",
+      "player": "Bridget",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": 1,
+      "serveScores": [
+        1
+      ],
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -15947,7 +15976,7 @@ window.DATA = {
       "opponent": "Lincoln Cougars",
       "set": 1,
       "acesUs": null,
-      "errorsUs": null,
+      "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 2,
@@ -16191,5 +16220,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T16:16+00:00"
+  "updated": "2026-10-24T16:21+00:00"
 };
