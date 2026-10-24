@@ -12605,6 +12605,83 @@ window.DATA = {
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Bridget",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": 1,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": 1,
+      "serveScores": [
+        1
+      ],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Annabelle",
+      "digs": 2,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Shiloh",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
     }
   ],
   "rotations": [
@@ -16283,7 +16360,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": null,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -16529,5 +16606,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T19:01+00:00"
+  "updated": "2026-10-24T20:21+00:00"
 };
