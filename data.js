@@ -12199,7 +12199,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12214,11 +12214,13 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 1.25,
+      "receiveAttempts": 6,
+      "receiveRating": 1.333,
       "receiveGrades": [
         2,
         0,
+        1,
+        2,
         1,
         2
       ],
@@ -12232,7 +12234,7 @@ window.DATA = {
       "player": "Nataly",
       "digs": 1,
       "assists": 2,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12318,11 +12320,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
       "serveErrors": null,
-      "serveRating": null,
-      "serveScores": [],
+      "serveRating": 3,
+      "serveScores": [
+        3
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -12334,15 +12338,17 @@ window.DATA = {
         1,
         0
       ],
-      "freeballAttempts": null,
-      "freeballRating": null,
-      "freeballGrades": []
+      "freeballAttempts": 1,
+      "freeballRating": 3,
+      "freeballGrades": [
+        3
+      ]
     },
     {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Annabelle",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
       "attackAttempts": 1,
       "kills": 1,
@@ -12361,15 +12367,17 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
+      "receiveAttempts": 2,
       "receiveRating": 0,
       "receiveGrades": [
+        0,
         0
       ],
-      "freeballAttempts": 1,
-      "freeballRating": 2,
+      "freeballAttempts": 2,
+      "freeballRating": 1.5,
       "freeballGrades": [
-        2
+        2,
+        1
       ]
     },
     {
@@ -12414,7 +12422,7 @@ window.DATA = {
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -16022,7 +16030,7 @@ window.DATA = {
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 4,
+      "acesThem": 5,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -16263,5 +16271,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T17:21+00:00"
+  "updated": "2026-10-24T17:26+00:00"
 };
