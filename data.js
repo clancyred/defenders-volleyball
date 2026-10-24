@@ -12698,7 +12698,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 7,
       "assists": null,
-      "attackAttempts": 8,
+      "attackAttempts": 10,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": null,
@@ -16912,5 +16912,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T21:36+00:00"
+  "updated": "2026-10-24T21:41+00:00"
 };
