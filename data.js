@@ -12217,8 +12217,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 14,
-      "receiveRating": 1.857,
+      "receiveAttempts": 15,
+      "receiveRating": 1.867,
       "receiveGrades": [
         2,
         0,
@@ -12230,6 +12230,7 @@ window.DATA = {
         3,
         1,
         3,
+        2,
         2,
         2,
         2,
@@ -12276,9 +12277,9 @@ window.DATA = {
       "player": "Tea",
       "digs": 4,
       "assists": null,
-      "attackAttempts": 9,
+      "attackAttempts": 10,
       "kills": 4,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 3,
       "aces": null,
@@ -12425,21 +12426,23 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Bridget",
-      "digs": 2,
+      "digs": 4,
       "assists": null,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 6,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 1.75,
+      "serveRating": 1.833,
       "serveScores": [
         1,
         3,
         1,
-        2
+        2,
+        3,
+        1
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -12460,7 +12463,7 @@ window.DATA = {
       "player": "Cora",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 9,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
@@ -16372,5 +16375,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:11+00:00"
+  "updated": "2026-10-24T18:16+00:00"
 };
