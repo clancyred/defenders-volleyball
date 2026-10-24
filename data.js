@@ -12616,13 +12616,20 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 2,
-      "aces": null,
+      "serveAttempts": 9,
+      "aces": 3,
       "serveErrors": null,
-      "serveRating": 1.5,
+      "serveRating": 2.889,
       "serveScores": [
         1,
-        2
+        2,
+        5,
+        1,
+        5,
+        3,
+        1,
+        5,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12671,7 +12678,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 2,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12753,7 +12760,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "player": "Tea",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": 2,
       "kills": null,
@@ -12838,6 +12845,33 @@ window.DATA = {
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Corena",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": 1,
+      "freeballRating": 1,
+      "freeballGrades": [
+        1
+      ]
     }
   ],
   "rotations": [
@@ -16524,7 +16558,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "set": 2,
-      "acesUs": null,
+      "acesUs": 3,
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
@@ -16762,5 +16796,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T20:41+00:00"
+  "updated": "2026-10-24T20:46+00:00"
 };
