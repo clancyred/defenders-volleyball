@@ -12199,9 +12199,9 @@ window.DATA = {
       "player": "Shiloh",
       "digs": null,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 6,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 2,
       "aces": null,
@@ -12214,15 +12214,17 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 1.333,
+      "receiveAttempts": 8,
+      "receiveRating": 1.75,
       "receiveGrades": [
         2,
         0,
         1,
         2,
         1,
-        2
+        2,
+        3,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -12330,13 +12332,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 0.75,
+      "receiveAttempts": 5,
+      "receiveRating": 0.8,
       "receiveGrades": [
         0,
         2,
         1,
-        0
+        0,
+        1
       ],
       "freeballAttempts": 1,
       "freeballRating": 3,
@@ -12373,11 +12376,12 @@ window.DATA = {
         0,
         0
       ],
-      "freeballAttempts": 2,
-      "freeballRating": 1.5,
+      "freeballAttempts": 3,
+      "freeballRating": 2,
       "freeballGrades": [
         2,
-        1
+        1,
+        3
       ]
     },
     {
@@ -16271,5 +16275,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T17:26+00:00"
+  "updated": "2026-10-24T17:41+00:00"
 };
