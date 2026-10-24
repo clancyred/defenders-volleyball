@@ -12218,8 +12218,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 17,
-      "receiveRating": 1.824,
+      "receiveAttempts": 20,
+      "receiveRating": 1.65,
       "receiveGrades": [
         2,
         0,
@@ -12237,6 +12237,9 @@ window.DATA = {
         2,
         2,
         2,
+        1,
+        0,
+        1,
         1
       ],
       "freeballAttempts": 1,
@@ -12264,7 +12267,7 @@ window.DATA = {
         2,
         2
       ],
-      "unforcedErrors": 4,
+      "unforcedErrors": 5,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -12345,9 +12348,9 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Lincoln Cougars",
       "player": "Anna",
-      "digs": 6,
+      "digs": 7,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12364,8 +12367,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
-      "receiveRating": 0.727,
+      "receiveAttempts": 12,
+      "receiveRating": 0.667,
       "receiveGrades": [
         0,
         2,
@@ -12376,6 +12379,7 @@ window.DATA = {
         0,
         0,
         2,
+        0,
         0,
         0
       ],
@@ -12395,10 +12399,10 @@ window.DATA = {
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 10,
+      "serveAttempts": 11,
       "aces": 3,
       "serveErrors": 2,
-      "serveRating": 2.8,
+      "serveRating": 2.636,
       "serveScores": [
         5,
         3,
@@ -12409,7 +12413,8 @@ window.DATA = {
         2,
         3,
         5,
-        0
+        0,
+        1
       ],
       "unforcedErrors": 1,
       "stuffBlocks": null,
@@ -12460,9 +12465,10 @@ window.DATA = {
       "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
+      "receiveAttempts": 3,
       "receiveRating": 1,
       "receiveGrades": [
+        1,
         1,
         1
       ],
@@ -12487,7 +12493,7 @@ window.DATA = {
       "serveScores": [],
       "unforcedErrors": 1,
       "stuffBlocks": null,
-      "blockTouches": 1,
+      "blockTouches": 2,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
@@ -16173,8 +16179,8 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
-      "errorsThem": null,
+      "acesThem": 5,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -16388,5 +16394,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T18:26+00:00"
+  "updated": "2026-10-24T18:31+00:00"
 };
