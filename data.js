@@ -12616,10 +12616,10 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 9,
+      "serveAttempts": 10,
       "aces": 3,
       "serveErrors": null,
-      "serveRating": 2.889,
+      "serveRating": 2.7,
       "serveScores": [
         1,
         2,
@@ -12629,7 +12629,8 @@ window.DATA = {
         3,
         1,
         5,
-        3
+        3,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -12645,7 +12646,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "player": "Annabelle",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
       "attackAttempts": 3,
       "kills": 2,
@@ -12676,7 +12677,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "player": "Shiloh",
-      "digs": 2,
+      "digs": 3,
       "assists": null,
       "attackAttempts": 3,
       "kills": null,
@@ -12691,7 +12692,7 @@ window.DATA = {
         1,
         1
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 2,
@@ -12774,12 +12775,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 1.25,
+      "receiveAttempts": 6,
+      "receiveRating": 0.833,
       "receiveGrades": [
         3,
         1,
         1,
+        0,
+        0,
         0
       ],
       "freeballAttempts": null,
@@ -12872,6 +12875,58 @@ window.DATA = {
       "freeballGrades": [
         1
       ]
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Emma",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": 1,
+      "receiveGrades": [
+        1
+      ],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-22",
+      "opponent": "Texas Serve",
+      "player": "Cora",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
     }
   ],
   "rotations": [
@@ -16562,7 +16617,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 3,
+      "acesThem": 5,
       "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
@@ -16796,5 +16851,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T20:46+00:00"
+  "updated": "2026-10-24T20:51+00:00"
 };
