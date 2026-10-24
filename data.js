@@ -12738,7 +12738,7 @@ window.DATA = {
       "player": "Piper",
       "digs": null,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -12748,7 +12748,7 @@ window.DATA = {
       "serveRating": null,
       "serveScores": [],
       "unforcedErrors": 1,
-      "stuffBlocks": null,
+      "stuffBlocks": 1,
       "blockTouches": 2,
       "receiveAttempts": null,
       "receiveRating": null,
@@ -12775,15 +12775,16 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 0.833,
+      "receiveAttempts": 7,
+      "receiveRating": 1.143,
       "receiveGrades": [
         3,
         1,
         1,
         0,
         0,
-        0
+        0,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -12793,7 +12794,7 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "player": "Anna",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -16856,5 +16857,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-24T20:56+00:00"
+  "updated": "2026-10-24T21:01+00:00"
 };
