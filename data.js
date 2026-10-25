@@ -12993,24 +12993,25 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "player": "Anna",
-      "digs": 3,
+      "digs": 4,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 1,
+      "serveRating": 1.5,
       "serveScores": [
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 12,
-      "receiveRating": 1.583,
+      "receiveAttempts": 13,
+      "receiveRating": 1.692,
       "receiveGrades": [
         3,
         3,
@@ -13023,7 +13024,8 @@ window.DATA = {
         2,
         1,
         3,
-        2
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13091,24 +13093,25 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 4,
       "assists": null,
-      "attackAttempts": 5,
+      "attackAttempts": 6,
       "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 3,
+      "serveAttempts": 4,
       "aces": null,
       "serveErrors": 2,
-      "serveRating": 1,
+      "serveRating": 1.25,
       "serveScores": [
         0,
         3,
-        0
+        0,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 10,
-      "receiveRating": 2.1,
+      "receiveAttempts": 11,
+      "receiveRating": 2.182,
       "receiveGrades": [
         2,
         3,
@@ -13119,7 +13122,8 @@ window.DATA = {
         3,
         3,
         2,
-        2
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13149,7 +13153,7 @@ window.DATA = {
         0,
         2
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 1,
@@ -13165,18 +13169,19 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "player": "Nataly",
-      "digs": null,
+      "digs": 1,
       "assists": 4,
       "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 0,
+      "serveRating": 0.5,
       "serveScores": [
-        0
+        0,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13198,16 +13203,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 6,
+      "serveAttempts": 7,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 1.667,
+      "serveRating": 1.571,
       "serveScores": [
         1,
         1,
         3,
         2,
         2,
+        1,
         1
       ],
       "unforcedErrors": null,
@@ -13226,7 +13232,7 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 4,
+      "attackAttempts": 5,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -17118,7 +17124,7 @@ window.DATA = {
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": null,
+      "errorsThem": 1,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -17357,5 +17363,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T14:06+00:00"
+  "updated": "2026-10-25T14:11+00:00"
 };
