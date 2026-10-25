@@ -13009,8 +13009,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
-      "receiveRating": 1.545,
+      "receiveAttempts": 12,
+      "receiveRating": 1.583,
       "receiveGrades": [
         3,
         3,
@@ -13022,7 +13022,8 @@ window.DATA = {
         1,
         2,
         1,
-        3
+        3,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13059,7 +13060,7 @@ window.DATA = {
       "player": "Tea",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 7,
       "kills": 3,
       "killErrors": null,
       "hittingSheet": null,
@@ -13071,13 +13072,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 4,
-      "receiveRating": 1.5,
+      "receiveAttempts": 5,
+      "receiveRating": 1.8,
       "receiveGrades": [
         2,
         2,
         2,
-        0
+        0,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13087,7 +13089,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "player": "Shiloh",
-      "digs": 3,
+      "digs": 4,
       "assists": null,
       "attackAttempts": 5,
       "kills": 2,
@@ -13105,14 +13107,18 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 1.833,
+      "receiveAttempts": 10,
+      "receiveRating": 2.1,
       "receiveGrades": [
         2,
         3,
         1,
         0,
         3,
+        2,
+        3,
+        3,
+        2,
         2
       ],
       "freeballAttempts": null,
@@ -13125,14 +13131,14 @@ window.DATA = {
       "player": "Annabelle",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": null,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 7,
+      "serveAttempts": 8,
       "aces": 3,
       "serveErrors": 2,
-      "serveRating": 2.857,
+      "serveRating": 2.75,
       "serveScores": [
         2,
         5,
@@ -13140,7 +13146,8 @@ window.DATA = {
         3,
         0,
         5,
-        0
+        0,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13191,15 +13198,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 6,
       "aces": null,
       "serveErrors": null,
-      "serveRating": 1.75,
+      "serveRating": 1.667,
       "serveScores": [
         1,
         1,
         3,
-        2
+        2,
+        2,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13217,7 +13226,7 @@ window.DATA = {
       "player": "Cora",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 4,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
@@ -13228,7 +13237,7 @@ window.DATA = {
       "serveScores": [],
       "unforcedErrors": null,
       "stuffBlocks": null,
-      "blockTouches": null,
+      "blockTouches": 1,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
@@ -13246,11 +13255,12 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": null,
       "serveRating": 1,
       "serveScores": [
+        1,
         1
       ],
       "unforcedErrors": null,
@@ -17107,7 +17117,7 @@ window.DATA = {
       "errorsUs": 1,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 1,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -17347,5 +17357,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T14:01+00:00"
+  "updated": "2026-10-25T14:06+00:00"
 };
