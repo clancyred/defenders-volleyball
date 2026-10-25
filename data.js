@@ -12998,7 +12998,7 @@ window.DATA = {
       "attackAttempts": 6,
       "kills": 1,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": 5,
       "aces": null,
       "serveErrors": 1,
@@ -13087,7 +13087,7 @@ window.DATA = {
       "attackAttempts": 8,
       "kills": 1,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": -0.125,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -13125,7 +13125,7 @@ window.DATA = {
       "attackAttempts": 4,
       "kills": 1,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -13178,7 +13178,7 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": 1,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 1,
       "serveAttempts": 6,
       "aces": null,
       "serveErrors": 2,
@@ -13210,7 +13210,7 @@ window.DATA = {
       "attackAttempts": 4,
       "kills": null,
       "killErrors": 2,
-      "hittingSheet": null,
+      "hittingSheet": -0.5,
       "serveAttempts": 3,
       "aces": null,
       "serveErrors": 2,
@@ -13246,7 +13246,7 @@ window.DATA = {
       "attackAttempts": 5,
       "kills": 3,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -13303,7 +13303,7 @@ window.DATA = {
       "attackAttempts": 1,
       "kills": 1,
       "killErrors": null,
-      "hittingSheet": null,
+      "hittingSheet": 1,
       "serveAttempts": 2,
       "aces": 1,
       "serveErrors": null,
@@ -17522,14 +17522,14 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
-      "acePctUs": null,
-      "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acesUs": 3,
+      "errorsUs": 7,
+      "acePctUs": 0.11,
+      "errorPctUs": 0.26,
+      "acesThem": 6,
+      "errorsThem": 6,
+      "acePctThem": 0.12,
+      "errorPctThem": 0.12
     },
     {
       "date": "2026-10-23",
@@ -17788,7 +17788,7 @@ window.DATA = {
     {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
-      "teamHitting": null,
+      "teamHitting": 0.069,
       "note": ""
     },
     {
@@ -17798,5 +17798,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T19:16+00:00"
+  "updated": "2026-10-25T19:21+00:00"
 };
