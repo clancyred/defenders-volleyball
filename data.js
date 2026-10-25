@@ -12995,7 +12995,7 @@ window.DATA = {
       "player": "Shiloh",
       "digs": 1,
       "assists": null,
-      "attackAttempts": 6,
+      "attackAttempts": 4,
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": 0,
@@ -13084,7 +13084,7 @@ window.DATA = {
       "player": "Tea",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 8,
+      "attackAttempts": 9,
       "kills": 1,
       "killErrors": 2,
       "hittingSheet": -0.125,
@@ -17798,5 +17798,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T19:21+00:00"
+  "updated": "2026-10-25T21:06+00:00"
 };
