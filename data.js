@@ -13010,8 +13010,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 13,
-      "receiveRating": 1.692,
+      "receiveAttempts": 14,
+      "receiveRating": 1.714,
       "receiveGrades": [
         3,
         3,
@@ -13025,7 +13025,8 @@ window.DATA = {
         1,
         3,
         2,
-        3
+        3,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13111,7 +13112,7 @@ window.DATA = {
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 11,
-      "receiveRating": 2.182,
+      "receiveRating": 2,
       "receiveGrades": [
         2,
         3,
@@ -13123,7 +13124,7 @@ window.DATA = {
         3,
         2,
         2,
-        3
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13183,7 +13184,7 @@ window.DATA = {
         0,
         1
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -17363,5 +17364,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T14:11+00:00"
+  "updated": "2026-10-25T14:16+00:00"
 };
