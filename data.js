@@ -16726,6 +16726,84 @@ window.DATA = {
       "date": "2026-10-22",
       "opponent": "Texas Serve",
       "set": "Total",
+      "acesUs": 6,
+      "errorsUs": 6,
+      "acePctUs": 0.11,
+      "errorPctUs": 0.11,
+      "acesThem": 18,
+      "errorsThem": 8,
+      "acePctThem": 0.24,
+      "errorPctThem": 0.11
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "set": "Total",
       "acesUs": null,
       "errorsUs": null,
       "acePctUs": null,
@@ -16910,7 +16988,13 @@ window.DATA = {
       "opponent": "Texas Serve",
       "teamHitting": 0.139,
       "note": ""
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "teamHitting": null,
+      "note": ""
     }
   ],
-  "updated": "2026-10-25T13:21+00:00"
+  "updated": "2026-10-25T13:26+00:00"
 };
