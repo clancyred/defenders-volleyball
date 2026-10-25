@@ -12999,12 +12999,14 @@ window.DATA = {
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 3,
       "aces": null,
       "serveErrors": null,
       "serveRating": 2,
       "serveScores": [
-        2
+        2,
+        1,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13028,7 +13030,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Anna",
-      "digs": 2,
+      "digs": 4,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
@@ -13066,9 +13068,9 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Tea",
-      "digs": 1,
+      "digs": 2,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 5,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -13080,13 +13082,14 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
-      "receiveRating": 1.8,
+      "receiveAttempts": 6,
+      "receiveRating": 1.833,
       "receiveGrades": [
         2,
         3,
         2,
         0,
+        2,
         2
       ],
       "freeballAttempts": null,
@@ -13108,7 +13111,7 @@ window.DATA = {
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [],
-      "unforcedErrors": 1,
+      "unforcedErrors": 2,
       "stuffBlocks": null,
       "blockTouches": 1,
       "receiveAttempts": null,
@@ -13122,7 +13125,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Nataly",
-      "digs": 1,
+      "digs": 2,
       "assists": 3,
       "attackAttempts": null,
       "kills": null,
@@ -13174,7 +13177,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Annabelle",
-      "digs": 4,
+      "digs": 5,
       "assists": null,
       "attackAttempts": 2,
       "kills": null,
@@ -17437,7 +17440,7 @@ window.DATA = {
       "errorsUs": null,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": null,
+      "acesThem": 1,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -17761,5 +17764,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T18:16+00:00"
+  "updated": "2026-10-25T18:51+00:00"
 };
