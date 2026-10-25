@@ -12999,21 +12999,22 @@ window.DATA = {
       "kills": 1,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 1.5,
+      "serveRating": 1.4,
       "serveScores": [
         2,
         1,
         3,
-        0
+        0,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": 13,
-      "receiveRating": 2,
+      "receiveRating": 1.923,
       "receiveGrades": [
         3,
         2,
@@ -13021,7 +13022,7 @@ window.DATA = {
         1,
         2,
         0,
-        3,
+        2,
         2,
         3,
         3,
@@ -13057,8 +13058,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
-      "receiveRating": 1.818,
+      "receiveAttempts": 12,
+      "receiveRating": 1.917,
       "receiveGrades": [
         2,
         1,
@@ -13070,7 +13071,8 @@ window.DATA = {
         2,
         1,
         2,
-        2
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13082,9 +13084,9 @@ window.DATA = {
       "player": "Tea",
       "digs": 3,
       "assists": null,
-      "attackAttempts": 7,
+      "attackAttempts": 8,
       "kills": 1,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": null,
       "aces": null,
@@ -13094,8 +13096,8 @@ window.DATA = {
       "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 8,
-      "receiveRating": 1.875,
+      "receiveAttempts": 12,
+      "receiveRating": 2.167,
       "receiveGrades": [
         2,
         3,
@@ -13104,7 +13106,11 @@ window.DATA = {
         2,
         2,
         3,
-        1
+        1,
+        3,
+        3,
+        2,
+        3
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13127,7 +13133,7 @@ window.DATA = {
       "serveScores": [],
       "unforcedErrors": 2,
       "stuffBlocks": null,
-      "blockTouches": 1,
+      "blockTouches": 2,
       "receiveAttempts": null,
       "receiveRating": null,
       "receiveGrades": [],
@@ -13139,7 +13145,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Nataly",
-      "digs": 2,
+      "digs": 3,
       "assists": 4,
       "attackAttempts": null,
       "kills": null,
@@ -13199,11 +13205,11 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Annabelle",
-      "digs": 7,
+      "digs": 8,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": null,
-      "killErrors": 1,
+      "killErrors": 2,
       "hittingSheet": null,
       "serveAttempts": 3,
       "aces": null,
@@ -17792,5 +17798,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T19:11+00:00"
+  "updated": "2026-10-25T19:16+00:00"
 };
