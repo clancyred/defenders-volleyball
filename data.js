@@ -12988,6 +12988,58 @@ window.DATA = {
       "freeballAttempts": null,
       "freeballRating": null,
       "freeballGrades": []
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "player": "Anna",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": null,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": 1,
+      "receiveRating": 3,
+      "receiveGrades": [
+        3
+      ],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "KC Firestorm",
+      "player": "Piper",
+      "digs": null,
+      "assists": null,
+      "attackAttempts": 1,
+      "kills": null,
+      "killErrors": null,
+      "hittingSheet": null,
+      "serveAttempts": null,
+      "aces": null,
+      "serveErrors": null,
+      "serveRating": null,
+      "serveScores": [],
+      "unforcedErrors": null,
+      "stuffBlocks": null,
+      "blockTouches": null,
+      "receiveAttempts": null,
+      "receiveRating": null,
+      "receiveGrades": [],
+      "freeballAttempts": null,
+      "freeballRating": null,
+      "freeballGrades": []
     }
   ],
   "rotations": [
@@ -16996,5 +17048,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T13:26+00:00"
+  "updated": "2026-10-25T13:31+00:00"
 };
