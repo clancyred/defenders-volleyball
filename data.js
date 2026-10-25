@@ -13007,10 +13007,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 3,
+      "receiveAttempts": 2,
+      "receiveRating": 2.5,
       "receiveGrades": [
-        3
+        3,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13085,7 +13086,7 @@ window.DATA = {
       "serveErrors": null,
       "serveRating": null,
       "serveScores": [],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -17571,5 +17572,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T14:56+00:00"
+  "updated": "2026-10-25T15:01+00:00"
 };
