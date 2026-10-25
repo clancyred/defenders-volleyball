@@ -13358,7 +13358,7 @@ window.DATA = {
       "attackAttempts": 3,
       "kills": 1,
       "killErrors": 1,
-      "hittingSheet": null,
+      "hittingSheet": 0,
       "serveAttempts": null,
       "aces": null,
       "serveErrors": null,
@@ -17122,6 +17122,84 @@ window.DATA = {
     },
     {
       "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": 1,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": 2,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": 3,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": 4,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": 5,
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "set": "Total",
+      "acesUs": null,
+      "errorsUs": null,
+      "acePctUs": null,
+      "errorPctUs": null,
+      "acesThem": null,
+      "errorsThem": null,
+      "acePctThem": null,
+      "errorPctThem": null
+    },
+    {
+      "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "set": 1,
       "acesUs": 3,
@@ -17189,14 +17267,14 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "set": "Total",
-      "acesUs": null,
-      "errorsUs": null,
-      "acePctUs": null,
-      "errorPctUs": null,
-      "acesThem": null,
-      "errorsThem": null,
-      "acePctThem": null,
-      "errorPctThem": null
+      "acesUs": 4,
+      "errorsUs": 6,
+      "acePctUs": 0.13,
+      "errorPctUs": 0.2,
+      "acesThem": 11,
+      "errorsThem": 4,
+      "acePctThem": 0.22,
+      "errorPctThem": 0.08
     }
   ],
   "matches": [
@@ -17376,10 +17454,16 @@ window.DATA = {
     },
     {
       "date": "2026-10-23",
+      "opponent": "HypeVolleyball",
+      "teamHitting": null,
+      "note": ""
+    },
+    {
+      "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "teamHitting": 0.147,
       "note": ""
     }
   ],
-  "updated": "2026-10-25T14:31+00:00"
+  "updated": "2026-10-25T14:36+00:00"
 };
