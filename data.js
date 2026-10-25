@@ -12995,9 +12995,9 @@ window.DATA = {
       "player": "Shiloh",
       "digs": null,
       "assists": null,
-      "attackAttempts": 1,
+      "attackAttempts": 2,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 1,
       "aces": null,
@@ -13031,22 +13031,26 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": null,
-      "aces": null,
+      "serveAttempts": 1,
+      "aces": 1,
       "serveErrors": null,
-      "serveRating": null,
-      "serveScores": [],
+      "serveRating": 5,
+      "serveScores": [
+        5
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 5,
-      "receiveRating": 2.2,
+      "receiveAttempts": 7,
+      "receiveRating": 1.857,
       "receiveGrades": [
         2,
         1,
         3,
         3,
-        2
+        2,
+        1,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13070,9 +13074,11 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 1,
-      "receiveRating": 2,
+      "receiveAttempts": 3,
+      "receiveRating": 2.333,
       "receiveGrades": [
+        2,
+        3,
         2
       ],
       "freeballAttempts": null,
@@ -13160,11 +13166,11 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Annabelle",
-      "digs": 3,
+      "digs": 4,
       "assists": null,
-      "attackAttempts": null,
+      "attackAttempts": 2,
       "kills": null,
-      "killErrors": null,
+      "killErrors": 1,
       "hittingSheet": null,
       "serveAttempts": 1,
       "aces": null,
@@ -17376,11 +17382,11 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "set": 1,
-      "acesUs": 1,
+      "acesUs": 2,
       "errorsUs": 2,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
+      "acesThem": 2,
       "errorsThem": null,
       "acePctThem": null,
       "errorPctThem": null
@@ -17717,5 +17723,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T15:11+00:00"
+  "updated": "2026-10-25T15:16+00:00"
 };
