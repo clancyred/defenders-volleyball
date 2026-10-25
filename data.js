@@ -13046,8 +13046,8 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
-      "receiveRating": 1.857,
+      "receiveAttempts": 8,
+      "receiveRating": 1.875,
       "receiveGrades": [
         2,
         1,
@@ -13055,7 +13055,8 @@ window.DATA = {
         3,
         2,
         1,
-        1
+        1,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13098,7 +13099,7 @@ window.DATA = {
       "player": "Piper",
       "digs": null,
       "assists": null,
-      "attackAttempts": 2,
+      "attackAttempts": 3,
       "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
@@ -13274,7 +13275,7 @@ window.DATA = {
         5,
         1
       ],
-      "unforcedErrors": null,
+      "unforcedErrors": 1,
       "stuffBlocks": null,
       "blockTouches": null,
       "receiveAttempts": null,
@@ -17760,5 +17761,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T18:11+00:00"
+  "updated": "2026-10-25T18:16+00:00"
 };
