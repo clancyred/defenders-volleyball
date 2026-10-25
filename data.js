@@ -13009,15 +13009,18 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 6,
-      "receiveRating": 1.667,
+      "receiveAttempts": 9,
+      "receiveRating": 1.444,
       "receiveGrades": [
         3,
         3,
         2,
         1,
         1,
-        0
+        0,
+        0,
+        1,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13052,9 +13055,9 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "KC Firestorm",
       "player": "Tea",
-      "digs": 2,
+      "digs": 3,
       "assists": null,
-      "attackAttempts": 3,
+      "attackAttempts": 4,
       "kills": 2,
       "killErrors": null,
       "hittingSheet": null,
@@ -13066,11 +13069,13 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 2,
-      "receiveRating": 2,
+      "receiveAttempts": 4,
+      "receiveRating": 1.5,
       "receiveGrades": [
         2,
-        2
+        2,
+        2,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13086,22 +13091,24 @@ window.DATA = {
       "kills": 2,
       "killErrors": 1,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
       "serveErrors": 1,
-      "serveRating": 0,
+      "serveRating": 1.5,
       "serveScores": [
-        0
+        0,
+        3
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 3,
-      "receiveRating": 2,
+      "receiveAttempts": 4,
+      "receiveRating": 1.5,
       "receiveGrades": [
         2,
         3,
-        1
+        1,
+        0
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13146,15 +13153,17 @@ window.DATA = {
       "player": "Nataly",
       "digs": null,
       "assists": 3,
-      "attackAttempts": null,
+      "attackAttempts": 1,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": null,
+      "serveAttempts": 1,
       "aces": null,
-      "serveErrors": null,
-      "serveRating": null,
-      "serveScores": [],
+      "serveErrors": 1,
+      "serveRating": 0,
+      "serveScores": [
+        0
+      ],
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
@@ -16995,11 +17004,11 @@ window.DATA = {
       "opponent": "KC Firestorm",
       "set": 1,
       "acesUs": 2,
-      "errorsUs": 2,
+      "errorsUs": 3,
       "acePctUs": null,
       "errorPctUs": null,
-      "acesThem": 1,
-      "errorsThem": 1,
+      "acesThem": 5,
+      "errorsThem": 2,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -17251,5 +17260,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T13:46+00:00"
+  "updated": "2026-10-25T13:51+00:00"
 };
