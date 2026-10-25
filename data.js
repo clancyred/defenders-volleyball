@@ -13012,7 +13012,7 @@ window.DATA = {
       "unforcedErrors": null,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 11,
+      "receiveAttempts": 13,
       "receiveRating": 2,
       "receiveGrades": [
         3,
@@ -13025,7 +13025,9 @@ window.DATA = {
         2,
         3,
         3,
-        1
+        1,
+        2,
+        2
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13041,15 +13043,16 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 5,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 2.25,
+      "serveRating": 2.2,
       "serveScores": [
         5,
         1,
         2,
-        1
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13091,8 +13094,8 @@ window.DATA = {
       "unforcedErrors": 3,
       "stuffBlocks": null,
       "blockTouches": null,
-      "receiveAttempts": 7,
-      "receiveRating": 2,
+      "receiveAttempts": 8,
+      "receiveRating": 1.875,
       "receiveGrades": [
         2,
         3,
@@ -13100,7 +13103,8 @@ window.DATA = {
         0,
         2,
         2,
-        3
+        3,
+        1
       ],
       "freeballAttempts": null,
       "freeballRating": null,
@@ -13141,12 +13145,13 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 2,
       "aces": null,
-      "serveErrors": null,
-      "serveRating": 3,
+      "serveErrors": 1,
+      "serveRating": 1.5,
       "serveScores": [
-        3
+        3,
+        0
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13194,7 +13199,7 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Annabelle",
-      "digs": 6,
+      "digs": 7,
       "assists": null,
       "attackAttempts": 3,
       "kills": null,
@@ -13219,9 +13224,10 @@ window.DATA = {
         0,
         1
       ],
-      "freeballAttempts": 1,
+      "freeballAttempts": 2,
       "freeballRating": 3,
       "freeballGrades": [
+        3,
         3
       ]
     },
@@ -13260,15 +13266,17 @@ window.DATA = {
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 4,
+      "serveAttempts": 6,
       "aces": 1,
       "serveErrors": 1,
-      "serveRating": 2.25,
+      "serveRating": 2,
       "serveScores": [
         5,
         2,
         2,
-        0
+        0,
+        2,
+        1
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -13286,8 +13294,8 @@ window.DATA = {
       "player": "Corena",
       "digs": null,
       "assists": 1,
-      "attackAttempts": null,
-      "kills": null,
+      "attackAttempts": 1,
+      "kills": 1,
       "killErrors": null,
       "hittingSheet": null,
       "serveAttempts": 2,
@@ -17457,11 +17465,11 @@ window.DATA = {
       "opponent": "HypeVolleyball",
       "set": 2,
       "acesUs": null,
-      "errorsUs": 4,
+      "errorsUs": 5,
       "acePctUs": null,
       "errorPctUs": null,
       "acesThem": 1,
-      "errorsThem": 4,
+      "errorsThem": 6,
       "acePctThem": null,
       "errorPctThem": null
     },
@@ -17784,5 +17792,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T19:06+00:00"
+  "updated": "2026-10-25T19:11+00:00"
 };
