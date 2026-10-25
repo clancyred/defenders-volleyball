@@ -13025,18 +13025,20 @@ window.DATA = {
       "date": "2026-10-23",
       "opponent": "HypeVolleyball",
       "player": "Anna",
-      "digs": null,
+      "digs": 1,
       "assists": null,
       "attackAttempts": null,
       "kills": null,
       "killErrors": null,
       "hittingSheet": null,
-      "serveAttempts": 1,
+      "serveAttempts": 3,
       "aces": 1,
       "serveErrors": null,
-      "serveRating": 5,
+      "serveRating": 2.667,
       "serveScores": [
-        5
+        5,
+        1,
+        2
       ],
       "unforcedErrors": null,
       "stuffBlocks": null,
@@ -17723,5 +17725,5 @@ window.DATA = {
       "note": ""
     }
   ],
-  "updated": "2026-10-25T15:16+00:00"
+  "updated": "2026-10-25T18:06+00:00"
 };
